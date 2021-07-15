@@ -1,0 +1,3472 @@
+{
+  "data": [
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "12959619"
+      ],
+      "id": "12290725",
+      "nyplType": "item",
+      "updatedDate": "2014-07-16T22:57:08-04:00",
+      "createdDate": "2009-02-06T03:42:00-05:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "scff2",
+        "name": "Schomburg Center - Research & Reference"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433017857628",
+      "callNumber": "|hSc Ser.-M .N489",
+      "itemType": null,
+      "fixedFields": {
+        "57": {
+          "label": "BIB HOLD",
+          "value": false,
+          "display": null
+        },
+        "58": {
+          "label": "Copy No.",
+          "value": 1,
+          "display": null
+        },
+        "59": {
+          "label": "Item Code 1",
+          "value": "0",
+          "display": null
+        },
+        "60": {
+          "label": "Item Code 2",
+          "value": "-",
+          "display": null
+        },
+        "61": {
+          "label": "Item Type",
+          "value": "3",
+          "display": null
+        },
+        "62": {
+          "label": "Price",
+          "value": 0,
+          "display": null
+        },
+        "64": {
+          "label": "Checkout Location",
+          "value": 0,
+          "display": null
+        },
+        "70": {
+          "label": "Checkin Location",
+          "value": 0,
+          "display": null
+        },
+        "74": {
+          "label": "Item Use 3",
+          "value": 0,
+          "display": null
+        },
+        "76": {
+          "label": "Total Checkouts",
+          "value": 0,
+          "display": null
+        },
+        "77": {
+          "label": "Total Renewals",
+          "value": 0,
+          "display": null
+        },
+        "79": {
+          "label": "Location",
+          "value": "scff2",
+          "display": "Schomburg Center - Research & Reference"
+        },
+        "80": {
+          "label": "Record Type",
+          "value": "i",
+          "display": null
+        },
+        "81": {
+          "label": "Record Number",
+          "value": "12290725",
+          "display": null
+        },
+        "83": {
+          "label": "Created Date",
+          "value": "2009-02-06T03:42:00Z",
+          "display": null
+        },
+        "84": {
+          "label": "Updated Date",
+          "value": "2014-07-16T22:57:08Z",
+          "display": null
+        },
+        "85": {
+          "label": "No. of Revisions",
+          "value": "6",
+          "display": null
+        },
+        "86": {
+          "label": "Agency",
+          "value": "1",
+          "display": null
+        },
+        "88": {
+          "label": "Status",
+          "value": "-",
+          "display": "AVAILABLE"
+        },
+        "93": {
+          "label": "Inhouse Use",
+          "value": 0,
+          "display": null
+        },
+        "94": {
+          "label": "Copy Use",
+          "value": 0,
+          "display": null
+        },
+        "97": {
+          "label": "Item Message",
+          "value": "-",
+          "display": null
+        },
+        "98": {
+          "label": "PDATE",
+          "value": "2013-07-16T02:44:24Z",
+          "display": null
+        },
+        "108": {
+          "label": "OPAC Message",
+          "value": "1",
+          "display": null
+        },
+        "109": {
+          "label": "Year-to-Date Circ",
+          "value": 0,
+          "display": null
+        },
+        "110": {
+          "label": "Last Year Circ",
+          "value": 0,
+          "display": null
+        },
+        "127": {
+          "label": "Item Agency",
+          "value": "31",
+          "display": "Schomburg"
+        },
+        "161": {
+          "label": "VI Central",
+          "value": 0,
+          "display": null
+        },
+        "162": {
+          "label": "IR Dist Learn Same Site",
+          "value": "0",
+          "display": null
+        },
+        "264": {
+          "label": "Holdings Item Tag",
+          "value": "6",
+          "display": null
+        },
+        "265": {
+          "label": "Inherit Location",
+          "value": false,
+          "display": null
+        }
+      },
+      "varFields": [
+        {
+          "fieldTag": "a",
+          "marcTag": "949",
+          "ind1": " ",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "a",
+              "content": "Sc Ser.-M .N489"
+            },
+            {
+              "tag": "c",
+              "content": "33433017857628"
+            },
+            {
+              "tag": "e",
+              "content": "2002"
+            },
+            {
+              "tag": "h",
+              "content": "1"
+            },
+            {
+              "tag": "i",
+              "content": "0"
+            },
+            {
+              "tag": "j",
+              "content": "-"
+            },
+            {
+              "tag": "k",
+              "content": "3"
+            },
+            {
+              "tag": "l",
+              "content": "$0.00"
+            },
+            {
+              "tag": "m",
+              "content": "0"
+            },
+            {
+              "tag": "n",
+              "content": "0"
+            },
+            {
+              "tag": "o",
+              "content": "0"
+            },
+            {
+              "tag": "p",
+              "content": "sg   "
+            },
+            {
+              "tag": "q",
+              "content": "-"
+            },
+            {
+              "tag": "r",
+              "content": "0"
+            },
+            {
+              "tag": "s",
+              "content": "0"
+            },
+            {
+              "tag": "t",
+              "content": "-"
+            },
+            {
+              "tag": "u",
+              "content": "-"
+            },
+            {
+              "tag": "v",
+              "content": "0"
+            },
+            {
+              "tag": "w",
+              "content": "0"
+            },
+            {
+              "tag": "x",
+              "content": ".i3624448x"
+            },
+            {
+              "tag": "y",
+              "content": "06-28-03"
+            },
+            {
+              "tag": "z",
+              "content": "03-13-07"
+            }
+          ]
+        },
+        {
+          "fieldTag": "b",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "33433017857628",
+          "subfields": null
+        },
+        {
+          "fieldTag": "c",
+          "marcTag": "852",
+          "ind1": "8",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "h",
+              "content": "Sc Ser.-M .N489"
+            }
+          ]
+        },
+        {
+          "fieldTag": "v",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "2002",
+          "subfields": null
+        }
+      ]
+    },
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "12959619"
+      ],
+      "id": "14347356",
+      "nyplType": "item",
+      "updatedDate": "2014-07-16T23:54:49-04:00",
+      "createdDate": "2009-02-09T07:29:02-05:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "scff2",
+        "name": "Schomburg Center - Research & Reference"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433058989447",
+      "callNumber": "|hSc Ser.-M .N489",
+      "itemType": null,
+      "fixedFields": {
+        "57": {
+          "label": "BIB HOLD",
+          "value": false,
+          "display": null
+        },
+        "58": {
+          "label": "Copy No.",
+          "value": 1,
+          "display": null
+        },
+        "59": {
+          "label": "Item Code 1",
+          "value": "0",
+          "display": null
+        },
+        "60": {
+          "label": "Item Code 2",
+          "value": "-",
+          "display": null
+        },
+        "61": {
+          "label": "Item Type",
+          "value": "3",
+          "display": null
+        },
+        "62": {
+          "label": "Price",
+          "value": 0,
+          "display": null
+        },
+        "64": {
+          "label": "Checkout Location",
+          "value": 0,
+          "display": null
+        },
+        "70": {
+          "label": "Checkin Location",
+          "value": 0,
+          "display": null
+        },
+        "74": {
+          "label": "Item Use 3",
+          "value": 0,
+          "display": null
+        },
+        "76": {
+          "label": "Total Checkouts",
+          "value": 0,
+          "display": null
+        },
+        "77": {
+          "label": "Total Renewals",
+          "value": 0,
+          "display": null
+        },
+        "79": {
+          "label": "Location",
+          "value": "scff2",
+          "display": "Schomburg Center - Research & Reference"
+        },
+        "80": {
+          "label": "Record Type",
+          "value": "i",
+          "display": null
+        },
+        "81": {
+          "label": "Record Number",
+          "value": "14347356",
+          "display": null
+        },
+        "83": {
+          "label": "Created Date",
+          "value": "2009-02-09T07:29:02Z",
+          "display": null
+        },
+        "84": {
+          "label": "Updated Date",
+          "value": "2014-07-16T23:54:49Z",
+          "display": null
+        },
+        "85": {
+          "label": "No. of Revisions",
+          "value": "6",
+          "display": null
+        },
+        "86": {
+          "label": "Agency",
+          "value": "1",
+          "display": null
+        },
+        "88": {
+          "label": "Status",
+          "value": "-",
+          "display": "AVAILABLE"
+        },
+        "93": {
+          "label": "Inhouse Use",
+          "value": 0,
+          "display": null
+        },
+        "94": {
+          "label": "Copy Use",
+          "value": 0,
+          "display": null
+        },
+        "97": {
+          "label": "Item Message",
+          "value": "-",
+          "display": null
+        },
+        "98": {
+          "label": "PDATE",
+          "value": "2013-07-16T03:21:34Z",
+          "display": null
+        },
+        "108": {
+          "label": "OPAC Message",
+          "value": "1",
+          "display": null
+        },
+        "109": {
+          "label": "Year-to-Date Circ",
+          "value": 0,
+          "display": null
+        },
+        "110": {
+          "label": "Last Year Circ",
+          "value": 0,
+          "display": null
+        },
+        "127": {
+          "label": "Item Agency",
+          "value": "31",
+          "display": "Schomburg"
+        },
+        "161": {
+          "label": "VI Central",
+          "value": 0,
+          "display": null
+        },
+        "162": {
+          "label": "IR Dist Learn Same Site",
+          "value": "0",
+          "display": null
+        },
+        "264": {
+          "label": "Holdings Item Tag",
+          "value": "6",
+          "display": null
+        },
+        "265": {
+          "label": "Inherit Location",
+          "value": false,
+          "display": null
+        }
+      },
+      "varFields": [
+        {
+          "fieldTag": "a",
+          "marcTag": "949",
+          "ind1": " ",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "a",
+              "content": "Sc Ser.-M .N489"
+            },
+            {
+              "tag": "c",
+              "content": "33433058989447"
+            },
+            {
+              "tag": "e",
+              "content": "Jan./Feb.-July/Aug., Nov./Dec. 2003"
+            },
+            {
+              "tag": "g",
+              "content": "scr/gm"
+            },
+            {
+              "tag": "h",
+              "content": "1"
+            },
+            {
+              "tag": "i",
+              "content": "0"
+            },
+            {
+              "tag": "j",
+              "content": "-"
+            },
+            {
+              "tag": "k",
+              "content": "3"
+            },
+            {
+              "tag": "l",
+              "content": "$0.00"
+            },
+            {
+              "tag": "m",
+              "content": "0"
+            },
+            {
+              "tag": "n",
+              "content": "0"
+            },
+            {
+              "tag": "o",
+              "content": "0"
+            },
+            {
+              "tag": "p",
+              "content": "sg   "
+            },
+            {
+              "tag": "q",
+              "content": "-"
+            },
+            {
+              "tag": "r",
+              "content": "0"
+            },
+            {
+              "tag": "s",
+              "content": "0"
+            },
+            {
+              "tag": "t",
+              "content": "-"
+            },
+            {
+              "tag": "u",
+              "content": "-"
+            },
+            {
+              "tag": "v",
+              "content": "0"
+            },
+            {
+              "tag": "w",
+              "content": "0"
+            },
+            {
+              "tag": "x",
+              "content": ".i56138416"
+            },
+            {
+              "tag": "y",
+              "content": "03-12-04"
+            },
+            {
+              "tag": "z",
+              "content": "07-13-07"
+            }
+          ]
+        },
+        {
+          "fieldTag": "b",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "33433058989447",
+          "subfields": null
+        },
+        {
+          "fieldTag": "c",
+          "marcTag": "852",
+          "ind1": "8",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "h",
+              "content": "Sc Ser.-M .N489"
+            }
+          ]
+        },
+        {
+          "fieldTag": "t",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "scr/gm",
+          "subfields": null
+        },
+        {
+          "fieldTag": "v",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "Jan./Feb.-July/Aug., Nov./Dec. 2003",
+          "subfields": null
+        }
+      ]
+    },
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "12959619"
+      ],
+      "id": "14347357",
+      "nyplType": "item",
+      "updatedDate": "2014-07-16T23:54:49-04:00",
+      "createdDate": "2009-02-09T07:29:02-05:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "scff2",
+        "name": "Schomburg Center - Research & Reference"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433061003772",
+      "callNumber": "|hSc Ser.-M .N489",
+      "itemType": null,
+      "fixedFields": {
+        "57": {
+          "label": "BIB HOLD",
+          "value": false,
+          "display": null
+        },
+        "58": {
+          "label": "Copy No.",
+          "value": 1,
+          "display": null
+        },
+        "59": {
+          "label": "Item Code 1",
+          "value": "0",
+          "display": null
+        },
+        "60": {
+          "label": "Item Code 2",
+          "value": "-",
+          "display": null
+        },
+        "61": {
+          "label": "Item Type",
+          "value": "3",
+          "display": null
+        },
+        "62": {
+          "label": "Price",
+          "value": 0,
+          "display": null
+        },
+        "64": {
+          "label": "Checkout Location",
+          "value": 0,
+          "display": null
+        },
+        "70": {
+          "label": "Checkin Location",
+          "value": 0,
+          "display": null
+        },
+        "74": {
+          "label": "Item Use 3",
+          "value": 0,
+          "display": null
+        },
+        "76": {
+          "label": "Total Checkouts",
+          "value": 1,
+          "display": null
+        },
+        "77": {
+          "label": "Total Renewals",
+          "value": 0,
+          "display": null
+        },
+        "79": {
+          "label": "Location",
+          "value": "scff2",
+          "display": "Schomburg Center - Research & Reference"
+        },
+        "80": {
+          "label": "Record Type",
+          "value": "i",
+          "display": null
+        },
+        "81": {
+          "label": "Record Number",
+          "value": "14347357",
+          "display": null
+        },
+        "83": {
+          "label": "Created Date",
+          "value": "2009-02-09T07:29:02Z",
+          "display": null
+        },
+        "84": {
+          "label": "Updated Date",
+          "value": "2014-07-16T23:54:49Z",
+          "display": null
+        },
+        "85": {
+          "label": "No. of Revisions",
+          "value": "6",
+          "display": null
+        },
+        "86": {
+          "label": "Agency",
+          "value": "1",
+          "display": null
+        },
+        "88": {
+          "label": "Status",
+          "value": "-",
+          "display": "AVAILABLE"
+        },
+        "93": {
+          "label": "Inhouse Use",
+          "value": 0,
+          "display": null
+        },
+        "94": {
+          "label": "Copy Use",
+          "value": 0,
+          "display": null
+        },
+        "97": {
+          "label": "Item Message",
+          "value": "-",
+          "display": null
+        },
+        "98": {
+          "label": "PDATE",
+          "value": "2013-07-16T03:21:34Z",
+          "display": null
+        },
+        "108": {
+          "label": "OPAC Message",
+          "value": "1",
+          "display": null
+        },
+        "109": {
+          "label": "Year-to-Date Circ",
+          "value": 0,
+          "display": null
+        },
+        "110": {
+          "label": "Last Year Circ",
+          "value": 0,
+          "display": null
+        },
+        "127": {
+          "label": "Item Agency",
+          "value": "31",
+          "display": "Schomburg"
+        },
+        "161": {
+          "label": "VI Central",
+          "value": 0,
+          "display": null
+        },
+        "162": {
+          "label": "IR Dist Learn Same Site",
+          "value": "0",
+          "display": null
+        },
+        "264": {
+          "label": "Holdings Item Tag",
+          "value": "6",
+          "display": null
+        },
+        "265": {
+          "label": "Inherit Location",
+          "value": false,
+          "display": null
+        }
+      },
+      "varFields": [
+        {
+          "fieldTag": "a",
+          "marcTag": "949",
+          "ind1": " ",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "a",
+              "content": "Sc Ser.-M .N489"
+            },
+            {
+              "tag": "c",
+              "content": "33433061003772"
+            },
+            {
+              "tag": "e",
+              "content": "Jan. 1997-Feb. 1998"
+            },
+            {
+              "tag": "g",
+              "content": "scr/dls"
+            },
+            {
+              "tag": "h",
+              "content": "1"
+            },
+            {
+              "tag": "i",
+              "content": "0"
+            },
+            {
+              "tag": "j",
+              "content": "-"
+            },
+            {
+              "tag": "k",
+              "content": "3"
+            },
+            {
+              "tag": "l",
+              "content": "$0.00"
+            },
+            {
+              "tag": "m",
+              "content": "0"
+            },
+            {
+              "tag": "n",
+              "content": "1"
+            },
+            {
+              "tag": "o",
+              "content": "0"
+            },
+            {
+              "tag": "p",
+              "content": "sg   "
+            },
+            {
+              "tag": "q",
+              "content": "-"
+            },
+            {
+              "tag": "r",
+              "content": "0"
+            },
+            {
+              "tag": "s",
+              "content": "0"
+            },
+            {
+              "tag": "t",
+              "content": "-"
+            },
+            {
+              "tag": "u",
+              "content": "-"
+            },
+            {
+              "tag": "v",
+              "content": "1"
+            },
+            {
+              "tag": "w",
+              "content": "0"
+            },
+            {
+              "tag": "x",
+              "content": ".i58493098"
+            },
+            {
+              "tag": "y",
+              "content": "06-10-04"
+            },
+            {
+              "tag": "z",
+              "content": "07-13-07"
+            }
+          ]
+        },
+        {
+          "fieldTag": "b",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "33433061003772",
+          "subfields": null
+        },
+        {
+          "fieldTag": "c",
+          "marcTag": "852",
+          "ind1": "8",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "h",
+              "content": "Sc Ser.-M .N489"
+            }
+          ]
+        },
+        {
+          "fieldTag": "t",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "scr/dls",
+          "subfields": null
+        },
+        {
+          "fieldTag": "v",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "Jan. 1997-Feb. 1998",
+          "subfields": null
+        }
+      ]
+    },
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "12959619"
+      ],
+      "id": "14347358",
+      "nyplType": "item",
+      "updatedDate": "2014-07-16T23:54:49-04:00",
+      "createdDate": "2009-02-09T07:29:02-05:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "scff2",
+        "name": "Schomburg Center - Research & Reference"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433061040048",
+      "callNumber": "|hSc Ser.-M .N489",
+      "itemType": null,
+      "fixedFields": {
+        "57": {
+          "label": "BIB HOLD",
+          "value": false,
+          "display": null
+        },
+        "58": {
+          "label": "Copy No.",
+          "value": 1,
+          "display": null
+        },
+        "59": {
+          "label": "Item Code 1",
+          "value": "0",
+          "display": null
+        },
+        "60": {
+          "label": "Item Code 2",
+          "value": "-",
+          "display": null
+        },
+        "61": {
+          "label": "Item Type",
+          "value": "3",
+          "display": null
+        },
+        "62": {
+          "label": "Price",
+          "value": 0,
+          "display": null
+        },
+        "64": {
+          "label": "Checkout Location",
+          "value": 0,
+          "display": null
+        },
+        "70": {
+          "label": "Checkin Location",
+          "value": 0,
+          "display": null
+        },
+        "74": {
+          "label": "Item Use 3",
+          "value": 0,
+          "display": null
+        },
+        "76": {
+          "label": "Total Checkouts",
+          "value": 0,
+          "display": null
+        },
+        "77": {
+          "label": "Total Renewals",
+          "value": 0,
+          "display": null
+        },
+        "79": {
+          "label": "Location",
+          "value": "scff2",
+          "display": "Schomburg Center - Research & Reference"
+        },
+        "80": {
+          "label": "Record Type",
+          "value": "i",
+          "display": null
+        },
+        "81": {
+          "label": "Record Number",
+          "value": "14347358",
+          "display": null
+        },
+        "83": {
+          "label": "Created Date",
+          "value": "2009-02-09T07:29:02Z",
+          "display": null
+        },
+        "84": {
+          "label": "Updated Date",
+          "value": "2014-07-16T23:54:49Z",
+          "display": null
+        },
+        "85": {
+          "label": "No. of Revisions",
+          "value": "6",
+          "display": null
+        },
+        "86": {
+          "label": "Agency",
+          "value": "1",
+          "display": null
+        },
+        "88": {
+          "label": "Status",
+          "value": "-",
+          "display": "AVAILABLE"
+        },
+        "93": {
+          "label": "Inhouse Use",
+          "value": 0,
+          "display": null
+        },
+        "94": {
+          "label": "Copy Use",
+          "value": 0,
+          "display": null
+        },
+        "97": {
+          "label": "Item Message",
+          "value": "-",
+          "display": null
+        },
+        "98": {
+          "label": "PDATE",
+          "value": "2013-07-16T03:21:34Z",
+          "display": null
+        },
+        "108": {
+          "label": "OPAC Message",
+          "value": "1",
+          "display": null
+        },
+        "109": {
+          "label": "Year-to-Date Circ",
+          "value": 0,
+          "display": null
+        },
+        "110": {
+          "label": "Last Year Circ",
+          "value": 0,
+          "display": null
+        },
+        "127": {
+          "label": "Item Agency",
+          "value": "31",
+          "display": "Schomburg"
+        },
+        "161": {
+          "label": "VI Central",
+          "value": 0,
+          "display": null
+        },
+        "162": {
+          "label": "IR Dist Learn Same Site",
+          "value": "0",
+          "display": null
+        },
+        "264": {
+          "label": "Holdings Item Tag",
+          "value": "6",
+          "display": null
+        },
+        "265": {
+          "label": "Inherit Location",
+          "value": false,
+          "display": null
+        }
+      },
+      "varFields": [
+        {
+          "fieldTag": "a",
+          "marcTag": "949",
+          "ind1": " ",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "a",
+              "content": "Sc Ser.-M .N489"
+            },
+            {
+              "tag": "c",
+              "content": "33433061040048"
+            },
+            {
+              "tag": "e",
+              "content": "Mar./Apr. 1998, Nov./Dec. 2000-Nov./Dec. 2001"
+            },
+            {
+              "tag": "g",
+              "content": "scr/dls"
+            },
+            {
+              "tag": "h",
+              "content": "1"
+            },
+            {
+              "tag": "i",
+              "content": "0"
+            },
+            {
+              "tag": "j",
+              "content": "-"
+            },
+            {
+              "tag": "k",
+              "content": "3"
+            },
+            {
+              "tag": "l",
+              "content": "$0.00"
+            },
+            {
+              "tag": "m",
+              "content": "0"
+            },
+            {
+              "tag": "n",
+              "content": "0"
+            },
+            {
+              "tag": "o",
+              "content": "0"
+            },
+            {
+              "tag": "p",
+              "content": "sg   "
+            },
+            {
+              "tag": "q",
+              "content": "-"
+            },
+            {
+              "tag": "r",
+              "content": "0"
+            },
+            {
+              "tag": "s",
+              "content": "0"
+            },
+            {
+              "tag": "t",
+              "content": "-"
+            },
+            {
+              "tag": "u",
+              "content": "-"
+            },
+            {
+              "tag": "v",
+              "content": "0"
+            },
+            {
+              "tag": "w",
+              "content": "0"
+            },
+            {
+              "tag": "x",
+              "content": ".i58493189"
+            },
+            {
+              "tag": "y",
+              "content": "06-10-04"
+            },
+            {
+              "tag": "z",
+              "content": "05-27-08"
+            }
+          ]
+        },
+        {
+          "fieldTag": "b",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "33433061040048",
+          "subfields": null
+        },
+        {
+          "fieldTag": "c",
+          "marcTag": "852",
+          "ind1": "8",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "h",
+              "content": "Sc Ser.-M .N489"
+            }
+          ]
+        },
+        {
+          "fieldTag": "t",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "scr/dls",
+          "subfields": null
+        },
+        {
+          "fieldTag": "v",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "Mar./Apr. 1998, Nov./Dec. 2000-Nov./Dec. 2001",
+          "subfields": null
+        }
+      ]
+    },
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "12959619"
+      ],
+      "id": "15152335",
+      "nyplType": "item",
+      "updatedDate": "2014-07-17T00:18:03-04:00",
+      "createdDate": "2009-02-10T05:38:59-05:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "scff2",
+        "name": "Schomburg Center - Research & Reference"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433064380201",
+      "callNumber": "|hSc Ser.-M .N489",
+      "itemType": null,
+      "fixedFields": {
+        "57": {
+          "label": "BIB HOLD",
+          "value": false,
+          "display": null
+        },
+        "58": {
+          "label": "Copy No.",
+          "value": 1,
+          "display": null
+        },
+        "59": {
+          "label": "Item Code 1",
+          "value": "0",
+          "display": null
+        },
+        "60": {
+          "label": "Item Code 2",
+          "value": "-",
+          "display": null
+        },
+        "61": {
+          "label": "Item Type",
+          "value": "3",
+          "display": null
+        },
+        "62": {
+          "label": "Price",
+          "value": 0,
+          "display": null
+        },
+        "64": {
+          "label": "Checkout Location",
+          "value": 0,
+          "display": null
+        },
+        "70": {
+          "label": "Checkin Location",
+          "value": 0,
+          "display": null
+        },
+        "74": {
+          "label": "Item Use 3",
+          "value": 0,
+          "display": null
+        },
+        "76": {
+          "label": "Total Checkouts",
+          "value": 0,
+          "display": null
+        },
+        "77": {
+          "label": "Total Renewals",
+          "value": 0,
+          "display": null
+        },
+        "79": {
+          "label": "Location",
+          "value": "scff2",
+          "display": "Schomburg Center - Research & Reference"
+        },
+        "80": {
+          "label": "Record Type",
+          "value": "i",
+          "display": null
+        },
+        "81": {
+          "label": "Record Number",
+          "value": "15152335",
+          "display": null
+        },
+        "83": {
+          "label": "Created Date",
+          "value": "2009-02-10T05:38:59Z",
+          "display": null
+        },
+        "84": {
+          "label": "Updated Date",
+          "value": "2014-07-17T00:18:03Z",
+          "display": null
+        },
+        "85": {
+          "label": "No. of Revisions",
+          "value": "6",
+          "display": null
+        },
+        "86": {
+          "label": "Agency",
+          "value": "1",
+          "display": null
+        },
+        "88": {
+          "label": "Status",
+          "value": "-",
+          "display": "AVAILABLE"
+        },
+        "93": {
+          "label": "Inhouse Use",
+          "value": 0,
+          "display": null
+        },
+        "94": {
+          "label": "Copy Use",
+          "value": 0,
+          "display": null
+        },
+        "97": {
+          "label": "Item Message",
+          "value": "-",
+          "display": null
+        },
+        "98": {
+          "label": "PDATE",
+          "value": "2013-07-16T03:41:39Z",
+          "display": null
+        },
+        "108": {
+          "label": "OPAC Message",
+          "value": "1",
+          "display": null
+        },
+        "109": {
+          "label": "Year-to-Date Circ",
+          "value": 0,
+          "display": null
+        },
+        "110": {
+          "label": "Last Year Circ",
+          "value": 0,
+          "display": null
+        },
+        "127": {
+          "label": "Item Agency",
+          "value": "31",
+          "display": "Schomburg"
+        },
+        "161": {
+          "label": "VI Central",
+          "value": 0,
+          "display": null
+        },
+        "162": {
+          "label": "IR Dist Learn Same Site",
+          "value": "0",
+          "display": null
+        },
+        "264": {
+          "label": "Holdings Item Tag",
+          "value": "6",
+          "display": null
+        },
+        "265": {
+          "label": "Inherit Location",
+          "value": false,
+          "display": null
+        }
+      },
+      "varFields": [
+        {
+          "fieldTag": "a",
+          "marcTag": "949",
+          "ind1": " ",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "a",
+              "content": "Sc Ser.-M .N489"
+            },
+            {
+              "tag": "c",
+              "content": "33433064380201"
+            },
+            {
+              "tag": "e",
+              "content": "Jan./Feb.-Nov./Dec. 2004, inc."
+            },
+            {
+              "tag": "g",
+              "content": "scr/dls"
+            },
+            {
+              "tag": "h",
+              "content": "1"
+            },
+            {
+              "tag": "i",
+              "content": "0"
+            },
+            {
+              "tag": "j",
+              "content": "-"
+            },
+            {
+              "tag": "k",
+              "content": "3"
+            },
+            {
+              "tag": "l",
+              "content": "$0.00"
+            },
+            {
+              "tag": "m",
+              "content": "0"
+            },
+            {
+              "tag": "n",
+              "content": "0"
+            },
+            {
+              "tag": "o",
+              "content": "0"
+            },
+            {
+              "tag": "p",
+              "content": "sg   "
+            },
+            {
+              "tag": "q",
+              "content": "-"
+            },
+            {
+              "tag": "r",
+              "content": "0"
+            },
+            {
+              "tag": "s",
+              "content": "0"
+            },
+            {
+              "tag": "t",
+              "content": "-"
+            },
+            {
+              "tag": "u",
+              "content": "-"
+            },
+            {
+              "tag": "v",
+              "content": "0"
+            },
+            {
+              "tag": "w",
+              "content": "0"
+            },
+            {
+              "tag": "x",
+              "content": ".i66193795"
+            },
+            {
+              "tag": "y",
+              "content": "11-18-05"
+            },
+            {
+              "tag": "z",
+              "content": "07-13-07"
+            }
+          ]
+        },
+        {
+          "fieldTag": "b",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "33433064380201",
+          "subfields": null
+        },
+        {
+          "fieldTag": "c",
+          "marcTag": "852",
+          "ind1": "8",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "h",
+              "content": "Sc Ser.-M .N489"
+            }
+          ]
+        },
+        {
+          "fieldTag": "t",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "scr/dls",
+          "subfields": null
+        },
+        {
+          "fieldTag": "v",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "Jan./Feb.-Nov./Dec. 2004, inc.",
+          "subfields": null
+        }
+      ]
+    },
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "12959619"
+      ],
+      "id": "15152336",
+      "nyplType": "item",
+      "updatedDate": "2014-07-17T00:18:03-04:00",
+      "createdDate": "2009-02-10T05:38:59-05:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "scff2",
+        "name": "Schomburg Center - Research & Reference"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433072857430",
+      "callNumber": "|hSc Ser.-M .N489",
+      "itemType": null,
+      "fixedFields": {
+        "57": {
+          "label": "BIB HOLD",
+          "value": false,
+          "display": null
+        },
+        "58": {
+          "label": "Copy No.",
+          "value": 1,
+          "display": null
+        },
+        "59": {
+          "label": "Item Code 1",
+          "value": "0",
+          "display": null
+        },
+        "60": {
+          "label": "Item Code 2",
+          "value": "-",
+          "display": null
+        },
+        "61": {
+          "label": "Item Type",
+          "value": "3",
+          "display": null
+        },
+        "62": {
+          "label": "Price",
+          "value": 0,
+          "display": null
+        },
+        "64": {
+          "label": "Checkout Location",
+          "value": 0,
+          "display": null
+        },
+        "70": {
+          "label": "Checkin Location",
+          "value": 0,
+          "display": null
+        },
+        "74": {
+          "label": "Item Use 3",
+          "value": 0,
+          "display": null
+        },
+        "76": {
+          "label": "Total Checkouts",
+          "value": 1,
+          "display": null
+        },
+        "77": {
+          "label": "Total Renewals",
+          "value": 0,
+          "display": null
+        },
+        "79": {
+          "label": "Location",
+          "value": "scff2",
+          "display": "Schomburg Center - Research & Reference"
+        },
+        "80": {
+          "label": "Record Type",
+          "value": "i",
+          "display": null
+        },
+        "81": {
+          "label": "Record Number",
+          "value": "15152336",
+          "display": null
+        },
+        "83": {
+          "label": "Created Date",
+          "value": "2009-02-10T05:38:59Z",
+          "display": null
+        },
+        "84": {
+          "label": "Updated Date",
+          "value": "2014-07-17T00:18:03Z",
+          "display": null
+        },
+        "85": {
+          "label": "No. of Revisions",
+          "value": "6",
+          "display": null
+        },
+        "86": {
+          "label": "Agency",
+          "value": "1",
+          "display": null
+        },
+        "88": {
+          "label": "Status",
+          "value": "-",
+          "display": "AVAILABLE"
+        },
+        "93": {
+          "label": "Inhouse Use",
+          "value": 0,
+          "display": null
+        },
+        "94": {
+          "label": "Copy Use",
+          "value": 0,
+          "display": null
+        },
+        "97": {
+          "label": "Item Message",
+          "value": "-",
+          "display": null
+        },
+        "98": {
+          "label": "PDATE",
+          "value": "2013-07-16T03:41:39Z",
+          "display": null
+        },
+        "108": {
+          "label": "OPAC Message",
+          "value": "1",
+          "display": null
+        },
+        "109": {
+          "label": "Year-to-Date Circ",
+          "value": 0,
+          "display": null
+        },
+        "110": {
+          "label": "Last Year Circ",
+          "value": 0,
+          "display": null
+        },
+        "127": {
+          "label": "Item Agency",
+          "value": "31",
+          "display": "Schomburg"
+        },
+        "161": {
+          "label": "VI Central",
+          "value": 0,
+          "display": null
+        },
+        "162": {
+          "label": "IR Dist Learn Same Site",
+          "value": "0",
+          "display": null
+        },
+        "264": {
+          "label": "Holdings Item Tag",
+          "value": "6",
+          "display": null
+        },
+        "265": {
+          "label": "Inherit Location",
+          "value": false,
+          "display": null
+        }
+      },
+      "varFields": [
+        {
+          "fieldTag": "a",
+          "marcTag": "949",
+          "ind1": " ",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "a",
+              "content": "Sc Ser.-M .N489"
+            },
+            {
+              "tag": "c",
+              "content": "33433072857430"
+            },
+            {
+              "tag": "e",
+              "content": "2005"
+            },
+            {
+              "tag": "g",
+              "content": "scr/dls"
+            },
+            {
+              "tag": "h",
+              "content": "1"
+            },
+            {
+              "tag": "i",
+              "content": "0"
+            },
+            {
+              "tag": "j",
+              "content": "-"
+            },
+            {
+              "tag": "k",
+              "content": "3"
+            },
+            {
+              "tag": "l",
+              "content": "$0.00"
+            },
+            {
+              "tag": "m",
+              "content": "0"
+            },
+            {
+              "tag": "n",
+              "content": "1"
+            },
+            {
+              "tag": "o",
+              "content": "0"
+            },
+            {
+              "tag": "p",
+              "content": "sg   "
+            },
+            {
+              "tag": "q",
+              "content": "-"
+            },
+            {
+              "tag": "r",
+              "content": "0"
+            },
+            {
+              "tag": "s",
+              "content": "0"
+            },
+            {
+              "tag": "t",
+              "content": "-"
+            },
+            {
+              "tag": "u",
+              "content": "-"
+            },
+            {
+              "tag": "v",
+              "content": "1"
+            },
+            {
+              "tag": "w",
+              "content": "0"
+            },
+            {
+              "tag": "x",
+              "content": ".i69250807"
+            },
+            {
+              "tag": "y",
+              "content": "07-10-06"
+            },
+            {
+              "tag": "z",
+              "content": "09-19-06"
+            }
+          ]
+        },
+        {
+          "fieldTag": "b",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "33433072857430",
+          "subfields": null
+        },
+        {
+          "fieldTag": "c",
+          "marcTag": "852",
+          "ind1": "8",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "h",
+              "content": "Sc Ser.-M .N489"
+            }
+          ]
+        },
+        {
+          "fieldTag": "t",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "scr/dls",
+          "subfields": null
+        },
+        {
+          "fieldTag": "v",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "2005",
+          "subfields": null
+        }
+      ]
+    },
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "12959619"
+      ],
+      "id": "24714721",
+      "nyplType": "item",
+      "updatedDate": "2018-07-17T22:57:45-04:00",
+      "createdDate": "2010-02-18T14:44:00-05:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "rcma2",
+        "name": "OFFSITE - Request in Advance for use at Schwarzman Bldg"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433086856287",
+      "callNumber": "|hNYGB E I85.89 A351",
+      "itemType": null,
+      "fixedFields": {
+        "57": {
+          "label": "BIB HOLD",
+          "value": false,
+          "display": null
+        },
+        "58": {
+          "label": "Copy No.",
+          "value": 1,
+          "display": null
+        },
+        "59": {
+          "label": "Item Code 1",
+          "value": "0",
+          "display": null
+        },
+        "60": {
+          "label": "Item Code 2",
+          "value": "-",
+          "display": null
+        },
+        "61": {
+          "label": "Item Type",
+          "value": "3",
+          "display": "serial"
+        },
+        "62": {
+          "label": "Price",
+          "value": 0,
+          "display": null
+        },
+        "64": {
+          "label": "Checkout Location",
+          "value": 362,
+          "display": null
+        },
+        "68": {
+          "label": "Last Checkin",
+          "value": "2011-05-22T19:44:18Z",
+          "display": null
+        },
+        "69": {
+          "label": "Inventory Date",
+          "value": "2014-06-01T08:00:00Z",
+          "display": null
+        },
+        "70": {
+          "label": "Checkin Location",
+          "value": 915,
+          "display": null
+        },
+        "74": {
+          "label": "Item Use 3",
+          "value": 0,
+          "display": null
+        },
+        "76": {
+          "label": "Total Checkouts",
+          "value": 1,
+          "display": null
+        },
+        "77": {
+          "label": "Total Renewals",
+          "value": 1,
+          "display": null
+        },
+        "78": {
+          "label": "Last Checkout Date",
+          "value": "2011-04-04T15:27:34Z",
+          "display": null
+        },
+        "79": {
+          "label": "Location",
+          "value": "rcma2",
+          "display": "OFFSITE - Request in Advance for use at Schwarzman Bldg"
+        },
+        "80": {
+          "label": "Record Type",
+          "value": "i",
+          "display": null
+        },
+        "81": {
+          "label": "Record Number",
+          "value": "24714721",
+          "display": null
+        },
+        "83": {
+          "label": "Created Date",
+          "value": "2010-02-18T14:44:00Z",
+          "display": null
+        },
+        "84": {
+          "label": "Updated Date",
+          "value": "2018-07-17T22:57:45Z",
+          "display": null
+        },
+        "85": {
+          "label": "No. of Revisions",
+          "value": "15",
+          "display": null
+        },
+        "86": {
+          "label": "Agency",
+          "value": "1",
+          "display": null
+        },
+        "88": {
+          "label": "Status",
+          "value": "-",
+          "display": "AVAILABLE"
+        },
+        "93": {
+          "label": "Inhouse Use",
+          "value": 0,
+          "display": null
+        },
+        "94": {
+          "label": "Copy Use",
+          "value": 0,
+          "display": null
+        },
+        "97": {
+          "label": "Item Message",
+          "value": "-",
+          "display": null
+        },
+        "98": {
+          "label": "PDATE",
+          "value": "2014-08-12T01:28:15Z",
+          "display": null
+        },
+        "108": {
+          "label": "OPAC Message",
+          "value": "2",
+          "display": null
+        },
+        "109": {
+          "label": "Year-to-Date Circ",
+          "value": 0,
+          "display": null
+        },
+        "110": {
+          "label": "Last Year Circ",
+          "value": 0,
+          "display": null
+        },
+        "127": {
+          "label": "Item Agency",
+          "value": "214",
+          "display": "ReCAP (NA) - NYPL Standard"
+        },
+        "161": {
+          "label": "VI Central",
+          "value": 0,
+          "display": null
+        },
+        "162": {
+          "label": "IR Dist Learn Same Site",
+          "value": "0",
+          "display": null
+        },
+        "264": {
+          "label": "Holdings Item Tag",
+          "value": "6",
+          "display": null
+        },
+        "265": {
+          "label": "Inherit Location",
+          "value": false,
+          "display": null
+        }
+      },
+      "varFields": [
+        {
+          "fieldTag": "b",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "33433086856287",
+          "subfields": null
+        },
+        {
+          "fieldTag": "c",
+          "marcTag": "852",
+          "ind1": "8",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "h",
+              "content": "NYGB E I85.89 A351"
+            }
+          ]
+        },
+        {
+          "fieldTag": "t",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "CATRL/NYGB/emh",
+          "subfields": null
+        },
+        {
+          "fieldTag": "v",
+          "marcTag": "   ",
+          "ind1": " ",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "a",
+              "content": "Sep./Oct. 1994, Jan./Feb. 1997-Jan./Feb. 1998"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "12959619"
+      ],
+      "id": "17552931",
+      "nyplType": "item",
+      "updatedDate": "2014-07-17T01:32:25-04:00",
+      "createdDate": "2009-02-13T01:40:01-05:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "scff2",
+        "name": "Schomburg Center - Research & Reference"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433074059571",
+      "callNumber": "|hSc Ser.-M .N489",
+      "itemType": null,
+      "fixedFields": {
+        "57": {
+          "label": "BIB HOLD",
+          "value": false,
+          "display": null
+        },
+        "58": {
+          "label": "Copy No.",
+          "value": 1,
+          "display": null
+        },
+        "59": {
+          "label": "Item Code 1",
+          "value": "0",
+          "display": null
+        },
+        "60": {
+          "label": "Item Code 2",
+          "value": "-",
+          "display": null
+        },
+        "61": {
+          "label": "Item Type",
+          "value": "3",
+          "display": null
+        },
+        "62": {
+          "label": "Price",
+          "value": 0,
+          "display": null
+        },
+        "64": {
+          "label": "Checkout Location",
+          "value": 0,
+          "display": null
+        },
+        "70": {
+          "label": "Checkin Location",
+          "value": 0,
+          "display": null
+        },
+        "74": {
+          "label": "Item Use 3",
+          "value": 0,
+          "display": null
+        },
+        "76": {
+          "label": "Total Checkouts",
+          "value": 1,
+          "display": null
+        },
+        "77": {
+          "label": "Total Renewals",
+          "value": 0,
+          "display": null
+        },
+        "79": {
+          "label": "Location",
+          "value": "scff2",
+          "display": "Schomburg Center - Research & Reference"
+        },
+        "80": {
+          "label": "Record Type",
+          "value": "i",
+          "display": null
+        },
+        "81": {
+          "label": "Record Number",
+          "value": "17552931",
+          "display": null
+        },
+        "83": {
+          "label": "Created Date",
+          "value": "2009-02-13T01:40:01Z",
+          "display": null
+        },
+        "84": {
+          "label": "Updated Date",
+          "value": "2014-07-17T01:32:25Z",
+          "display": null
+        },
+        "85": {
+          "label": "No. of Revisions",
+          "value": "6",
+          "display": null
+        },
+        "86": {
+          "label": "Agency",
+          "value": "1",
+          "display": null
+        },
+        "88": {
+          "label": "Status",
+          "value": "-",
+          "display": "AVAILABLE"
+        },
+        "93": {
+          "label": "Inhouse Use",
+          "value": 0,
+          "display": null
+        },
+        "94": {
+          "label": "Copy Use",
+          "value": 0,
+          "display": null
+        },
+        "97": {
+          "label": "Item Message",
+          "value": "-",
+          "display": null
+        },
+        "98": {
+          "label": "PDATE",
+          "value": "2013-07-16T04:17:53Z",
+          "display": null
+        },
+        "108": {
+          "label": "OPAC Message",
+          "value": "1",
+          "display": null
+        },
+        "109": {
+          "label": "Year-to-Date Circ",
+          "value": 0,
+          "display": null
+        },
+        "110": {
+          "label": "Last Year Circ",
+          "value": 0,
+          "display": null
+        },
+        "127": {
+          "label": "Item Agency",
+          "value": "31",
+          "display": "Schomburg"
+        },
+        "161": {
+          "label": "VI Central",
+          "value": 0,
+          "display": null
+        },
+        "162": {
+          "label": "IR Dist Learn Same Site",
+          "value": "0",
+          "display": null
+        },
+        "264": {
+          "label": "Holdings Item Tag",
+          "value": "6",
+          "display": null
+        },
+        "265": {
+          "label": "Inherit Location",
+          "value": false,
+          "display": null
+        }
+      },
+      "varFields": [
+        {
+          "fieldTag": "a",
+          "marcTag": "949",
+          "ind1": " ",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "a",
+              "content": "Sc Ser.-M .N489"
+            },
+            {
+              "tag": "c",
+              "content": "33433074059571"
+            },
+            {
+              "tag": "e",
+              "content": "Mar./Apr.-Nov./Dec. 2007"
+            },
+            {
+              "tag": "h",
+              "content": "1"
+            },
+            {
+              "tag": "i",
+              "content": "0"
+            },
+            {
+              "tag": "j",
+              "content": "-"
+            },
+            {
+              "tag": "k",
+              "content": "3"
+            },
+            {
+              "tag": "l",
+              "content": "$0.00"
+            },
+            {
+              "tag": "m",
+              "content": "0"
+            },
+            {
+              "tag": "n",
+              "content": "1"
+            },
+            {
+              "tag": "o",
+              "content": "0"
+            },
+            {
+              "tag": "p",
+              "content": "sg   "
+            },
+            {
+              "tag": "q",
+              "content": "-"
+            },
+            {
+              "tag": "r",
+              "content": "0"
+            },
+            {
+              "tag": "s",
+              "content": "0"
+            },
+            {
+              "tag": "t",
+              "content": "-"
+            },
+            {
+              "tag": "u",
+              "content": "-"
+            },
+            {
+              "tag": "v",
+              "content": "1"
+            },
+            {
+              "tag": "w",
+              "content": "0"
+            },
+            {
+              "tag": "x",
+              "content": ".i91378515"
+            },
+            {
+              "tag": "y",
+              "content": "05-27-08"
+            },
+            {
+              "tag": "z",
+              "content": "06-20-08"
+            }
+          ]
+        },
+        {
+          "fieldTag": "b",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "33433074059571",
+          "subfields": null
+        },
+        {
+          "fieldTag": "c",
+          "marcTag": "852",
+          "ind1": "8",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "h",
+              "content": "Sc Ser.-M .N489"
+            }
+          ]
+        },
+        {
+          "fieldTag": "v",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "Mar./Apr.-Nov./Dec. 2007",
+          "subfields": null
+        }
+      ]
+    },
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "12959619"
+      ],
+      "id": "25916378",
+      "nyplType": "item",
+      "updatedDate": "2018-07-18T22:52:33-04:00",
+      "createdDate": "2010-12-09T21:05:42-05:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "scff2",
+        "name": "Schomburg Center - Research & Reference"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433089294239",
+      "callNumber": "|hSc Ser.-M .N489",
+      "itemType": null,
+      "fixedFields": {
+        "57": {
+          "label": "BIB HOLD",
+          "value": false,
+          "display": null
+        },
+        "58": {
+          "label": "Copy No.",
+          "value": 1,
+          "display": null
+        },
+        "59": {
+          "label": "Item Code 1",
+          "value": "0",
+          "display": null
+        },
+        "60": {
+          "label": "Item Code 2",
+          "value": "-",
+          "display": null
+        },
+        "61": {
+          "label": "Item Type",
+          "value": "3",
+          "display": "serial"
+        },
+        "62": {
+          "label": "Price",
+          "value": 0,
+          "display": null
+        },
+        "64": {
+          "label": "Checkout Location",
+          "value": 89,
+          "display": null
+        },
+        "68": {
+          "label": "Last Checkin",
+          "value": "2011-01-13T20:41:02Z",
+          "display": null
+        },
+        "70": {
+          "label": "Checkin Location",
+          "value": 89,
+          "display": null
+        },
+        "74": {
+          "label": "Item Use 3",
+          "value": 0,
+          "display": null
+        },
+        "76": {
+          "label": "Total Checkouts",
+          "value": 1,
+          "display": null
+        },
+        "77": {
+          "label": "Total Renewals",
+          "value": 0,
+          "display": null
+        },
+        "78": {
+          "label": "Last Checkout Date",
+          "value": "2010-12-13T21:39:14Z",
+          "display": null
+        },
+        "79": {
+          "label": "Location",
+          "value": "scff2",
+          "display": "Schomburg Center - Research & Reference"
+        },
+        "80": {
+          "label": "Record Type",
+          "value": "i",
+          "display": null
+        },
+        "81": {
+          "label": "Record Number",
+          "value": "25916378",
+          "display": null
+        },
+        "83": {
+          "label": "Created Date",
+          "value": "2010-12-09T21:05:42Z",
+          "display": null
+        },
+        "84": {
+          "label": "Updated Date",
+          "value": "2018-07-18T22:52:33Z",
+          "display": null
+        },
+        "85": {
+          "label": "No. of Revisions",
+          "value": "10",
+          "display": null
+        },
+        "86": {
+          "label": "Agency",
+          "value": "1",
+          "display": null
+        },
+        "88": {
+          "label": "Status",
+          "value": "-",
+          "display": "AVAILABLE"
+        },
+        "93": {
+          "label": "Inhouse Use",
+          "value": 0,
+          "display": null
+        },
+        "94": {
+          "label": "Copy Use",
+          "value": 0,
+          "display": null
+        },
+        "97": {
+          "label": "Item Message",
+          "value": "-",
+          "display": null
+        },
+        "98": {
+          "label": "PDATE",
+          "value": "2014-07-17T03:27:25Z",
+          "display": null
+        },
+        "108": {
+          "label": "OPAC Message",
+          "value": "1",
+          "display": null
+        },
+        "109": {
+          "label": "Year-to-Date Circ",
+          "value": 0,
+          "display": null
+        },
+        "110": {
+          "label": "Last Year Circ",
+          "value": 0,
+          "display": null
+        },
+        "127": {
+          "label": "Item Agency",
+          "value": "31",
+          "display": "Schomburg"
+        },
+        "161": {
+          "label": "VI Central",
+          "value": 0,
+          "display": null
+        },
+        "162": {
+          "label": "IR Dist Learn Same Site",
+          "value": "0",
+          "display": null
+        },
+        "264": {
+          "label": "Holdings Item Tag",
+          "value": "6",
+          "display": null
+        },
+        "265": {
+          "label": "Inherit Location",
+          "value": false,
+          "display": null
+        }
+      },
+      "varFields": [
+        {
+          "fieldTag": "b",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "33433089294239",
+          "subfields": null
+        },
+        {
+          "fieldTag": "c",
+          "marcTag": "852",
+          "ind1": "8",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "h",
+              "content": "Sc Ser.-M .N489"
+            }
+          ]
+        },
+        {
+          "fieldTag": "t",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "scr/dt",
+          "subfields": null
+        },
+        {
+          "fieldTag": "v",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "2010",
+          "subfields": null
+        }
+      ]
+    },
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "12959619"
+      ],
+      "id": "25773904",
+      "nyplType": "item",
+      "updatedDate": "2018-07-18T22:52:33-04:00",
+      "createdDate": "2010-10-25T20:50:00-04:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "scff2",
+        "name": "Schomburg Center - Research & Reference"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433089272664",
+      "callNumber": "|hSc Ser.-M .N489",
+      "itemType": null,
+      "fixedFields": {
+        "57": {
+          "label": "BIB HOLD",
+          "value": false,
+          "display": null
+        },
+        "58": {
+          "label": "Copy No.",
+          "value": 1,
+          "display": null
+        },
+        "59": {
+          "label": "Item Code 1",
+          "value": "0",
+          "display": null
+        },
+        "60": {
+          "label": "Item Code 2",
+          "value": "-",
+          "display": null
+        },
+        "61": {
+          "label": "Item Type",
+          "value": "3",
+          "display": "serial"
+        },
+        "62": {
+          "label": "Price",
+          "value": 0,
+          "display": null
+        },
+        "64": {
+          "label": "Checkout Location",
+          "value": 89,
+          "display": null
+        },
+        "68": {
+          "label": "Last Checkin",
+          "value": "2010-11-24T22:22:03Z",
+          "display": null
+        },
+        "70": {
+          "label": "Checkin Location",
+          "value": 89,
+          "display": null
+        },
+        "74": {
+          "label": "Item Use 3",
+          "value": 0,
+          "display": null
+        },
+        "76": {
+          "label": "Total Checkouts",
+          "value": 1,
+          "display": null
+        },
+        "77": {
+          "label": "Total Renewals",
+          "value": 0,
+          "display": null
+        },
+        "78": {
+          "label": "Last Checkout Date",
+          "value": "2010-11-01T20:49:06Z",
+          "display": null
+        },
+        "79": {
+          "label": "Location",
+          "value": "scff2",
+          "display": "Schomburg Center - Research & Reference"
+        },
+        "80": {
+          "label": "Record Type",
+          "value": "i",
+          "display": null
+        },
+        "81": {
+          "label": "Record Number",
+          "value": "25773904",
+          "display": null
+        },
+        "83": {
+          "label": "Created Date",
+          "value": "2010-10-25T20:50:00Z",
+          "display": null
+        },
+        "84": {
+          "label": "Updated Date",
+          "value": "2018-07-18T22:52:33Z",
+          "display": null
+        },
+        "85": {
+          "label": "No. of Revisions",
+          "value": "10",
+          "display": null
+        },
+        "86": {
+          "label": "Agency",
+          "value": "1",
+          "display": null
+        },
+        "88": {
+          "label": "Status",
+          "value": "-",
+          "display": "AVAILABLE"
+        },
+        "93": {
+          "label": "Inhouse Use",
+          "value": 0,
+          "display": null
+        },
+        "94": {
+          "label": "Copy Use",
+          "value": 0,
+          "display": null
+        },
+        "97": {
+          "label": "Item Message",
+          "value": "-",
+          "display": null
+        },
+        "98": {
+          "label": "PDATE",
+          "value": "2014-07-17T03:25:55Z",
+          "display": null
+        },
+        "108": {
+          "label": "OPAC Message",
+          "value": "1",
+          "display": null
+        },
+        "109": {
+          "label": "Year-to-Date Circ",
+          "value": 0,
+          "display": null
+        },
+        "110": {
+          "label": "Last Year Circ",
+          "value": 0,
+          "display": null
+        },
+        "127": {
+          "label": "Item Agency",
+          "value": "31",
+          "display": "Schomburg"
+        },
+        "161": {
+          "label": "VI Central",
+          "value": 0,
+          "display": null
+        },
+        "162": {
+          "label": "IR Dist Learn Same Site",
+          "value": "0",
+          "display": null
+        },
+        "264": {
+          "label": "Holdings Item Tag",
+          "value": "6",
+          "display": null
+        },
+        "265": {
+          "label": "Inherit Location",
+          "value": false,
+          "display": null
+        }
+      },
+      "varFields": [
+        {
+          "fieldTag": "b",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "33433089272664",
+          "subfields": null
+        },
+        {
+          "fieldTag": "c",
+          "marcTag": "852",
+          "ind1": "8",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "h",
+              "content": "Sc Ser.-M .N489"
+            }
+          ]
+        },
+        {
+          "fieldTag": "t",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "scr/dt",
+          "subfields": null
+        },
+        {
+          "fieldTag": "v",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "Jan.-Apr. 2008, May-Dec. 2009",
+          "subfields": null
+        }
+      ]
+    },
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "12959619"
+      ],
+      "id": "24132367",
+      "nyplType": "item",
+      "updatedDate": "2014-07-17T03:01:17-04:00",
+      "createdDate": "2009-07-17T10:49:48-04:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "scff2",
+        "name": "Schomburg Center - Research & Reference"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433083508048",
+      "callNumber": "|hSc Ser.-M .N489",
+      "itemType": null,
+      "fixedFields": {
+        "57": {
+          "label": "BIB HOLD",
+          "value": false,
+          "display": null
+        },
+        "58": {
+          "label": "Copy No.",
+          "value": 1,
+          "display": null
+        },
+        "59": {
+          "label": "Item Code 1",
+          "value": "0",
+          "display": null
+        },
+        "60": {
+          "label": "Item Code 2",
+          "value": "-",
+          "display": null
+        },
+        "61": {
+          "label": "Item Type",
+          "value": "3",
+          "display": null
+        },
+        "62": {
+          "label": "Price",
+          "value": 0,
+          "display": null
+        },
+        "64": {
+          "label": "Checkout Location",
+          "value": 0,
+          "display": null
+        },
+        "70": {
+          "label": "Checkin Location",
+          "value": 0,
+          "display": null
+        },
+        "74": {
+          "label": "Item Use 3",
+          "value": 0,
+          "display": null
+        },
+        "76": {
+          "label": "Total Checkouts",
+          "value": 1,
+          "display": null
+        },
+        "77": {
+          "label": "Total Renewals",
+          "value": 0,
+          "display": null
+        },
+        "79": {
+          "label": "Location",
+          "value": "scff2",
+          "display": "Schomburg Center - Research & Reference"
+        },
+        "80": {
+          "label": "Record Type",
+          "value": "i",
+          "display": null
+        },
+        "81": {
+          "label": "Record Number",
+          "value": "24132367",
+          "display": null
+        },
+        "83": {
+          "label": "Created Date",
+          "value": "2009-07-17T10:49:48Z",
+          "display": null
+        },
+        "84": {
+          "label": "Updated Date",
+          "value": "2014-07-17T03:01:17Z",
+          "display": null
+        },
+        "85": {
+          "label": "No. of Revisions",
+          "value": "6",
+          "display": null
+        },
+        "86": {
+          "label": "Agency",
+          "value": "1",
+          "display": null
+        },
+        "88": {
+          "label": "Status",
+          "value": "-",
+          "display": "AVAILABLE"
+        },
+        "93": {
+          "label": "Inhouse Use",
+          "value": 0,
+          "display": null
+        },
+        "94": {
+          "label": "Copy Use",
+          "value": 0,
+          "display": null
+        },
+        "97": {
+          "label": "Item Message",
+          "value": "-",
+          "display": null
+        },
+        "98": {
+          "label": "PDATE",
+          "value": "2013-07-16T04:59:56Z",
+          "display": null
+        },
+        "108": {
+          "label": "OPAC Message",
+          "value": "1",
+          "display": null
+        },
+        "109": {
+          "label": "Year-to-Date Circ",
+          "value": 0,
+          "display": null
+        },
+        "110": {
+          "label": "Last Year Circ",
+          "value": 0,
+          "display": null
+        },
+        "127": {
+          "label": "Item Agency",
+          "value": "31",
+          "display": "Schomburg"
+        },
+        "161": {
+          "label": "VI Central",
+          "value": 0,
+          "display": null
+        },
+        "162": {
+          "label": "IR Dist Learn Same Site",
+          "value": "0",
+          "display": null
+        },
+        "264": {
+          "label": "Holdings Item Tag",
+          "value": "6",
+          "display": null
+        },
+        "265": {
+          "label": "Inherit Location",
+          "value": false,
+          "display": null
+        }
+      },
+      "varFields": [
+        {
+          "fieldTag": "a",
+          "marcTag": "949",
+          "ind1": " ",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "a",
+              "content": "Sc Ser.-M .N489"
+            },
+            {
+              "tag": "c",
+              "content": "33433083508048"
+            },
+            {
+              "tag": "e",
+              "content": "Jan./Feb.-Mar./Apr., July/Aug.-Nov./Dec. 2006"
+            },
+            {
+              "tag": "g",
+              "content": "scr/dls"
+            },
+            {
+              "tag": "h",
+              "content": "1"
+            },
+            {
+              "tag": "i",
+              "content": "0"
+            },
+            {
+              "tag": "j",
+              "content": "-"
+            },
+            {
+              "tag": "k",
+              "content": "3"
+            },
+            {
+              "tag": "l",
+              "content": "$0.00"
+            },
+            {
+              "tag": "m",
+              "content": "0"
+            },
+            {
+              "tag": "n",
+              "content": "1"
+            },
+            {
+              "tag": "o",
+              "content": "0"
+            },
+            {
+              "tag": "p",
+              "content": "sg   "
+            },
+            {
+              "tag": "q",
+              "content": "-"
+            },
+            {
+              "tag": "r",
+              "content": "0"
+            },
+            {
+              "tag": "s",
+              "content": "0"
+            },
+            {
+              "tag": "t",
+              "content": "-"
+            },
+            {
+              "tag": "u",
+              "content": "-"
+            },
+            {
+              "tag": "v",
+              "content": "1"
+            },
+            {
+              "tag": "w",
+              "content": "0"
+            },
+            {
+              "tag": "x",
+              "content": ".i94807498"
+            },
+            {
+              "tag": "y",
+              "content": "05-18-09"
+            },
+            {
+              "tag": "z",
+              "content": "06-08-09"
+            }
+          ]
+        },
+        {
+          "fieldTag": "b",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "33433083508048",
+          "subfields": null
+        },
+        {
+          "fieldTag": "c",
+          "marcTag": "852",
+          "ind1": "8",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "h",
+              "content": "Sc Ser.-M .N489"
+            }
+          ]
+        },
+        {
+          "fieldTag": "t",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "scr/dls",
+          "subfields": null
+        },
+        {
+          "fieldTag": "v",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "Jan./Feb.-Mar./Apr., July/Aug.-Nov./Dec. 2006",
+          "subfields": null
+        }
+      ]
+    },
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "12959619"
+      ],
+      "id": "28294176",
+      "nyplType": "item",
+      "updatedDate": "2014-07-17T03:50:02-04:00",
+      "createdDate": "2012-03-02T21:47:00-05:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "scff2",
+        "name": "Schomburg Center - Research & Reference"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433089120236",
+      "callNumber": "|hSc Ser.-M .N489",
+      "itemType": null,
+      "fixedFields": {
+        "57": {
+          "label": "BIB HOLD",
+          "value": false,
+          "display": null
+        },
+        "58": {
+          "label": "Copy No.",
+          "value": 1,
+          "display": null
+        },
+        "59": {
+          "label": "Item Code 1",
+          "value": "0",
+          "display": null
+        },
+        "60": {
+          "label": "Item Code 2",
+          "value": "-",
+          "display": null
+        },
+        "61": {
+          "label": "Item Type",
+          "value": "3",
+          "display": null
+        },
+        "62": {
+          "label": "Price",
+          "value": 0,
+          "display": null
+        },
+        "64": {
+          "label": "Checkout Location",
+          "value": 0,
+          "display": null
+        },
+        "70": {
+          "label": "Checkin Location",
+          "value": 0,
+          "display": null
+        },
+        "74": {
+          "label": "Item Use 3",
+          "value": 0,
+          "display": null
+        },
+        "76": {
+          "label": "Total Checkouts",
+          "value": 0,
+          "display": null
+        },
+        "77": {
+          "label": "Total Renewals",
+          "value": 0,
+          "display": null
+        },
+        "79": {
+          "label": "Location",
+          "value": "scff2",
+          "display": "Schomburg Center - Research & Reference"
+        },
+        "80": {
+          "label": "Record Type",
+          "value": "i",
+          "display": null
+        },
+        "81": {
+          "label": "Record Number",
+          "value": "28294176",
+          "display": null
+        },
+        "83": {
+          "label": "Created Date",
+          "value": "2012-03-02T21:47:00Z",
+          "display": null
+        },
+        "84": {
+          "label": "Updated Date",
+          "value": "2014-07-17T03:50:02Z",
+          "display": null
+        },
+        "85": {
+          "label": "No. of Revisions",
+          "value": "6",
+          "display": null
+        },
+        "86": {
+          "label": "Agency",
+          "value": "1",
+          "display": null
+        },
+        "88": {
+          "label": "Status",
+          "value": "-",
+          "display": "AVAILABLE"
+        },
+        "93": {
+          "label": "Inhouse Use",
+          "value": 0,
+          "display": null
+        },
+        "94": {
+          "label": "Copy Use",
+          "value": 0,
+          "display": null
+        },
+        "97": {
+          "label": "Item Message",
+          "value": "-",
+          "display": null
+        },
+        "98": {
+          "label": "PDATE",
+          "value": "2013-07-16T06:45:07Z",
+          "display": null
+        },
+        "108": {
+          "label": "OPAC Message",
+          "value": "1",
+          "display": null
+        },
+        "109": {
+          "label": "Year-to-Date Circ",
+          "value": 0,
+          "display": null
+        },
+        "110": {
+          "label": "Last Year Circ",
+          "value": 0,
+          "display": null
+        },
+        "127": {
+          "label": "Item Agency",
+          "value": "31",
+          "display": "Schomburg"
+        },
+        "161": {
+          "label": "VI Central",
+          "value": 0,
+          "display": null
+        },
+        "162": {
+          "label": "IR Dist Learn Same Site",
+          "value": "0",
+          "display": null
+        },
+        "264": {
+          "label": "Holdings Item Tag",
+          "value": "6",
+          "display": null
+        },
+        "265": {
+          "label": "Inherit Location",
+          "value": false,
+          "display": null
+        }
+      },
+      "varFields": [
+        {
+          "fieldTag": "b",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "33433089120236",
+          "subfields": null
+        },
+        {
+          "fieldTag": "c",
+          "marcTag": "852",
+          "ind1": "8",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "h",
+              "content": "Sc Ser.-M .N489"
+            }
+          ]
+        },
+        {
+          "fieldTag": "t",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "scr/hl",
+          "subfields": null
+        },
+        {
+          "fieldTag": "v",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "(2011)",
+          "subfields": null
+        }
+      ]
+    }
+  ],
+  "count": 12,
+  "totalCount": 0,
+  "statusCode": 200,
+  "debugInfo": []
+}

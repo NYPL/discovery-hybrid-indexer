@@ -1,0 +1,320 @@
+{
+  "data": [
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "10001936"
+      ],
+      "id": "10001320",
+      "nyplType": "item",
+      "updatedDate": "2014-08-13T16:09:10-04:00",
+      "createdDate": "2009-02-03T00:37:00-05:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "rc2ma",
+        "name": "OFFSITE - Request in Advance"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433001892276",
+      "callNumber": "|h*ONR 84-743",
+      "itemType": null,
+      "fixedFields": {
+        "57": {
+          "label": "BIB HOLD",
+          "value": false,
+          "display": null
+        },
+        "58": {
+          "label": "Copy No.",
+          "value": 1,
+          "display": null
+        },
+        "59": {
+          "label": "Item Code 1",
+          "value": "0",
+          "display": null
+        },
+        "60": {
+          "label": "Item Code 2",
+          "value": "-",
+          "display": null
+        },
+        "61": {
+          "label": "Item Type",
+          "value": "32",
+          "display": null
+        },
+        "62": {
+          "label": "Price",
+          "value": 0,
+          "display": null
+        },
+        "64": {
+          "label": "Checkout Location",
+          "value": 0,
+          "display": null
+        },
+        "68": {
+          "label": "Last Checkin",
+          "value": "2009-12-17T16:33:15Z",
+          "display": null
+        },
+        "69": {
+          "label": "Inventory Date",
+          "value": "2014-06-01T08:00:00Z",
+          "display": null
+        },
+        "70": {
+          "label": "Checkin Location",
+          "value": 340,
+          "display": null
+        },
+        "74": {
+          "label": "Item Use 3",
+          "value": 0,
+          "display": null
+        },
+        "76": {
+          "label": "Total Checkouts",
+          "value": 3,
+          "display": null
+        },
+        "77": {
+          "label": "Total Renewals",
+          "value": 0,
+          "display": null
+        },
+        "78": {
+          "label": "Last Checkout Date",
+          "value": "2009-09-28T15:21:49Z",
+          "display": null
+        },
+        "79": {
+          "label": "Location",
+          "value": "rc2ma",
+          "display": "OFFSITE - Request in Advance"
+        },
+        "80": {
+          "label": "Record Type",
+          "value": "i",
+          "display": null
+        },
+        "81": {
+          "label": "Record Number",
+          "value": "10001320",
+          "display": null
+        },
+        "83": {
+          "label": "Created Date",
+          "value": "2009-02-03T00:37:00Z",
+          "display": null
+        },
+        "84": {
+          "label": "Updated Date",
+          "value": "2014-08-13T16:09:10Z",
+          "display": null
+        },
+        "85": {
+          "label": "No. of Revisions",
+          "value": "14",
+          "display": null
+        },
+        "86": {
+          "label": "Agency",
+          "value": "1",
+          "display": null
+        },
+        "88": {
+          "label": "Status",
+          "value": "-",
+          "display": "AVAILABLE"
+        },
+        "93": {
+          "label": "Inhouse Use",
+          "value": 0,
+          "display": null
+        },
+        "94": {
+          "label": "Copy Use",
+          "value": 0,
+          "display": null
+        },
+        "97": {
+          "label": "Item Message",
+          "value": "-",
+          "display": null
+        },
+        "98": {
+          "label": "PDATE",
+          "value": "2014-07-16T20:00:25Z",
+          "display": null
+        },
+        "108": {
+          "label": "OPAC Message",
+          "value": "2",
+          "display": null
+        },
+        "109": {
+          "label": "Year-to-Date Circ",
+          "value": 0,
+          "display": null
+        },
+        "110": {
+          "label": "Last Year Circ",
+          "value": 0,
+          "display": null
+        },
+        "127": {
+          "label": "Item Agency",
+          "value": "214",
+          "display": "ReCAP (NA) - NYPL Standard"
+        },
+        "161": {
+          "label": "VI Central",
+          "value": 0,
+          "display": null
+        },
+        "162": {
+          "label": "IR Dist Learn Same Site",
+          "value": "0",
+          "display": null
+        },
+        "264": {
+          "label": "Holdings Item Tag",
+          "value": "6",
+          "display": null
+        },
+        "265": {
+          "label": "Inherit Location",
+          "value": false,
+          "display": null
+        }
+      },
+      "varFields": [
+        {
+          "fieldTag": "a",
+          "marcTag": "949",
+          "ind1": " ",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "a",
+              "content": "*ONR 84-743"
+            },
+            {
+              "tag": "c",
+              "content": "33433001892276"
+            },
+            {
+              "tag": "h",
+              "content": "1"
+            },
+            {
+              "tag": "i",
+              "content": "0"
+            },
+            {
+              "tag": "j",
+              "content": "-"
+            },
+            {
+              "tag": "k",
+              "content": "2"
+            },
+            {
+              "tag": "l",
+              "content": "$0.00"
+            },
+            {
+              "tag": "m",
+              "content": "0"
+            },
+            {
+              "tag": "n",
+              "content": "2"
+            },
+            {
+              "tag": "o",
+              "content": "0"
+            },
+            {
+              "tag": "p",
+              "content": "rcah "
+            },
+            {
+              "tag": "q",
+              "content": "-"
+            },
+            {
+              "tag": "r",
+              "content": "0"
+            },
+            {
+              "tag": "s",
+              "content": "0"
+            },
+            {
+              "tag": "t",
+              "content": "-"
+            },
+            {
+              "tag": "u",
+              "content": "-"
+            },
+            {
+              "tag": "v",
+              "content": "2"
+            },
+            {
+              "tag": "w",
+              "content": "0"
+            },
+            {
+              "tag": "x",
+              "content": ".i17175549"
+            },
+            {
+              "tag": "y",
+              "content": "08-09-01"
+            },
+            {
+              "tag": "z",
+              "content": "01-23-09"
+            }
+          ]
+        },
+        {
+          "fieldTag": "b",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "33433001892276",
+          "subfields": null
+        },
+        {
+          "fieldTag": "c",
+          "marcTag": "852",
+          "ind1": "8",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "h",
+              "content": "*ONR 84-743"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "count": 1,
+  "totalCount": 0,
+  "statusCode": 200,
+  "debugInfo": []
+}
