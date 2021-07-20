@@ -46,6 +46,10 @@ const handler = (event, context, callback) => {
         logger.debug(`Firing callback with ${message}`)
         callback(null, message)
       })
+        .catch((e) => {
+          logger.error('Calling back with error: ', e)
+          callback(e)
+        })
     } else {
       logger.warn('Nothing to do for event', event)
       callback(null, 'Nothing to do.')

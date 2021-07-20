@@ -1,4 +1,3 @@
-const expect = require('chai').expect
 const sinon = require('sinon')
 const discoveryApiIndex = require('discovery-api-indexer/lib/index')
 
@@ -246,6 +245,92 @@ describe('index.handler', () => {
           } catch (e) {
             return reject(e)
           }
+        })
+      })
+    })
+
+    describe('Missing bib', () => {
+      it('Handles i14783826, with missing bib', () => {
+        // This item has bibId 10128427, which has fixture
+        // platform-api-b0f57e3adb1d0eeed81c5c41aacbb107.json,
+        // which has been written to emulate a 404
+        const event = require('./sample-events/i14783826.json')
+
+        return new Promise((resolve, reject) => {
+          index.handler(event, {}, (e, result) => {
+            try {
+              expect(result).to.eq('Wrote 0 doc(s)')
+
+              expect(indexedDocuments).to.have.lengthOf(0)
+
+              return resolve()
+            } catch (e) {
+              return reject(e)
+            }
+          })
+        })
+      })
+
+      it('Handles i14783826, i34162229, and i13172719, one of which has a missing bib', () => {
+        // This item has bibId 10128427, which has fixture
+        // platform-api-b0f57e3adb1d0eeed81c5c41aacbb107.json,
+        // which has been written to emulate a 404
+        const event = require('./sample-events/i14783826-and-i34162229-and-i13172719.json')
+
+        return new Promise((resolve, reject) => {
+          index.handler(event, {}, (e, result) => {
+            try {
+              expect(result).to.eq('Wrote 2 doc(s)')
+
+              expect(indexedDocuments).to.have.lengthOf(2)
+
+              return resolve()
+            } catch (e) {
+              return reject(e)
+            }
+          })
+        })
+      })
+    })
+
+    describe('Network error', function () {
+      const NYPLDataApiClient = require('@nypl/nypl-data-api-client')
+
+      before(() => {
+        // Disable default fixtures to establish special error emulation:
+        fixtures.disableDataApiFixtures()
+
+        sinon.stub(NYPLDataApiClient.prototype, '_doAuthenticatedRequest').callsFake(function (requestOptions) {
+          return Promise.reject(new Error('Emulated timeout'))
+        })
+      })
+
+      after(() => {
+        // Restore default fixtures:
+        NYPLDataApiClient.prototype._doAuthenticatedRequest.restore()
+
+        fixtures.enableDataApiFixtures()
+      })
+
+      it('Handles network error by firing error callback', () => {
+        // This item has bibId 10128427, which has fixture
+        // platform-api-b0f57e3adb1d0eeed81c5c41aacbb107.json,
+        // which has been written to emulate a 404
+        const event = require('./sample-events/i14783826.json')
+
+        return new Promise((resolve, reject) => {
+          index.handler(event, {}, (e, result) => {
+            try {
+              expect(result).to.be.a('undefined')
+              expect(e).to.be.a('error')
+
+              expect(indexedDocuments).to.have.lengthOf(0)
+
+              return resolve()
+            } catch (e) {
+              return reject(e)
+            }
+          })
         })
       })
     })

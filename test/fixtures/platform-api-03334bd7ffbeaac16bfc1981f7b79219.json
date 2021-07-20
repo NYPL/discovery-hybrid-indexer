@@ -1,0 +1,362 @@
+{
+  "data": {
+    "id": "11361121",
+    "nyplSource": "sierra-nypl",
+    "nyplType": "bib",
+    "updatedDate": "2009-02-07T09:26:14-05:00",
+    "createdDate": "2008-12-14T22:29:41-05:00",
+    "deletedDate": null,
+    "deleted": false,
+    "locations": [
+      {
+        "code": "mal",
+        "name": "SASB - Service Desk Rm 315"
+      }
+    ],
+    "suppressed": false,
+    "lang": {
+      "code": "pol",
+      "name": "Polish"
+    },
+    "title": "Toast",
+    "author": "Hen, Józef.",
+    "materialType": {
+      "code": "a",
+      "value": "BOOK/TEXT"
+    },
+    "bibLevel": {
+      "code": "m",
+      "value": "MONOGRAPH"
+    },
+    "publishYear": 1974,
+    "catalogDate": "2000-10-24",
+    "country": {
+      "code": "pl ",
+      "name": "Poland"
+    },
+    "normTitle": "toast",
+    "normAuthor": "hen józef",
+    "standardNumbers": [],
+    "controlNumber": "NYPG89-B29663",
+    "fixedFields": {
+      "24": {
+        "label": "Language",
+        "value": "pol",
+        "display": "Polish"
+      },
+      "25": {
+        "label": "Skip",
+        "value": "0",
+        "display": null
+      },
+      "26": {
+        "label": "Location",
+        "value": "mal  ",
+        "display": "SASB - Service Desk Rm 315"
+      },
+      "27": {
+        "label": "COPIES",
+        "value": "1",
+        "display": null
+      },
+      "28": {
+        "label": "Cat. Date",
+        "value": "2000-10-24",
+        "display": null
+      },
+      "29": {
+        "label": "Bib Level",
+        "value": "m",
+        "display": "MONOGRAPH"
+      },
+      "30": {
+        "label": "Material Type",
+        "value": "a",
+        "display": "BOOK/TEXT"
+      },
+      "31": {
+        "label": "Bib Code 3",
+        "value": "-",
+        "display": null
+      },
+      "80": {
+        "label": "Record Type",
+        "value": "b",
+        "display": null
+      },
+      "81": {
+        "label": "Record Number",
+        "value": "11361121",
+        "display": null
+      },
+      "83": {
+        "label": "Created Date",
+        "value": "2008-12-14T22:29:41Z",
+        "display": null
+      },
+      "84": {
+        "label": "Updated Date",
+        "value": "2009-02-07T09:26:14Z",
+        "display": null
+      },
+      "85": {
+        "label": "No. of Revisions",
+        "value": "2",
+        "display": null
+      },
+      "86": {
+        "label": "Agency",
+        "value": "1",
+        "display": null
+      },
+      "89": {
+        "label": "Country",
+        "value": "pl ",
+        "display": "Poland"
+      },
+      "98": {
+        "label": "PDATE",
+        "value": "2008-12-14T22:29:41Z",
+        "display": null
+      },
+      "107": {
+        "label": "MARC Type",
+        "value": " ",
+        "display": null
+      }
+    },
+    "varFields": [
+      {
+        "fieldTag": "a",
+        "marcTag": "100",
+        "ind1": "1",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Hen, Józef."
+          }
+        ]
+      },
+      {
+        "fieldTag": "c",
+        "marcTag": "852",
+        "ind1": "8",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "h",
+            "content": "*QPM 90-2088"
+          }
+        ]
+      },
+      {
+        "fieldTag": "e",
+        "marcTag": "250",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Wyd. 3."
+          }
+        ]
+      },
+      {
+        "fieldTag": "l",
+        "marcTag": "035",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "(WaOLN)nyp1369053"
+          }
+        ]
+      },
+      {
+        "fieldTag": "o",
+        "marcTag": "001",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "NYPG89-B29663",
+        "subfields": null
+      },
+      {
+        "fieldTag": "p",
+        "marcTag": "260",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Krakow :"
+          },
+          {
+            "tag": "b",
+            "content": "Wydawnictwo Literackie,"
+          },
+          {
+            "tag": "c",
+            "content": "1974."
+          }
+        ]
+      },
+      {
+        "fieldTag": "q",
+        "marcTag": "852",
+        "ind1": "8",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "h",
+            "content": "*QPM 90-2088"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "300",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "191 p. ;"
+          },
+          {
+            "tag": "c",
+            "content": "19 cm."
+          }
+        ]
+      },
+      {
+        "fieldTag": "t",
+        "marcTag": "245",
+        "ind1": "1",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Toast /"
+          },
+          {
+            "tag": "c",
+            "content": "Józef Hen."
+          }
+        ]
+      },
+      {
+        "fieldTag": "v",
+        "marcTag": "959",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": ".b23905256"
+          },
+          {
+            "tag": "b",
+            "content": "04-13-07"
+          },
+          {
+            "tag": "c",
+            "content": "09-05-91"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "005",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "20000629180813.0",
+        "subfields": null
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "008",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "890428s1974    pl            000 1 pol dcam a ",
+        "subfields": null
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "040",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "d",
+            "content": "WaOLN"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "997",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "hv"
+          },
+          {
+            "tag": "b",
+            "content": "10-24-00"
+          },
+          {
+            "tag": "c",
+            "content": "m"
+          },
+          {
+            "tag": "d",
+            "content": "a"
+          },
+          {
+            "tag": "e",
+            "content": "-"
+          },
+          {
+            "tag": "f",
+            "content": "pol"
+          },
+          {
+            "tag": "g",
+            "content": "pl "
+          },
+          {
+            "tag": "h",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "fieldTag": "_",
+        "marcTag": null,
+        "ind1": null,
+        "ind2": null,
+        "content": "00000cam  2200181 a 4500",
+        "subfields": null
+      }
+    ]
+  },
+  "count": 1,
+  "totalCount": 0,
+  "statusCode": 200,
+  "debugInfo": []
+}
