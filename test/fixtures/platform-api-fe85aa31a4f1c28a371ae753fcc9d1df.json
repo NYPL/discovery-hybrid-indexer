@@ -1,0 +1,415 @@
+{
+  "data": {
+    "id": "578091",
+    "nyplSource": "recap-cul",
+    "nyplType": "bib",
+    "updatedDate": "2017-08-27T15:52:58-04:00",
+    "createdDate": "2017-08-27T11:53:00-04:00",
+    "deletedDate": null,
+    "deleted": false,
+    "locations": null,
+    "suppressed": false,
+    "lang": {
+      "code": "beng",
+      "name": null
+    },
+    "title": "Gray.",
+    "author": "Gosse, Edmund,",
+    "materialType": {
+      "code": "a",
+      "value": "BOOK/TEXT"
+    },
+    "bibLevel": {
+      "code": "m",
+      "value": "MONOGRAPH"
+    },
+    "publishYear": 1968,
+    "catalogDate": null,
+    "country": null,
+    "normTitle": null,
+    "normAuthor": null,
+    "standardNumbers": [],
+    "controlNumber": "",
+    "fixedFields": {
+      "24": {
+        "label": "Language",
+        "value": "beng",
+        "display": null
+      },
+      "25": {
+        "label": "Skip",
+        "value": "0",
+        "display": null
+      },
+      "26": {
+        "label": "Location",
+        "value": "rccul",
+        "display": null
+      },
+      "27": {
+        "label": "COPIES",
+        "value": "1",
+        "display": null
+      },
+      "28": {
+        "label": "Cat. Date",
+        "value": null,
+        "display": null
+      },
+      "29": {
+        "label": "Bib Level",
+        "value": "m",
+        "display": "MONOGRAPH"
+      },
+      "30": {
+        "label": "Material Type",
+        "value": "a",
+        "display": "BOOK/TEXT"
+      },
+      "31": {
+        "label": "Bib Code 3",
+        "value": null,
+        "display": null
+      },
+      "80": {
+        "label": "Record Type",
+        "value": "b",
+        "display": null
+      },
+      "81": {
+        "label": "Record Number",
+        "value": "578091",
+        "display": null
+      },
+      "83": {
+        "label": "Created Date",
+        "value": null,
+        "display": null
+      },
+      "84": {
+        "label": "Updated Date",
+        "value": "2017-08-27T15:52:58Z",
+        "display": null
+      },
+      "85": {
+        "label": "No. of Revisions",
+        "value": "1",
+        "display": null
+      },
+      "86": {
+        "label": "Agency",
+        "value": "6",
+        "display": null
+      },
+      "98": {
+        "label": "PDATE",
+        "value": null,
+        "display": null
+      },
+      "107": {
+        "label": "MARC Type",
+        "value": " ",
+        "display": null
+      }
+    },
+    "varFields": [
+      {
+        "fieldTag": null,
+        "marcTag": "010",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "   68058380//r84 "
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "035",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "(OCoLC)2972"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "035",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "(OCoLC)ocm00002972"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "035",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "(CStRLIN)NYCG87-B57862"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "035",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "9",
+            "content": "ACN1794CU"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "035",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "(NNC)578091"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "050",
+        "ind1": "0",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "PR3503"
+          },
+          {
+            "tag": "b",
+            "content": ".G6 1968"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "082",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "821/.6"
+          },
+          {
+            "tag": "a",
+            "content": "B"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "090",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "PR3503"
+          },
+          {
+            "tag": "b",
+            "content": ".G6 1968"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "100",
+        "ind1": "1",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Gosse, Edmund,"
+          },
+          {
+            "tag": "d",
+            "content": "1849-1928."
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "245",
+        "ind1": "1",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Gray."
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "260",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "New York,"
+          },
+          {
+            "tag": "b",
+            "content": "AMS Press"
+          },
+          {
+            "tag": "c",
+            "content": "[1968]"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "300",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "x, 224 p."
+          },
+          {
+            "tag": "c",
+            "content": "22 cm."
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "490",
+        "ind1": "1",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "English men of letters"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "504",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Bibliography: p. [v]-vi."
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "600",
+        "ind1": "1",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Gray, Thomas,"
+          },
+          {
+            "tag": "d",
+            "content": "1716-1771."
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "830",
+        "ind1": " ",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "English men of letters."
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "001",
+        "ind1": null,
+        "ind2": null,
+        "content": "SCSB-2571549",
+        "subfields": null
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "003",
+        "ind1": null,
+        "ind2": null,
+        "content": "NNC",
+        "subfields": null
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "005",
+        "ind1": null,
+        "ind2": null,
+        "content": "20100304232948.0",
+        "subfields": null
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "008",
+        "ind1": null,
+        "ind2": null,
+        "content": "870702s1968    nyu      b    000 0beng  ",
+        "subfields": null
+      },
+      {
+        "fieldTag": "_",
+        "marcTag": null,
+        "ind1": null,
+        "ind2": null,
+        "content": "00736cam a2200277   4500",
+        "subfields": null
+      }
+    ]
+  },
+  "count": 1,
+  "totalCount": 0,
+  "statusCode": 200,
+  "debugInfo": []
+}

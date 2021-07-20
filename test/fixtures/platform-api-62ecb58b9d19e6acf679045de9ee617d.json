@@ -1,0 +1,565 @@
+{
+  "data": {
+    "id": "12959619",
+    "nyplSource": "sierra-nypl",
+    "nyplType": "bib",
+    "updatedDate": "2018-09-19T02:24:04-04:00",
+    "createdDate": "2008-12-16T09:47:00-05:00",
+    "deletedDate": null,
+    "deleted": false,
+    "locations": [
+      {
+        "code": "sc",
+        "name": "Schomburg Center"
+      },
+      {
+        "code": "scf",
+        "name": "Schomburg Center - Research & Reference"
+      },
+      {
+        "code": "mal",
+        "name": "SASB - Service Desk Rm 315"
+      }
+    ],
+    "suppressed": false,
+    "lang": {
+      "code": "eng",
+      "name": "English"
+    },
+    "title": "AAHGS news : the bi-monthly newsletter of the Afro-American Historical and Genealogical Society, Inc.",
+    "author": "",
+    "materialType": {
+      "code": "a",
+      "value": "BOOK/TEXT"
+    },
+    "bibLevel": {
+      "code": "s",
+      "value": "SERIAL"
+    },
+    "publishYear": 1994,
+    "catalogDate": "1997-04-16",
+    "country": {
+      "code": "dcu",
+      "name": "District of Columbia"
+    },
+    "normTitle": "aahgs news the bi monthly newsletter of the afro american historical and genealogical society inc",
+    "normAuthor": "",
+    "standardNumbers": [],
+    "controlNumber": "30264923",
+    "fixedFields": {
+      "24": {
+        "label": "Language",
+        "value": "eng",
+        "display": "English"
+      },
+      "25": {
+        "label": "Skip",
+        "value": "0",
+        "display": null
+      },
+      "26": {
+        "label": "Location",
+        "value": "multi",
+        "display": null
+      },
+      "27": {
+        "label": "COPIES",
+        "value": "12",
+        "display": null
+      },
+      "28": {
+        "label": "Cat. Date",
+        "value": "1997-04-16",
+        "display": null
+      },
+      "29": {
+        "label": "Bib Level",
+        "value": "s",
+        "display": "SERIAL"
+      },
+      "30": {
+        "label": "Material Type",
+        "value": "a",
+        "display": "BOOK/TEXT"
+      },
+      "31": {
+        "label": "Bib Code 3",
+        "value": "-",
+        "display": null
+      },
+      "80": {
+        "label": "Record Type",
+        "value": "b",
+        "display": null
+      },
+      "81": {
+        "label": "Record Number",
+        "value": "12959619",
+        "display": null
+      },
+      "83": {
+        "label": "Created Date",
+        "value": "2008-12-16T09:47:00Z",
+        "display": null
+      },
+      "84": {
+        "label": "Updated Date",
+        "value": "2018-09-19T02:24:04Z",
+        "display": null
+      },
+      "85": {
+        "label": "No. of Revisions",
+        "value": "28",
+        "display": null
+      },
+      "86": {
+        "label": "Agency",
+        "value": "1",
+        "display": null
+      },
+      "89": {
+        "label": "Country",
+        "value": "dcu",
+        "display": "District of Columbia"
+      },
+      "98": {
+        "label": "PDATE",
+        "value": "2015-12-30T19:13:18Z",
+        "display": null
+      },
+      "107": {
+        "label": "MARC Type",
+        "value": " ",
+        "display": null
+      }
+    },
+    "varFields": [
+      {
+        "fieldTag": "b",
+        "marcTag": "710",
+        "ind1": "2",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Afro-American Historical and Genealogical Society (Washington, D.C.)"
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "791",
+        "ind1": "2",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "New York Genealogical and Biographical Society Collection."
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "610",
+        "ind1": "2",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Afro-American Historical and Genealogical Society (Washington, D.C.)"
+          },
+          {
+            "tag": "v",
+            "content": "Periodicals."
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "African Americans"
+          },
+          {
+            "tag": "x",
+            "content": "History"
+          },
+          {
+            "tag": "v",
+            "content": "Periodicals."
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "African Americans"
+          },
+          {
+            "tag": "x",
+            "content": "Genealogy"
+          },
+          {
+            "tag": "v",
+            "content": "Periodicals."
+          }
+        ]
+      },
+      {
+        "fieldTag": "m",
+        "marcTag": "541",
+        "ind1": "1",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "c",
+            "content": "Gift;"
+          },
+          {
+            "tag": "a",
+            "content": "New York Genealogical and Biographical Society;"
+          },
+          {
+            "tag": "d",
+            "content": "2008."
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Caption title."
+          }
+        ]
+      },
+      {
+        "fieldTag": "o",
+        "marcTag": "001",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "30264923",
+        "subfields": null
+      },
+      {
+        "fieldTag": "p",
+        "marcTag": "260",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Washington, D.C. :"
+          },
+          {
+            "tag": "b",
+            "content": "The Society,"
+          },
+          {
+            "tag": "c",
+            "content": "1994-"
+          }
+        ]
+      },
+      {
+        "fieldTag": "q",
+        "marcTag": "852",
+        "ind1": "8",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "h",
+            "content": "Sc Ser.-M .N489"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "300",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "v. ;"
+          },
+          {
+            "tag": "c",
+            "content": "28 cm."
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "310",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Bi-monthly"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "362",
+        "ind1": "0",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Jan/Feb. 1994-"
+          }
+        ]
+      },
+      {
+        "fieldTag": "t",
+        "marcTag": "245",
+        "ind1": "0",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "AAHGS news :"
+          },
+          {
+            "tag": "b",
+            "content": "the bi-monthly newsletter of the Afro-American Historical and Genealogical Society, Inc."
+          }
+        ]
+      },
+      {
+        "fieldTag": "t",
+        "marcTag": "130",
+        "ind1": "0",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "AAHGS news (1994)"
+          }
+        ]
+      },
+      {
+        "fieldTag": "u",
+        "marcTag": "299",
+        "ind1": "0",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "AAHGS news :"
+          },
+          {
+            "tag": "b",
+            "content": "the bi-monthly newsletter of the Afro-American Historical and Genealogical Society, Inc."
+          }
+        ]
+      },
+      {
+        "fieldTag": "u",
+        "marcTag": "799",
+        "ind1": "0",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Gift of New York Genealogical and Biographical Society."
+          }
+        ]
+      },
+      {
+        "fieldTag": "v",
+        "marcTag": "959",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": ".b4496643x"
+          },
+          {
+            "tag": "b",
+            "content": "05-18-09"
+          },
+          {
+            "tag": "c",
+            "content": "04-16-97"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "003",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "OCoLC",
+        "subfields": null
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "005",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "19970415151844.0",
+        "subfields": null
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "008",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "940419c19949999dcubr p       0   a0eng dnasIa ",
+        "subfields": null
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "040",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "EEX"
+          },
+          {
+            "tag": "c",
+            "content": "EEX"
+          },
+          {
+            "tag": "d",
+            "content": "NYP"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "043",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "n-us---"
+          },
+          {
+            "tag": "a",
+            "content": "n-us-dc"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "049",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "NYPU"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "946",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "s"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "997",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "sg"
+          },
+          {
+            "tag": "b",
+            "content": "04-16-97"
+          },
+          {
+            "tag": "c",
+            "content": "s"
+          },
+          {
+            "tag": "d",
+            "content": "a"
+          },
+          {
+            "tag": "e",
+            "content": "-"
+          },
+          {
+            "tag": "f",
+            "content": "eng"
+          },
+          {
+            "tag": "g",
+            "content": "dcu"
+          },
+          {
+            "tag": "h",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "fieldTag": "_",
+        "marcTag": null,
+        "ind1": null,
+        "ind2": null,
+        "content": "00000nas  2200301Ia 4500",
+        "subfields": null
+      }
+    ]
+  },
+  "count": 1,
+  "totalCount": 0,
+  "statusCode": 200,
+  "debugInfo": []
+}
