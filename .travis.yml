@@ -1,0 +1,70 @@
+language: node_js
+install: npm i
+script: npm test
+before_deploy:
+- echo "All unit tests passed; Preparing to deploy $TRAVIS_BRANCH"
+deploy:
+- provider: lambda
+  function_name: DiscoveryHybridIndexer-qa
+  description: Listens on Bib, Item, and Holding streams to update DiscoveryApi ES.
+    See https://github.com/NYPL/discovery-hybrid-indexer
+  region: us-east-1
+  subnet_ids: subnet-21a3b244,subnet-f35de0a9
+  security_group_ids: sg-aa74f1db
+  role: arn:aws:iam::946183545209:role/lambda-full-access
+  runtime: nodejs10.x
+  handler_name: index.handler
+  timeout: 300
+  access_key_id: "$AWS_ACCESS_KEY_ID_QA"
+  secret_access_key: "$AWS_SECRET_ACCESS_KEY_QA"
+  skip_cleanup: true
+  environment:
+  - ELASTICSEARCH_CONNECTION_URI=AQECAHh7ea2tyZ6phZgT4B9BDKwguhlFtRC6hgt+7HbmeFsrsgAAAK8wgawGCSqGSIb3DQEHBqCBnjCBmwIBADCBlQYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAxrJio3oL3JETS6dNMCARCAaKtg+mvgbSkkLh6JiZ97c02ZH3gWpOBGD8vNadjl7p/SjS7aTtBjanWOfsXdwkEYq6s1SHwGtfwmSB4X6ExBYXDUDFWlmJ/FODtEvMoNXkD0ERXHGvxmSnWWbvh4sa+/QUOvMf9k5y5t
+  - ELASTIC_RESOURCES_INDEX_NAME=resources-2020-05-08
+  - OUTGOING_STREAM_NAME=IndexDocumentProcessed-qa
+  - AEON_REQUESTABLE_LOCATIONS=scdd1,scdd2,marr2,mar62,mar82,mard2
+  - AEON_REQUESTABLE_SHELFMARK_REGEX=.*
+  - AEON_BASE_URLS=https://specialcollections.nypl.org,https://nypl-aeon-test.aeon.atlas-sys.com
+  - DISCOVERY_STORE_CONNECTION_URI=AQECAHh7ea2tyZ6phZgT4B9BDKwguhlFtRC6hgt+7HbmeFsrsgAAAGEwXwYJKoZIhvcNAQcGoFIwUAIBADBLBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDDXaZHpMncYfoQlb9wIBEIAePWUS8cXaMO5ZqUQudl2b6cA9xt9jp4Rsllj4nXj7
+  - NYPL_API_BASE_URL=http://qa-platform.nypl.org/api/v0.1/
+  - NYPL_CORE_VERSION=v1.37
+  - NYPL_OAUTH_URL=https://isso.nypl.org/
+  - NYPL_OAUTH_KEY=AQECAHh7ea2tyZ6phZgT4B9BDKwguhlFtRC6hgt+7HbmeFsrsgAAAGswaQYJKoZIhvcNAQcGoFwwWgIBADBVBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDNQozUGkaz8WYD2lUAIBEIAo/SzNMA9LowO6gcnTUCcMjBaAU1RH/L3EAS14fjJCUpyZppkuEDUd7w==
+  - NYPL_OAUTH_SECRET=AQECAHh7ea2tyZ6phZgT4B9BDKwguhlFtRC6hgt+7HbmeFsrsgAAAIcwgYQGCSqGSIb3DQEHBqB3MHUCAQAwcAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAxN3indXvk2ueiE6CwCARCAQ018FdIVXXwfTuKH1vp/ZTfjBinxKTDosMmzyWB9/CtiFtgOu09iiyZEpC3AyGOt8ExywHZoHOZQuLdGGNFgbusmldw=
+  - LOGLEVEL=info
+  on:
+    branch: qa
+- provider: lambda
+  function_name: DiscoveryHybridIndexer-production
+  description: Listens on Bib, Item, and Holding streams to update DiscoveryApi ES.
+    See https://github.com/NYPL/discovery-hybrid-indexer
+  region: us-east-1
+  subnet_ids: subnet-59bcdd03,subnet-5deecd15
+  security_group_ids: sg-116eeb60
+  role: arn:aws:iam::946183545209:role/lambda-full-access
+  runtime: nodejs10.x
+  handler_name: index.handler
+  timeout: 300
+  access_key_id: "$AWS_ACCESS_KEY_ID_PRODUCTION"
+  secret_access_key: "$AWS_SECRET_ACCESS_KEY_PRODUCTION"
+  skip_cleanup: true
+  environment:
+  - ELASTICSEARCH_CONNECTION_URI=AQECAHh7ea2tyZ6phZgT4B9BDKwguhlFtRC6hgt+7HbmeFsrsgAAALcwgbQGCSqGSIb3DQEHBqCBpjCBowIBADCBnQYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAx5ybmCdzYLQTJb/sACARCAcFlQOmcNtCd5DktlTS/kF+ew6CppeBD2pCaNIGUGUFXpgiurzzYzuBt5synRdunj2uaDUbbShnPlBeAksjd6z7i/FS0sHO0DrX6Sv63H5RkStTj+brYSflm16qVFQIwKRQMx6kYN+5lzV4Dxw0JLhsk=
+  - ELASTIC_RESOURCES_INDEX_NAME=resources-2018-04-09
+  - OUTGOING_STREAM_NAME=IndexDocumentProcessed-production
+  - AEON_REQUESTABLE_LOCATIONS=scdd1,scdd2,marr2,mar62,mar82,mard2
+  - AEON_REQUESTABLE_SHELFMARK_REGEX=.*
+  - AEON_BASE_URLS=https://specialcollections.nypl.org
+  - DISCOVERY_STORE_CONNECTION_URI=AQECAHh7ea2tyZ6phZgT4B9BDKwguhlFtRC6hgt+7HbmeFsrsgAAAGEwXwYJKoZIhvcNAQcGoFIwUAIBADBLBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDDXaZHpMncYfoQlb9wIBEIAePWUS8cXaMO5ZqUQudl2b6cA9xt9jp4Rsllj4nXj7
+  - NYPL_API_BASE_URL=http://platform.nypl.org/api/v0.1/
+  - NYPL_CORE_VERSION=v1.37
+  - NYPL_OAUTH_URL=https://isso.nypl.org/
+  - NYPL_OAUTH_KEY=AQECAHh7ea2tyZ6phZgT4B9BDKwguhlFtRC6hgt+7HbmeFsrsgAAAGswaQYJKoZIhvcNAQcGoFwwWgIBADBVBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDNQozUGkaz8WYD2lUAIBEIAo/SzNMA9LowO6gcnTUCcMjBaAU1RH/L3EAS14fjJCUpyZppkuEDUd7w==
+  - NYPL_OAUTH_SECRET=AQECAHh7ea2tyZ6phZgT4B9BDKwguhlFtRC6hgt+7HbmeFsrsgAAAIcwgYQGCSqGSIb3DQEHBqB3MHUCAQAwcAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAxN3indXvk2ueiE6CwCARCAQ018FdIVXXwfTuKH1vp/ZTfjBinxKTDosMmzyWB9/CtiFtgOu09iiyZEpC3AyGOt8ExywHZoHOZQuLdGGNFgbusmldw=
+  - LOGLEVEL=info
+  on:
+    branch: main
+after_deploy: echo "Successfully executed deploy trigger for $TRAVIS_BRANCH"
+env:
+  global:
+    secure: nxJ7gutBVTXUM0DEGu2l77WE9J7MYMraaRvs7XKnKbCCrm6e+cdQugY146Nk1cyCuSqhy8UpIaBA1C8/7JtUEkr+pd8GoHqVjHS1cEI3TvRrRY9LwOPvcxl1KZbQ8wzdWnHkeWSbrT4HCDzA6GroiVE0o3VqrkTdAT7nDp1Uvd+ov5upyD7Z9de5rzACEHxTD9jZSBaZetAxrct6gsxHyUhk8oFG/hcRUhh+NJcVZWtlG1cxhFkW0xNk9MMhovt0xOxgLlsH/5qJfVYwKZwiCUds5EFcHEmjdfrbpqNZLaO/uS08+P5fjvcaSqMZAILmttLYXeblWrpjBuw8bv+GCMOOSrwelYZX/Z+srEjvTshVDQ92vGjrsd2ZR8piB112+P933NKakpYtAPY8anoK7XnltYmjE6ktnTl1Gnw8NJnaWWHRXP3Wi2gxZIc9SrNMSGMnVZDqmifoLBrvXGIDAdAwxj1etNa8YYVzNnRxIe106ogUnsHpK2xs2UaM8cegkaIxb3cRA68BXA94dj73i3wM+5qR26usXtgdvtwtrNG1xy8j1XAp6L26j77uNwhYUKst80biyLt6jpmrwZnEJAyRtSwF/ByVRPurjNuRjj+qUo3SVF7J660++/vmOONzF0rEtDviZbAriWBbGVG5VRQYuGzF3gmwi+MqvvogfhA=
