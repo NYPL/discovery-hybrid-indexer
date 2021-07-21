@@ -15,6 +15,7 @@ deploy:
   security_group_ids: sg-aa74f1db
   role: arn:aws:iam::946183545209:role/lambda-full-access
   runtime: nodejs10.x
+  memory_size: 512
   handler_name: handler
   timeout: 300
   access_key_id: "$AWS_ACCESS_KEY_ID_QA"
@@ -41,8 +42,13 @@ deploy:
   description: Listens on Bib, Item, and Holding streams to update DiscoveryApi ES.
     See https://github.com/NYPL/discovery-hybrid-indexer
   region: us-east-1
+  subnet_ids:
+  - subnet-59bcdd03
+  - subnet-5deecd15
+  security_group_ids: sg-116eeb60
   role: arn:aws:iam::946183545209:role/lambda-full-access
   runtime: nodejs10.x
+  memory_size: 512
   handler_name: handler
   timeout: 300
   access_key_id: "$AWS_ACCESS_KEY_ID_PRODUCTION"
