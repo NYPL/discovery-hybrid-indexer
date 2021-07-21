@@ -1,3 +1,15 @@
+/**
+ *
+ * Given an event file with a single record, generates the ES doc and then
+ * fetches the same record from the remote index to perform a comparison.
+ *
+ * Usage:
+ *   node scripts/compare-with-indexed --envfile [path to .env] ./test/sample-events/[eventfile]')
+ *
+ * e.g. To compare how this app generates an ES doc for b10578183 with the QA ES index:
+ *   node scripts/compare-with-indexed.js --envfile config/qa.env test/sample-events/b10578183.json
+ */
+
 const argv = require('minimist')(process.argv.slice(2))
 const dotenv = require('dotenv')
 dotenv.config({ path: argv.envfile || './config/qa.env' })
