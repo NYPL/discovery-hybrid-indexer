@@ -9,9 +9,13 @@ deploy:
   description: Listens on Bib, Item, and Holding streams to update DiscoveryApi ES.
     See https://github.com/NYPL/discovery-hybrid-indexer
   region: us-east-1
+  subnet_ids:
+  - subnet-21a3b244
+  - subnet-f35de0a9
+  security_group_ids: sg-aa74f1db
   role: arn:aws:iam::946183545209:role/lambda-full-access
   runtime: nodejs10.x
-  handler_name: index.handler
+  handler_name: handler
   timeout: 300
   access_key_id: "$AWS_ACCESS_KEY_ID_QA"
   secret_access_key: "$AWS_SECRET_ACCESS_KEY_QA"
@@ -39,7 +43,7 @@ deploy:
   region: us-east-1
   role: arn:aws:iam::946183545209:role/lambda-full-access
   runtime: nodejs10.x
-  handler_name: index.handler
+  handler_name: handler
   timeout: 300
   access_key_id: "$AWS_ACCESS_KEY_ID_PRODUCTION"
   secret_access_key: "$AWS_SECRET_ACCESS_KEY_PRODUCTION"
