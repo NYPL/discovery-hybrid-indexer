@@ -1,5 +1,6 @@
 const sinon = require('sinon')
 const discoveryApiIndex = require('discovery-api-indexer/lib/index')
+const NyplStreamsClient = require('@nypl/nypl-streams-client')
 
 const kmsHelper = require('../lib/kms-helper')
 const index = require('../index')
@@ -9,6 +10,7 @@ const fixtures = require('./fixtures')
 
 describe('index.handler', () => {
   let indexedDocuments = []
+  let kinesisWrites = {}
   before(function () {
     // If updating fixtures, increase timeout to 10s
     this.timeout(process.env.UPDATE_FIXTURES ? 10000 : 2000)
@@ -21,16 +23,24 @@ describe('index.handler', () => {
         return Promise.resolve()
       })
 
+    sinon.stub(NyplStreamsClient.prototype, 'write')
+      .callsFake((streamName, records) => {
+        kinesisWrites[streamName] = (kinesisWrites[streamName] || []).concat(records)
+        return Promise.resolve({ Records: records })
+      })
+
     return fixtures.enableDataApiFixtures()
   })
 
   afterEach(() => {
     indexedDocuments = []
+    kinesisWrites = {}
   })
 
   after(() => {
     kmsHelper.decrypt.restore()
     discoveryApiIndex.resources.save.restore()
+    NyplStreamsClient.prototype.write.restore()
 
     fixtures.disableDataApiFixtures()
   })
@@ -98,6 +108,13 @@ describe('index.handler', () => {
             expect(indexedDocuments[0].items[0].accessMessage_packed).to.eql(['accessMessage:2||Request in advance'])
             expect(indexedDocuments[0].items[0].shelfMark_sort).to.eq('a*ONR 84-000743')
 
+            // Expect writes to "processed" stream:
+            expect(kinesisWrites).to.have.property('IndexDocumentProcessed-test')
+            expect(kinesisWrites['IndexDocumentProcessed-test']).to.have.lengthOf(1)
+            expect(kinesisWrites['IndexDocumentProcessed-test']).to.deep.include.members([
+              { id: '10001936', nyplSource: 'sierra-nypl', nyplType: 'bib' }
+            ])
+
             return resolve()
           } catch (e) {
             return reject(e)
@@ -144,6 +161,13 @@ describe('index.handler', () => {
             ])
             expect(indexedDocuments[0].items[0].idBarcode).to.eql(['CU54932505'])
             expect(indexedDocuments[0].items[0].shelfMark_sort).to.eq('aPR3503 .G6 001968')
+
+            // Expect writes to "processed" stream:
+            expect(kinesisWrites).to.have.property('IndexDocumentProcessed-test')
+            expect(kinesisWrites['IndexDocumentProcessed-test']).to.have.lengthOf(1)
+            expect(kinesisWrites['IndexDocumentProcessed-test']).to.deep.include.members([
+              { id: '578091', nyplSource: 'recap-cul', nyplType: 'bib' }
+            ])
 
             return resolve()
           } catch (e) {
@@ -218,6 +242,13 @@ describe('index.handler', () => {
             // Check items:
             expect(indexedDocuments[0].items).to.have.lengthOf(12)
 
+            // Expect writes to "processed" stream:
+            expect(kinesisWrites).to.have.property('IndexDocumentProcessed-test')
+            expect(kinesisWrites['IndexDocumentProcessed-test']).to.have.lengthOf(1)
+            expect(kinesisWrites['IndexDocumentProcessed-test']).to.deep.include.members([
+              { id: '12959619', nyplSource: 'sierra-nypl', nyplType: 'bib' }
+            ])
+
             return resolve()
           } catch (e) {
             return reject(e)
@@ -242,6 +273,13 @@ describe('index.handler', () => {
             // Check items:
             expect(indexedDocuments[0].items).to.have.lengthOf(1)
 
+            // Expect writes to "processed" stream:
+            expect(kinesisWrites).to.have.property('IndexDocumentProcessed-test')
+            expect(kinesisWrites['IndexDocumentProcessed-test']).to.have.lengthOf(1)
+            expect(kinesisWrites['IndexDocumentProcessed-test']).to.deep.include.members([
+              { id: '578091', nyplSource: 'recap-cul', nyplType: 'bib' }
+            ])
+
             return resolve()
           } catch (e) {
             return reject(e)
@@ -264,6 +302,9 @@ describe('index.handler', () => {
 
               expect(indexedDocuments).to.have.lengthOf(0)
 
+              // Expect no writes to "processed" stream:
+              expect(kinesisWrites).to.not.have.property('IndexDocumentProcessed-test')
+
               return resolve()
             } catch (e) {
               return reject(e)
@@ -284,6 +325,14 @@ describe('index.handler', () => {
               expect(result).to.eq('Wrote 2 doc(s)')
 
               expect(indexedDocuments).to.have.lengthOf(2)
+
+              // Expect writes to "processed" stream:
+              expect(kinesisWrites).to.have.property('IndexDocumentProcessed-test')
+              expect(kinesisWrites['IndexDocumentProcessed-test']).to.have.lengthOf(2)
+              expect(kinesisWrites['IndexDocumentProcessed-test']).to.deep.include.members([
+                { id: '20970375', nyplSource: 'sierra-nypl', nyplType: 'bib' },
+                { id: '11361121', nyplSource: 'sierra-nypl', nyplType: 'bib' }
+              ])
 
               return resolve()
             } catch (e) {
@@ -326,6 +375,9 @@ describe('index.handler', () => {
               expect(e).to.be.a('error')
 
               expect(indexedDocuments).to.have.lengthOf(0)
+
+              // Expect writes to "processed" stream:
+              expect(kinesisWrites).to.not.have.property('IndexDocumentProcessed-test')
 
               return resolve()
             } catch (e) {
