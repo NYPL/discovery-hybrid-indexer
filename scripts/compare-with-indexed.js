@@ -8,6 +8,9 @@
  *
  * e.g. To compare how this app generates an ES doc for b10578183 with the QA ES index:
  *   node scripts/compare-with-indexed.js --envfile config/qa.env test/sample-events/b10578183.json
+ *
+ * If event file contains multiple records, only the first is compared by default. Indicate which via:
+ *   --record N (default 0)
  */
 
 const argv = require('minimist')(process.argv.slice(2))
@@ -27,8 +30,9 @@ const { printDiff } = require('../test/diff-report')
 discoveryApiIndex.resources.save = (indexName, records, update) => {
   console.log('PROXY: index save: ', JSON.stringify(records, null, 2))
 
-  return discoveryApiIndexer.currentDocument(records[0].uri).then((liveRecord) => {
-    const newRecord = records[0]
+  const ind = Math.min(records.length - 1, argv.record || 0)
+  return discoveryApiIndexer.currentDocument(records[ind].uri).then((liveRecord) => {
+    const newRecord = records[ind]
     printDiff(liveRecord, newRecord)
   })
 }
