@@ -12,6 +12,7 @@ describe('index.handler', () => {
   before(function () {
     // If updating fixtures, increase timeout to 10s
     this.timeout(process.env.UPDATE_FIXTURES ? 10000 : 2000)
+    this.timeout(10000)
 
     sinon.stub(kmsHelper, 'decrypt').callsFake(() => Promise.resolve('decrypted!'))
     sinon.stub(discoveryApiIndex.resources, 'save')
@@ -35,7 +36,7 @@ describe('index.handler', () => {
   })
 
   describe('Bibs', () => {
-    it('Handles b10001936, with 0 holdings and 2 items (one electronic)', () => {
+    it.only('Handles b10001936, with 0 holdings and 2 items (one electronic)', () => {
       const event = require('./sample-events/b10001936.json')
 
       return new Promise((resolve, reject) => {
