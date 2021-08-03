@@ -29,7 +29,7 @@ const platformApi = require('../lib/platform-api')
 const discoveryApiIndexer = require('../lib/discovery-api-indexer')
 
 const usage = () => {
-  console.log('Usage: node scripts/compare-with-indexed --envfile [path to .env] ./test/sample-events/[eventfile]')
+  console.log('Usage: node scripts/compare-with-indexed --envfile [path to .env] [--uri bnum] ./test/sample-events/[eventfile]')
   return true
 }
 
@@ -61,6 +61,7 @@ suppressIndexAndStreamWrites({
 if (argv._.length < 1 && !argv.uri) usage() && die('Must specify event file or uri')
 
 const ev = argv._[0] ? JSON.parse(fs.readFileSync(argv._[0], 'utf8')) : null
+
 if (ev) {
   // Invoke the lambda handler on the event
   index.handler(ev, {}, cb)
