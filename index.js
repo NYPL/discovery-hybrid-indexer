@@ -30,7 +30,8 @@ const handler = (event, context, callback) => {
         updateTask = fullRebuildForBibs(result.records)
         break
       case 'Item':
-        updateTask = platformApi.bibsForItems(result.records)
+        updateTask = discoveryStoreModel.filterOutNonResearchItems(result.records)
+          .then(platformApi.bibsForItems)
           .then((bibs) => fullRebuildForBibs(bibs))
         break
       case 'Holding':
