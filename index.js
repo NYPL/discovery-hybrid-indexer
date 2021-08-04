@@ -27,10 +27,12 @@ const handler = (event, context, callback) => {
     // Dispatch based on what kind of event (Bib, Item, or Holding)
     switch (result.type) {
       case 'Bib':
-        updateTask = fullRebuildForBibs(result.records)
+        updateTask = discoveryStoreModel.filterOutNonResearchBibs(result.records)
+          .then(fullRebuildForBibs)
         break
       case 'Item':
-        updateTask = platformApi.bibsForItems(result.records)
+        updateTask = discoveryStoreModel.filterOutNonResearchItems(result.records)
+          .then(platformApi.bibsForItems)
           .then((bibs) => fullRebuildForBibs(bibs))
         break
       case 'Holding':
