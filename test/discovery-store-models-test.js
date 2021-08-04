@@ -3,7 +3,7 @@ const discoveryStoreModel = require('../lib/discovery-store-model')
 describe('discovery-store-model', () => {
   describe('filterOutNonResearchBibs', () => {
     it('removes non-research bib', () => {
-      return discoveryStoreModel.internal.filterOutNonResearchBibs([
+      return discoveryStoreModel.filterOutNonResearchBibs([
         {
           id: 'circulating-bib',
           locations: [
@@ -24,7 +24,7 @@ describe('discovery-store-model', () => {
     })
 
     it('does not remove locations that are both Research and Branch', () => {
-      return discoveryStoreModel.internal.filterOutNonResearchBibs([
+      return discoveryStoreModel.filterOutNonResearchBibs([
         {
           id: 'research-or-branch-bib',
           locations: [
@@ -40,7 +40,7 @@ describe('discovery-store-model', () => {
     })
 
     it('handles bibs with no locations: assumes they\'re research', () => {
-      return discoveryStoreModel.internal.filterOutNonResearchBibs([
+      return discoveryStoreModel.filterOutNonResearchBibs([
         { id: 123 },
         { id: 456, locations: [] }
       ]).then((filtered) => {
