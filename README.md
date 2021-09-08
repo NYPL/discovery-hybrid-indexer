@@ -56,6 +56,17 @@ NYPL_OAUTH_KEY=[decrypted key]
 NYPL_OAUTH_SECRET=[decrypted secret]
 ```
 
+### Adding fixtures
+
+As unit tests are added/modified, calls to platform endpoints from within the test suite may produce errors like `Missing fixture (./test/fixtures/platform-api-c3b6d56abdd478b5cf62207bf03ccef6.json) for  {"method":"GET","uri":"http://qa-platform.nypl.org/api/v0.1/bibs...}`. To fill in missing fixtures, run this:
+
+```
+source .env-for-fixture-building; UPDATE_FIXTURES=if-missing npm test
+```
+
+(`.env-for-fixture-building` can be built using `.env-for-fixture-building-sample` as a guide.)
+
+
 ## Contributing
 
 This repo uses the [Development-QA-Main Git Workflow](https://github.com/NYPL/engineering-general/blob/master/standards/git-workflow.md#development-qa-main)
