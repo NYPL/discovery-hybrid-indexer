@@ -10,6 +10,7 @@ const { decodeRecordsFromEvent } = require('./lib/event-decoder')
  */
 const fullRebuildForBibs = (bibs) => {
   logger.debug(`Full rebuild for bibs: ${bibs.map((b) => `${b.nyplSource}/${b.id}`).join(', ')}`)
+
   return discoveryStoreModel.buildDiscoveryStoreBibs(bibs)
     .then(discoveryApiIndexer.reindexBibs)
 }
