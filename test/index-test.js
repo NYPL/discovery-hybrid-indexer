@@ -342,6 +342,104 @@ describe('index.handler', () => {
       })
     })
 
+    describe('Deleted item', () => {
+      before(() => {
+        // The lack of bibIds in the deleted item will trigger a query on the
+        // index to retrieve the bibid:
+        sinon.stub(discoveryApiIndex, 'search')
+          .callsFake((payload) => {
+            return Promise.resolve({
+              hits: {
+                total: 1,
+                hits: [
+                  {
+                    _source: {
+                      uri: 'cb528410'
+                    }
+                  }
+                ]
+              }
+            })
+          })
+      })
+
+      after(() => {
+        discoveryApiIndex.search.restore()
+      })
+
+      it('Handles ci5714552 a deleted partner item', () => {
+        // This item has been deleted, meaning it has no bibIds
+        const event = require('./sample-events/ci5714552.json')
+
+        return new Promise((resolve, reject) => {
+          index.handler(event, {}, (e, result) => {
+            try {
+              expect(result).to.eq('Wrote 1 doc(s)')
+              expect(indexedDocuments).to.have.lengthOf(1)
+
+              // Confirm the deleted item does not appear in the newly built
+              // document:
+              expect(indexedDocuments[0].items).to.be.a('array')
+              expect(indexedDocuments[0].items).to.have.lengthOf(77)
+              expect(indexedDocuments[0].items).to.not.deep.include({
+                uri: 'ci5714552'
+              })
+
+              // Expect writes to "processed" stream:
+              expect(kinesisWrites).to.have.property('IndexDocumentProcessed-test')
+              expect(kinesisWrites['IndexDocumentProcessed-test']).to.have.lengthOf(1)
+              expect(kinesisWrites['IndexDocumentProcessed-test']).to.deep.include.members([
+                { id: '528410', nyplSource: 'recap-cul', nyplType: 'bib' }
+              ])
+
+              return resolve()
+            } catch (e) {
+              return reject(e)
+            }
+          })
+        })
+      })
+    })
+
+    describe('Deleted [circulating] item', () => {
+      before(() => {
+        // The lack of bibIds in the deleted item will trigger a query on the
+        // index to retrieve the bibid, which will return 0 results because
+        // it's a circulating item:
+        sinon.stub(discoveryApiIndex, 'search')
+          .callsFake((payload) => {
+            return Promise.resolve({
+              hits: {
+                total: 0,
+                hits: []
+              }
+            })
+          })
+      })
+
+      after(() => {
+        discoveryApiIndex.search.restore()
+      })
+
+      it('Handles a deleted circ item (noop)', () => {
+        // This item has been deleted, meaning it has no bibIds
+        const event = require('./sample-events/deleted-circ-item.json')
+
+        return new Promise((resolve, reject) => {
+          index.handler(event, {}, (e, result) => {
+            try {
+              expect(result).to.eq('Wrote 0 doc(s)')
+              expect(indexedDocuments).to.have.lengthOf(0)
+
+              return resolve()
+            } catch (e) {
+              return reject(e)
+            }
+          })
+        })
+      })
+    })
+
     describe('Network error', function () {
       const NYPLDataApiClient = require('@nypl/nypl-data-api-client')
 
