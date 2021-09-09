@@ -1,0 +1,618 @@
+{
+  "data": {
+    "id": "528410",
+    "nyplSource": "recap-cul",
+    "nyplType": "bib",
+    "updatedDate": "2017-10-16T07:09:35-04:00",
+    "createdDate": null,
+    "deletedDate": null,
+    "deleted": false,
+    "locations": null,
+    "suppressed": false,
+    "lang": {
+      "code": "0ger",
+      "name": null
+    },
+    "title": "Jahrbuch für Wirtschaftsgeschichte.",
+    "author": null,
+    "materialType": {
+      "code": "a",
+      "value": "BOOK/TEXT"
+    },
+    "bibLevel": {
+      "code": "s",
+      "value": "SERIAL"
+    },
+    "publishYear": 1960,
+    "catalogDate": null,
+    "country": null,
+    "normTitle": null,
+    "normAuthor": null,
+    "standardNumbers": [],
+    "controlNumber": "",
+    "fixedFields": {
+      "24": {
+        "label": "Language",
+        "value": "0ger",
+        "display": null
+      },
+      "25": {
+        "label": "Skip",
+        "value": "0",
+        "display": null
+      },
+      "26": {
+        "label": "Location",
+        "value": "rccul",
+        "display": null
+      },
+      "27": {
+        "label": "COPIES",
+        "value": "1",
+        "display": null
+      },
+      "28": {
+        "label": "Cat. Date",
+        "value": null,
+        "display": null
+      },
+      "29": {
+        "label": "Bib Level",
+        "value": "s",
+        "display": "SERIAL"
+      },
+      "30": {
+        "label": "Material Type",
+        "value": "a",
+        "display": "BOOK/TEXT"
+      },
+      "31": {
+        "label": "Bib Code 3",
+        "value": null,
+        "display": null
+      },
+      "80": {
+        "label": "Record Type",
+        "value": "b",
+        "display": null
+      },
+      "81": {
+        "label": "Record Number",
+        "value": "528410",
+        "display": null
+      },
+      "83": {
+        "label": "Created Date",
+        "value": null,
+        "display": null
+      },
+      "84": {
+        "label": "Updated Date",
+        "value": "2017-10-16T07:09:35Z",
+        "display": null
+      },
+      "85": {
+        "label": "No. of Revisions",
+        "value": "1",
+        "display": null
+      },
+      "86": {
+        "label": "Agency",
+        "value": "6",
+        "display": null
+      },
+      "98": {
+        "label": "PDATE",
+        "value": null,
+        "display": null
+      },
+      "107": {
+        "label": "MARC Type",
+        "value": " ",
+        "display": null
+      }
+    },
+    "varFields": [
+      {
+        "fieldTag": null,
+        "marcTag": "010",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "   62038718//r83 "
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "022",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "0075-2800"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "035",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "(OCoLC)1782983"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "035",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "(OCoLC)ocm01782983"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "035",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "(CStRLIN)NYCG86-S896"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "035",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "9",
+            "content": "ACH0391CU"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "035",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "(NNC)528410"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "040",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "d",
+            "content": "OCoLC"
+          },
+          {
+            "tag": "d",
+            "content": "DLC"
+          },
+          {
+            "tag": "d",
+            "content": "AIP"
+          },
+          {
+            "tag": "d",
+            "content": "NNC"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "042",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "lc"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "043",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "e-gx---"
+          },
+          {
+            "tag": "a",
+            "content": "e-ge---"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "050",
+        "ind1": "0",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "HC281"
+          },
+          {
+            "tag": "b",
+            "content": ".J35"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "090",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "HC281"
+          },
+          {
+            "tag": "b",
+            "content": ".J19"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "245",
+        "ind1": "0",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Jahrbuch für Wirtschaftsgeschichte."
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "260",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Berlin,"
+          },
+          {
+            "tag": "b",
+            "content": "Akademie-Verlag."
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "300",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "v."
+          },
+          {
+            "tag": "c",
+            "content": "25 cm."
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "310",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Two issues per year,"
+          },
+          {
+            "tag": "b",
+            "content": "[1992-]"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "321",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Quarterly."
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "362",
+        "ind1": "0",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "1960-"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "510",
+        "ind1": "2",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "America, history and life"
+          },
+          {
+            "tag": "x",
+            "content": "0002-7065"
+          },
+          {
+            "tag": "b",
+            "content": "1964-"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "510",
+        "ind1": "2",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Historical abstracts. Part A. Modern history abstracts"
+          },
+          {
+            "tag": "x",
+            "content": "0363-2717"
+          },
+          {
+            "tag": "b",
+            "content": "1964-"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "510",
+        "ind1": "2",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Historical abstracts. Part B. Twentieth century abstracts"
+          },
+          {
+            "tag": "x",
+            "content": "0363-2725"
+          },
+          {
+            "tag": "b",
+            "content": "1964-"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "510",
+        "ind1": "2",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Recently published articles"
+          },
+          {
+            "tag": "x",
+            "content": "0145-5311"
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "550",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Vols. for 1960-   issued by the Abteilung Wirtschaftsgeschichte of the Institut für Geschichte of the Akademie der Wissenschaften, Berlin."
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "555",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "1960-67.  1 v."
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "651",
+        "ind1": " ",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Germany"
+          },
+          {
+            "tag": "x",
+            "content": "Economic conditions"
+          },
+          {
+            "tag": "v",
+            "content": "Periodicals."
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "651",
+        "ind1": " ",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Germany (East)"
+          },
+          {
+            "tag": "x",
+            "content": "Economic conditions"
+          },
+          {
+            "tag": "v",
+            "content": "Periodicals."
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Economic history"
+          },
+          {
+            "tag": "v",
+            "content": "Periodicals."
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "710",
+        "ind1": "2",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Deutsche Akademie der Wissenschaften zu Berlin."
+          },
+          {
+            "tag": "b",
+            "content": "Institut für Geschichte."
+          },
+          {
+            "tag": "b",
+            "content": "Abteilung Wirtschaftsgeschichte."
+          }
+        ]
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "001",
+        "ind1": null,
+        "ind2": null,
+        "content": "SCSB-2537446",
+        "subfields": null
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "003",
+        "ind1": null,
+        "ind2": null,
+        "content": "NNC",
+        "subfields": null
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "005",
+        "ind1": null,
+        "ind2": null,
+        "content": "20100303222452.0",
+        "subfields": null
+      },
+      {
+        "fieldTag": null,
+        "marcTag": "008",
+        "ind1": null,
+        "ind2": null,
+        "content": "860130c19609999gw fr p  y    0    0ger  ",
+        "subfields": null
+      },
+      {
+        "fieldTag": "_",
+        "marcTag": null,
+        "ind1": null,
+        "ind2": null,
+        "content": "01541cas a22004211  4500",
+        "subfields": null
+      }
+    ]
+  },
+  "count": 1,
+  "totalCount": 0,
+  "statusCode": 200,
+  "debugInfo": []
+}
