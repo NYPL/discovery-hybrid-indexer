@@ -143,5 +143,28 @@ describe('discovery-store-model', () => {
         expect(filtered).to.have.lengthOf(1)
       })
     })
+
+    it('assumes bibs with location code "none" or "os" are Research (to ensure they are suppressed)', () => {
+      return discoveryStoreModel.filterOutNonResearchBibs([
+        {
+          nyplSource: 'sierra-nypl',
+          id: 'research-bib-1',
+          locations: [
+            { code: 'none', name: 'This is a location that appears sometimes for 0-item bibs' }
+          ]
+        },
+        {
+          nyplSource: 'sierra-nypl',
+          id: 'research-bibjj-2',
+          locations: [
+            { code: 'os', name: 'This is the OTF location, which nypl-core-objects considers Branch' }
+          ]
+        }
+
+      ]).then((filtered) => {
+        expect(filtered).to.be.a('array')
+        expect(filtered).to.have.lengthOf(2)
+      })
+    })
   })
 })
