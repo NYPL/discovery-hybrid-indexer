@@ -5,7 +5,6 @@ before_deploy:
 - echo "All unit tests passed; Preparing to deploy $TRAVIS_BRANCH"
 deploy:
 - provider: lambda
-  edge: true
   function_name: DiscoveryHybridIndexer-qa
   region: us-east-1
   runtime: nodejs10.x
