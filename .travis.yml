@@ -7,14 +7,9 @@ deploy:
 - provider: lambda
   edge: true
   function_name: DiscoveryHybridIndexer-qa
-  description: Listens on Bib, Item, and Holding streams to update DiscoveryApi ES.
-    See https://github.com/NYPL/discovery-hybrid-indexer
   region: us-east-1
-  role: arn:aws:iam::946183545209:role/lambda-full-access
   runtime: nodejs10.x
-  memory_size: 512
   handler_name: handler
-  timeout: 300
   access_key_id: "$AWS_ACCESS_KEY_ID_QA"
   secret_access_key: "$AWS_SECRET_ACCESS_KEY_QA"
   skip_cleanup: true
