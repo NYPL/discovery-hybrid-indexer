@@ -3,6 +3,7 @@ python:
 - "3.6"
 install:
 - npm i
+- pyenv global 3.6
 - pip install awscli
 - pip install aws-sam-cli
 script:
