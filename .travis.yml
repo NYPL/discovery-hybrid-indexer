@@ -5,6 +5,7 @@ before_deploy:
 - echo "All unit tests passed; Preparing to deploy $TRAVIS_BRANCH"
 deploy:
 - provider: lambda
+  edge: true
   function_name: DiscoveryHybridIndexer-qa
   description: Listens on Bib, Item, and Holding streams to update DiscoveryApi ES.
     See https://github.com/NYPL/discovery-hybrid-indexer
