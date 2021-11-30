@@ -14,7 +14,7 @@ deploy:
   - subnet-f35de0a9
   security_group_ids: sg-aa74f1db
   role: arn:aws:iam::946183545209:role/lambda-full-access
-  runtime: nodejs10.x
+  runtime: nodejs14.x
   memory_size: 512
   handler_name: handler
   timeout: 300
@@ -47,7 +47,7 @@ deploy:
   - subnet-5deecd15
   security_group_ids: sg-116eeb60
   role: arn:aws:iam::946183545209:role/lambda-full-access
-  runtime: nodejs10.x
+  runtime: nodejs14.x
   memory_size: 512
   handler_name: handler
   timeout: 300
