@@ -3,13 +3,14 @@ python:
 - "3.6"
 install:
 - npm i
-- pyenv global 3.6
-- pip install awscli
-- pip install aws-sam-cli
 script:
 - npm test
 before_deploy:
 - echo "All unit tests passed; Preparing to deploy $TRAVIS_BRANCH"
+- pyenv install 3.6
+- pyenv global 3.6
+- pip install awscli
+- pip install aws-sam-cli
 deploy:
 - provider: script
   script:
