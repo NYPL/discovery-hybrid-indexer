@@ -1,12 +1,12 @@
 language: node_js
+python:
+- "3.6"
 install:
 - npm i
 - pip install awscli
 - pip install aws-sam-cli
 script:
 - npm test
-python:
-- 3.9
 before_deploy:
 - echo "All unit tests passed; Preparing to deploy $TRAVIS_BRANCH"
 deploy:
