@@ -6,7 +6,7 @@ install:
 script:
 - npm test
 python:
-- 2.7
+- 3
 before_deploy:
 - echo "All unit tests passed; Preparing to deploy $TRAVIS_BRANCH"
 deploy:
