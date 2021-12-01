@@ -9,6 +9,7 @@ cache:
 - pip
 before_deploy:
 - echo "All unit tests passed; Preparing to deploy $TRAVIS_BRANCH"
+- pyenv versions
 - pyenv install 3.6.7 --skip-existing
 - pyenv global 3.6.7
 - pip install awscli
@@ -16,12 +17,7 @@ before_deploy:
 deploy:
 - provider: script
   script:
-  - echo "Setting config"
-  - env FOO=bar date
-  - echo "Validating template"
-  - sam validate -t sam.qa.yml --region us-east-1
-  - echo "Deploying"
-  - sam deploy -t sam.qa.yml --s3-bucket nypl-travis-builds-qa --region us-east-1 --stack-name travis-discovery-hybrid-indexer-qa
+  - env AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID_QA AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY_QA sam deploy -t sam.qa.yml --s3-bucket nypl-travis-builds-qa --region us-east-1 --stack-name travis-discovery-hybrid-indexer-qa
   - echo "Done"
   on:
     branch: qa
