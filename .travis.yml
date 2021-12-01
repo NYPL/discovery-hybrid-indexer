@@ -14,6 +14,8 @@ before_deploy:
 deploy:
 - provider: script
   script:
+  - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID_QA
+  - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY_QA
   - sam validate -t sam.qa.yml --region us-east-1
   - sam deploy -t sam.qa.yml --s3-bucket nypl-travis-builds-qa --region us-east-1 --stack-name travis-discovery-hybrid-indexer-qa
   on:
