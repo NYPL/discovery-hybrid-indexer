@@ -18,7 +18,8 @@ deploy:
 - provider: script
   script:
   - echo "Setting config"
-  - env AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID_QA AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY_QA
+  - env FOO=bar
+  - echo "Set FOO=$FOO"
   - echo "Validating template"
   - sam validate -t sam.qa.yml --region us-east-1
   - echo "Deploying"
