@@ -10,7 +10,7 @@ cache:
 before_deploy:
 - echo "All unit tests passed; Preparing to deploy $TRAVIS_BRANCH"
 - pyenv versions
-- pyenv install 3.6.7
+- pyenv install 3.6.7 --skip-existing
 - pyenv global 3.6.7
 - pip install awscli
 - pip install aws-sam-cli
