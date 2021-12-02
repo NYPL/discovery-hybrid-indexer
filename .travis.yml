@@ -12,14 +12,23 @@ before_install:
 - unzip terraform_"$TF_VERSION"_linux_amd64.zip
 - sudo mv terraform /usr/local/bin/
 - rm terraform_"$TF_VERSION"_linux_amd64.zip
+stages:
+- terraform init
+- terraform plan
+- terraform apply
 jobs:
   include:
+    - stage: terraform init
+      env:
+        - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID_QA
+        - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY_QA
+      script:
+        - terraform init -input=false
     - stage: terraform plan
       # Only run terraform validate and plan state if within a pull request
       if: type IN (pull_request)
       script:
         - echo "Executing Terraform Plan on pull request code"
-        - terraform init -input=false
         - terraform validate
         - terraform plan -lock=false -input=false
     - stage: terraform apply
@@ -27,7 +36,6 @@ jobs:
       if: type IN (push) and branch = qa
       script:
         - echo "Executing Terraform Apply on merged code"
-        - terraform init -input=false
         - terraform plan
 deploy:
 - provider: lambda
