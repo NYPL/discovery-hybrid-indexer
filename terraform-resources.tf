@@ -1,3 +1,11 @@
+terraform {
+  backend "s3" {
+    bucket  = "nypl-travis-builds-qa"
+    key     = "discovery-hybrid-indexer-terraform-state"
+    region  = "us-east-1"
+  }
+}
+
 provider "aws" {
   region     = "us-east-1"
 }
