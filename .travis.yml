@@ -1,26 +1,35 @@
 language: node_js
-python:
-- "3.6"
 install:
 - npm i
 script:
 - npm test
 cache:
-- pip
-before_deploy:
+- terraform.tfstate
+- .terraform
+before_install:
 - echo "All unit tests passed; Preparing to deploy $TRAVIS_BRANCH"
-- pyenv versions
-- pyenv install 3.6.7 --skip-existing
-- pyenv global 3.6.7
-- pip install awscli
-- pip install aws-sam-cli
+- wget https://releases.hashicorp.com/terraform/"$TF_VERSION"/terraform_"$TF_VERSION"_linux_amd64.zip
+- unzip terraform_"$TF_VERSION"_linux_amd64.zip
+- sudo mv terraform /usr/local/bin/
+- rm terraform_"$TF_VERSION"_linux_amd64.zip
+jobs:
+  include:
+    - stage: terraform plan
+      # Only run terraform validate and plan state if within a pull request
+      if: type IN (pull_request)
+      script:
+        - echo "Executing Terraform Plan on pull request code"
+        - terraform init -input=false
+        - terraform validate
+        - terraform plan -lock=false -input=false
+    - stage: terraform apply
+      # Only run terraform apply stage if outside of a pull request
+      if: type IN (push) and branch = qa
+      script:
+        - echo "Executing Terraform Apply on merged code"
+        - terraform init -input=false
+        - terraform plan
 deploy:
-- provider: script
-  script:
-  - env AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID_QA AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY_QA sam deploy -t sam.qa.yml --s3-bucket nypl-travis-builds-qa --region us-east-1 --stack-name travis-discovery-hybrid-indexer-qa
-  - echo "Done"
-  on:
-    branch: qa
 - provider: lambda
   edge: true
   function_name: DiscoveryHybridIndexer-qa
@@ -91,4 +100,5 @@ deploy:
 after_deploy: echo "Successfully executed deploy trigger for $TRAVIS_BRANCH"
 env:
   global:
-    secure: nxJ7gutBVTXUM0DEGu2l77WE9J7MYMraaRvs7XKnKbCCrm6e+cdQugY146Nk1cyCuSqhy8UpIaBA1C8/7JtUEkr+pd8GoHqVjHS1cEI3TvRrRY9LwOPvcxl1KZbQ8wzdWnHkeWSbrT4HCDzA6GroiVE0o3VqrkTdAT7nDp1Uvd+ov5upyD7Z9de5rzACEHxTD9jZSBaZetAxrct6gsxHyUhk8oFG/hcRUhh+NJcVZWtlG1cxhFkW0xNk9MMhovt0xOxgLlsH/5qJfVYwKZwiCUds5EFcHEmjdfrbpqNZLaO/uS08+P5fjvcaSqMZAILmttLYXeblWrpjBuw8bv+GCMOOSrwelYZX/Z+srEjvTshVDQ92vGjrsd2ZR8piB112+P933NKakpYtAPY8anoK7XnltYmjE6ktnTl1Gnw8NJnaWWHRXP3Wi2gxZIc9SrNMSGMnVZDqmifoLBrvXGIDAdAwxj1etNa8YYVzNnRxIe106ogUnsHpK2xs2UaM8cegkaIxb3cRA68BXA94dj73i3wM+5qR26usXtgdvtwtrNG1xy8j1XAp6L26j77uNwhYUKst80biyLt6jpmrwZnEJAyRtSwF/ByVRPurjNuRjj+qUo3SVF7J660++/vmOONzF0rEtDviZbAriWBbGVG5VRQYuGzF3gmwi+MqvvogfhA=
+  - secure: nxJ7gutBVTXUM0DEGu2l77WE9J7MYMraaRvs7XKnKbCCrm6e+cdQugY146Nk1cyCuSqhy8UpIaBA1C8/7JtUEkr+pd8GoHqVjHS1cEI3TvRrRY9LwOPvcxl1KZbQ8wzdWnHkeWSbrT4HCDzA6GroiVE0o3VqrkTdAT7nDp1Uvd+ov5upyD7Z9de5rzACEHxTD9jZSBaZetAxrct6gsxHyUhk8oFG/hcRUhh+NJcVZWtlG1cxhFkW0xNk9MMhovt0xOxgLlsH/5qJfVYwKZwiCUds5EFcHEmjdfrbpqNZLaO/uS08+P5fjvcaSqMZAILmttLYXeblWrpjBuw8bv+GCMOOSrwelYZX/Z+srEjvTshVDQ92vGjrsd2ZR8piB112+P933NKakpYtAPY8anoK7XnltYmjE6ktnTl1Gnw8NJnaWWHRXP3Wi2gxZIc9SrNMSGMnVZDqmifoLBrvXGIDAdAwxj1etNa8YYVzNnRxIe106ogUnsHpK2xs2UaM8cegkaIxb3cRA68BXA94dj73i3wM+5qR26usXtgdvtwtrNG1xy8j1XAp6L26j77uNwhYUKst80biyLt6jpmrwZnEJAyRtSwF/ByVRPurjNuRjj+qUo3SVF7J660++/vmOONzF0rEtDviZbAriWBbGVG5VRQYuGzF3gmwi+MqvvogfhA=
+  - TF_VERSION=0.12.19
