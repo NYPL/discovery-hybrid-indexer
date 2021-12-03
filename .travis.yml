@@ -24,7 +24,7 @@ jobs:
       script:
         - echo "Executing Terraform Apply on merged code"
         - terraform init -input=false
-        - terraform plan
+        - terraform apply -auto-approve -input=false
 deploy:
 - provider: lambda
   edge: true
