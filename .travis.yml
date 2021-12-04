@@ -25,7 +25,7 @@ jobs:
         - echo "Executing Terraform Apply on merged code"
         - terraform init -input=false
         - terraform -chdir=provisioning/qa apply -auto-approve -input=false
-
+deploy:
 - provider: lambda
   function_name: DiscoveryHybridIndexer-production
   description: Listens on Bib, Item, and Holding streams to update DiscoveryApi ES.
