@@ -13,13 +13,16 @@ jobs:
     - stage: deploy qa
       if: type IN (push) and branch = qa
       script:
-        - FOO=test
+        - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID_QA
+        - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY_QA
         - terraform -chdir=provisioning/qa init -input=false
-        - echo "Deploying to qa $FOO"
+        - echo "Deploying to qa"
         - terraform -chdir=provisioning/qa apply -auto-approve -input=false
     - stage: deploy production
       if: type IN (push) and branch = main
       script:
+        - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID_PRODUCTION
+        - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY_PRODUCTION
         - terraform -chdir=provisioning/production init -input=false
         - echo "Deploying to production"
         - terraform -chdir=provisioning/production apply -auto-approve -input=false
@@ -27,5 +30,3 @@ env:
   global:
   - secure: nxJ7gutBVTXUM0DEGu2l77WE9J7MYMraaRvs7XKnKbCCrm6e+cdQugY146Nk1cyCuSqhy8UpIaBA1C8/7JtUEkr+pd8GoHqVjHS1cEI3TvRrRY9LwOPvcxl1KZbQ8wzdWnHkeWSbrT4HCDzA6GroiVE0o3VqrkTdAT7nDp1Uvd+ov5upyD7Z9de5rzACEHxTD9jZSBaZetAxrct6gsxHyUhk8oFG/hcRUhh+NJcVZWtlG1cxhFkW0xNk9MMhovt0xOxgLlsH/5qJfVYwKZwiCUds5EFcHEmjdfrbpqNZLaO/uS08+P5fjvcaSqMZAILmttLYXeblWrpjBuw8bv+GCMOOSrwelYZX/Z+srEjvTshVDQ92vGjrsd2ZR8piB112+P933NKakpYtAPY8anoK7XnltYmjE6ktnTl1Gnw8NJnaWWHRXP3Wi2gxZIc9SrNMSGMnVZDqmifoLBrvXGIDAdAwxj1etNa8YYVzNnRxIe106ogUnsHpK2xs2UaM8cegkaIxb3cRA68BXA94dj73i3wM+5qR26usXtgdvtwtrNG1xy8j1XAp6L26j77uNwhYUKst80biyLt6jpmrwZnEJAyRtSwF/ByVRPurjNuRjj+qUo3SVF7J660++/vmOONzF0rEtDviZbAriWBbGVG5VRQYuGzF3gmwi+MqvvogfhA=
   - TF_VERSION=1.0.11
-  - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID_QA
-  - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY_QA
