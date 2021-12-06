@@ -23,7 +23,7 @@ jobs:
       if: type IN (push) and branch = qa
       script:
         - echo "Executing Terraform Apply on merged code"
-        - terraform init -input=false -reconfigure
+        - terraform -chdir=provisioning/qa apply init -input=false
         - terraform -chdir=provisioning/qa apply -auto-approve -input=false
 deploy:
 - provider: lambda
