@@ -12,9 +12,10 @@ jobs:
       script: npm test
     - stage: deploy qa
       if: type IN (push) and branch = qa
-      script:
+      env:
         - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID_QA
         - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY_QA
+      script:
         - terraform -chdir=provisioning/qa init -input=false
         - echo "Deploying to qa"
         - terraform -chdir=provisioning/qa apply -auto-approve -input=false
