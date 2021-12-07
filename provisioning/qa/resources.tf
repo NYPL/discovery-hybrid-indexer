@@ -20,6 +20,4 @@ module "base" {
     subnet_ids         = ["subnet-21a3b244", "subnet-f35de0a9"]
     security_group_ids = ["sg-aa74f1db"]
   }
-
-  env_vars = { for tuple in regexall("(.*?)=(.*)", file("../../config/qa.env")) : tuple[0] => tuple[1] }
 }

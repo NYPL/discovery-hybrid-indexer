@@ -5,11 +5,10 @@ provider "aws" {
 variable "environment" {
   type = string
   default = "qa"
-  description = "The name of the environnment (qa, production)"
+  description = "The name of the environnment (qa, production). This controls the name of lambda and the env vars loaded."
 
   validation {
     condition     = contains(["qa", "production"], var.environment)
-
     error_message = "The environmnet must be 'qa' or 'production'."
   }
 }
@@ -17,11 +16,6 @@ variable "environment" {
 variable "vpc_config" {
   type = map
   description = "The name of the environnment (qa, production)"
-}
-
-variable "env_vars" {
-  type = map
-  description = "A map of environmental variables to attach to the deployed Lambda"
 }
 
 # Package the app as a zip:
@@ -41,9 +35,9 @@ resource "aws_s3_bucket_object" "uploaded_zip" {
   etag   = filemd5(data.archive_file.lambda_zip.output_path)
 }
 
-# Create the QA lambda:
+# Create the lambda:
 resource "aws_lambda_function" "lambda_instance" {
-  description   = "See https://github.com/NYPL/discovery-hybrid-indexer"
+  description   = "Listens on Bib, Item, and Holding streams to update DiscoveryApi ES. See https://github.com/NYPL/discovery-hybrid-indexer"
   function_name = "DiscoveryHybridIndexer-${var.environment}"
   handler       = "index.handler"
   memory_size   = 512
@@ -63,7 +57,8 @@ resource "aws_lambda_function" "lambda_instance" {
     security_group_ids = var.vpc_config.security_group_ids
   }
 
+  # Load ENV vars from ./config/{environment}.env
   environment {
-    variables = var.env_vars
+    variables = { for tuple in regexall("(.*?)=(.*)", file("../../config/${var.environment}.env")) : tuple[0] => tuple[1] }
   }
 }
