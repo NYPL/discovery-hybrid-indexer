@@ -5,7 +5,7 @@
     "@nypl/nypl-data-api-client": "^1.0.4",
     "avsc": "^5.7.1",
     "deep-object-diff": "^1.1.0",
-    "discovery-api-indexer": "git+https://github.com/NYPL-discovery/discovery-api-indexer.git#noref-update-nypl-core-objects",
+    "discovery-api-indexer": "git+https://github.com/NYPL-discovery/discovery-api-indexer.git",
     "discovery-store-models": "git+https://github.com/NYPL-discovery/discovery-store-models.git#v1.4.0",
     "highland": "^2.13.5",
     "pcdm-store-updater": "git+https://github.com/NYPL-discovery/discovery-store-poster.git#v1.1.0",
