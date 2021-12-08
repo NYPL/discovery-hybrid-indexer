@@ -3,3 +3,6 @@ config/local*
 node_modules
 
 .env*
+
+dist.zip
+.terraform
