@@ -66,9 +66,19 @@ source .env-for-fixture-building; UPDATE_FIXTURES=if-missing npm test
 
 (`.env-for-fixture-building` can be built using `.env-for-fixture-building-sample` as a guide.)
 
-
 ## Contributing
 
 This repo uses the [Development-QA-Main Git Workflow](https://github.com/NYPL/engineering-general/blob/master/standards/git-workflow.md#development-qa-main)
 
+### Deployment
+
+This app uses Travis-CI and terraform for deployment. Code pushed to `qa` and `main` trigger deployments to `qa` and `production`, respectively.
+
+#### Troubleshooting deployments
+
+Because terraform state is synced to S3, you should never have to do this, but should you need to make `terraform` aware of a lambda resource that was created outside of `terraform`, you can import the existing resource like this:
+
+```
+terraform -chdir=provisioning/production import module.base.aws_lambda_function.lambda_instance DiscoveryHybridIndexer-production
+```
 
