@@ -1,6 +1,9 @@
 const sinon = require('sinon')
 const discoveryApiIndex = require('discovery-api-indexer/lib/index')
 const NyplStreamsClient = require('@nypl/nypl-streams-client')
+// For stubbing scsb client instantiation from a different module
+const kmsHelperPcdm = require('pcdm-store-updater/lib/kms-helper')
+const ScsbClient = require('pcdm-store-updater/lib/scsb-client')
 
 const kmsHelper = require('../lib/kms-helper')
 const index = require('../index')
@@ -11,11 +14,14 @@ const fixtures = require('./fixtures')
 describe('index.handler', () => {
   let indexedDocuments = []
   let kinesisWrites = {}
-  before(function () {
+  let client
+  before(async function () {
     // If updating fixtures, increase timeout to 10s
     this.timeout(process.env.UPDATE_FIXTURES ? 10000 : 2000)
-
     sinon.stub(kmsHelper, 'decrypt').callsFake(() => Promise.resolve('decrypted!'))
+    sinon.stub(kmsHelperPcdm, 'decrypt').callsFake(() => Promise.resolve('decrypted!'))
+    client = await ScsbClient.instance()
+    sinon.stub(client, 'search').callsFake(() => Promise.resolve('search result'))
     sinon.stub(discoveryApiIndex.resources, 'save')
       .callsFake((indexName, records, update) => {
         indexedDocuments = indexedDocuments.concat(records)
@@ -38,6 +44,8 @@ describe('index.handler', () => {
 
   after(() => {
     kmsHelper.decrypt.restore()
+    kmsHelperPcdm.decrypt.restore()
+    client.search.restore()
     discoveryApiIndex.resources.save.restore()
     NyplStreamsClient.prototype.write.restore()
 
