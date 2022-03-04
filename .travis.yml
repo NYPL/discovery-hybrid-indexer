@@ -6,6 +6,7 @@ before_install:
 - unzip terraform_"$TF_VERSION"_linux_amd64.zip
 - sudo mv terraform /usr/local/bin/
 - rm terraform_"$TF_VERSION"_linux_amd64.zip
+- git config --global url."https://".insteadOf ssh://
 jobs:
   include:
     - stage: test
