@@ -77,7 +77,7 @@ describe('index.handler', () => {
             ])
             expect(indexedDocuments[0].issuance_packed).to.eql(['urn:biblevel:m||monograph/item'])
             expect(indexedDocuments[0].language_packed).to.eql(['lang:arm||Armenian'])
-            expect(indexedDocuments[0].title).to.eql(['Niwtʻer azgayin patmutʻian hamar Ereveli hay kazunkʻ ; Parskastan'])
+            expect(indexedDocuments[0].title).to.eql(['Niwtʻer azgayin patmutʻian hamar Ereveli hay kazunkʻ ; Parskastan /'])
             expect(indexedDocuments[0].subjectLiteral_exploded).to.include.members([
               'Armenians',
               'Armenians -- Iran',
@@ -207,8 +207,8 @@ describe('index.handler', () => {
               uri: 'h1032862',
               physicalLocation: ['Sc Ser.-M .N489'],
               holdingStatement: [
-                '2009-07/08',
-                'Jan 1997-Apr 1998,Nov 2000-Jul 2003,Nov 2003,Jan/Feb 2004-Mar/Apr 2004,Nov/Dec 2004-'
+                'Jan 1997-Apr 1998,Nov 2000-Jul 2003,Nov 2003,Jan/Feb 2004-Mar/Apr 2004,Nov/Dec 2004-',
+                '2009-07/08'
               ],
               shelfMark: ['Sc Ser.-M .N489'],
               identifier: [
