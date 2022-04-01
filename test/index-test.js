@@ -77,7 +77,7 @@ describe('index.handler', () => {
             ])
             expect(indexedDocuments[0].issuance_packed).to.eql(['urn:biblevel:m||monograph/item'])
             expect(indexedDocuments[0].language_packed).to.eql(['lang:arm||Armenian'])
-            expect(indexedDocuments[0].title).to.eql(['Niwtʻer azgayin patmutʻian hamar Ereveli hay kazunkʻ ; Parskastan /'])
+            expect(indexedDocuments[0].title).to.eql(['Niwtʻer azgayin patmutʻian hamar Ereveli hay kazunkʻ ; Parskastan'])
             expect(indexedDocuments[0].subjectLiteral_exploded).to.include.members([
               'Armenians',
               'Armenians -- Iran',
