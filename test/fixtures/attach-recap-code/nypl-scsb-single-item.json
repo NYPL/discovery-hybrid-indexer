@@ -1,0 +1,42 @@
+{
+  "pageNumber": 0,
+  "totalPageCount": 1,
+  "totalBibRecordsCount": "1",
+  "totalItemRecordsCount": "1",
+  "totalRecordsCount": "1",
+  "showTotalCount": false,
+  "errorMessage": null,
+  "searchResultRows": [
+      {
+          "bibId": 8565700,
+          "title": "The 10 hottest counsulting practices : what they are, how to get into them / Ron Tepper.",
+          "author": "Tepper, Ron, 1937-   ",
+          "publisher": "Wiley,",
+          "publisherDate": "c1995.",
+          "owningInstitution": "NYPL",
+          "customerCode": "NA",
+          "collectionGroupDesignation": "Shared",
+          "useRestriction": "No Restrictions",
+          "barcode": "33433034215776",
+          "summaryHoldings": "",
+          "availability": "Available",
+          "leaderMaterialType": "Monograph",
+          "selected": false,
+          "showItems": false,
+          "selectAllItems": false,
+          "itemId": 14264643,
+          "imsLocation": "RECAP",
+          "searchItemResultRows": [],
+          "owningInstitutionBibId": ".b120785213",
+          "owningInstitutionHoldingsId": "eddf2fa0-0ada-4438-b61b-55cd1f8d559b",
+          "owningInstitutionItemId": ".i122359008",
+          "requestPosition": null,
+          "patronBarcode": null,
+          "requestingInstitution": null,
+          "deliveryLocation": null,
+          "requestType": null,
+          "requestNotes": null,
+          "matchingIdentifier": null
+      }
+  ]
+}

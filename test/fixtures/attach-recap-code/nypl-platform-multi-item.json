@@ -1,0 +1,105 @@
+{
+  "id": "15830171",
+  "nyplSource": "sierra-nypl",
+  "items": [
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "15830171"
+      ],
+      "id": "1",
+      "nyplType": "item",
+      "updatedDate": "2018-02-21T17:17:39-05:00",
+      "createdDate": "2009-02-12T14:30:13-05:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "rcpf2",
+        "name": "OFFSITE - Request in Advance for use at Performing Arts"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433063513356",
+      "callNumber": "|hNCOV 2737-K",
+      "itemType": null
+    },
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "15830171"
+      ],
+      "id": "2",
+      "nyplType": "item",
+      "updatedDate": "2018-02-21T17:17:39-05:00",
+      "createdDate": "2009-02-12T14:30:13-05:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "rcpf2",
+        "name": "OFFSITE - Request in Advance for use at Performing Arts"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433063513372",
+      "callNumber": "|hNCOV 2737-U",
+      "itemType": null
+    },
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "15830171"
+      ],
+      "id": "3",
+      "nyplType": "item",
+      "updatedDate": "2018-02-21T17:17:39-05:00",
+      "createdDate": "2009-02-12T14:30:13-05:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "rcpf2",
+        "name": "OFFSITE - Request in Advance for use at Performing Arts"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433063513364",
+      "callNumber": "|hNCOV 2737-U",
+      "itemType": null
+    },
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "15830171"
+      ],
+      "id": "31576906",
+      "nyplType": "item",
+      "updatedDate": "2014-07-17T04:47:53-04:00",
+      "createdDate": "2014-04-29T15:34:04-04:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "myf22",
+        "name": "Performing Arts Research Collections - TOFT"
+      },
+      "status": {
+        "code": "k",
+        "display": "CHECK W/STAFF",
+        "duedate": null
+      },
+      "barcode": "33433063664712",
+      "callNumber": "|hNCOV 2737",
+      "itemType": null
+    }
+    
+  ]
+}
+
+
