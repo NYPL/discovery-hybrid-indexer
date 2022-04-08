@@ -1,0 +1,18 @@
+{
+  "id": "15830171",
+  "nyplSource": "not-our-record",
+  "items": [
+    {
+      "id": 1,
+      "location": {
+        "code": "rc123"
+      }
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    }
+  ]
+}
