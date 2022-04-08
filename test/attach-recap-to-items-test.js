@@ -1,7 +1,7 @@
 const recapFuncs = require('../lib/attach-recap-to-items')
 const { nyplScsbMultiItemBib, nyplPlatformMultiItemBib, nyplScsbSingleItemBib, nyplPlatformSingleItemBib, partnerPlatformBib, nyplOnsiteBib } = require('./fixtures/attach-recap-code')
 const sinon = require('sinon')
-const ScsbClient = require('pcdm-store-updater/lib/scsb-client')
+const ScsbClient = require('../lib/scsb-client')
 const { expect } = require('chai')
 
 describe('createRecapCodeMap', () => {
