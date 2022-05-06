@@ -2,7 +2,6 @@ const sinon = require('sinon')
 
 const platformApi = require('../lib/platform-api')
 const discoveryApiIndex = require('discovery-api-indexer/lib/index')
-const kmsHelper = require('../lib/kms-helper')
 
 describe('platform-api', () => {
   describe('bibIdentifiersForItems', () => {
@@ -50,7 +49,6 @@ describe('platform-api', () => {
 
     describe('for deleted items', () => {
       before(() => {
-        sinon.stub(kmsHelper, 'decrypt').callsFake(() => Promise.resolve('decrypted!'))
         sinon.stub(discoveryApiIndex, 'search')
           .callsFake((payload) => {
             return Promise.resolve({
@@ -69,7 +67,6 @@ describe('platform-api', () => {
       })
 
       after(() => {
-        kmsHelper.decrypt.restore()
         discoveryApiIndex.search.restore()
       })
 

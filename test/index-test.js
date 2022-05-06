@@ -5,28 +5,20 @@ const NyplStreamsClient = require('@nypl/nypl-streams-client')
 const kmsHelperPcdm = require('pcdm-store-updater/lib/kms-helper')
 const ScsbClient = require('../lib/scsb-client')
 
-const kmsHelper = require('../lib/kms-helper')
 const index = require('../index')
 const fixtures = require('./fixtures')
 
 // const { printJsonObject } = require('./utils')
 
 describe('index.handler', () => {
-  let indexedDocuments = []
   let kinesisWrites = {}
   let client
   before(async function () {
     // If updating fixtures, increase timeout to 10s
     this.timeout(process.env.UPDATE_FIXTURES ? 10000 : 2000)
-    sinon.stub(kmsHelper, 'decrypt').callsFake(() => Promise.resolve('decrypted!'))
     sinon.stub(kmsHelperPcdm, 'decrypt').callsFake(() => Promise.resolve('decrypted!'))
     client = await ScsbClient.instance()
     sinon.stub(client, 'search').callsFake(() => Promise.resolve('search result'))
-    sinon.stub(discoveryApiIndex.resources, 'save')
-      .callsFake((indexName, records, update) => {
-        indexedDocuments = indexedDocuments.concat(records)
-        return Promise.resolve()
-      })
 
     sinon.stub(NyplStreamsClient.prototype, 'write')
       .callsFake((streamName, records) => {
@@ -38,15 +30,12 @@ describe('index.handler', () => {
   })
 
   afterEach(() => {
-    indexedDocuments = []
     kinesisWrites = {}
   })
 
   after(() => {
-    kmsHelper.decrypt.restore()
     kmsHelperPcdm.decrypt.restore()
     client.search.restore()
-    discoveryApiIndex.resources.save.restore()
     NyplStreamsClient.prototype.write.restore()
 
     fixtures.disableDataApiFixtures()
@@ -62,6 +51,7 @@ describe('index.handler', () => {
             expect(result).to.eq('Wrote 1 doc(s)')
             expect(discoveryApiIndex.resources.save.calledOnce).to.eq(true)
 
+            const { indexedDocuments } = global
             expect(indexedDocuments).to.have.lengthOf(1)
             expect(indexedDocuments[0]).to.be.a('object')
 
@@ -138,6 +128,7 @@ describe('index.handler', () => {
           try {
             expect(result).to.eq('Wrote 1 doc(s)')
 
+            const { indexedDocuments } = global
             expect(indexedDocuments[0].nyplSource).to.eql(['recap-cul'])
             // Check bib metadata
             expect(indexedDocuments[0].identifierV2).to.deep.include.members([
@@ -194,6 +185,7 @@ describe('index.handler', () => {
           try {
             expect(result).to.eq('Wrote 1 doc(s)')
 
+            const { indexedDocuments } = global
             expect(indexedDocuments[0].uri).to.eql('b12959619')
             expect(indexedDocuments[0].nyplSource).to.eql(['sierra-nypl'])
 
@@ -274,6 +266,7 @@ describe('index.handler', () => {
           try {
             expect(result).to.eq('Wrote 1 doc(s)')
 
+            const { indexedDocuments } = global
             expect(indexedDocuments[0].uri).to.eql('cb578091')
             expect(indexedDocuments[0].nyplSource).to.eql(['recap-cul'])
 
@@ -307,7 +300,7 @@ describe('index.handler', () => {
             try {
               expect(result).to.eq('Wrote 0 doc(s)')
 
-              expect(indexedDocuments).to.have.lengthOf(0)
+              expect(global.indexedDocuments).to.have.lengthOf(0)
 
               // Expect no writes to "processed" stream:
               expect(kinesisWrites).to.not.have.property('IndexDocumentProcessed-test')
@@ -331,7 +324,7 @@ describe('index.handler', () => {
             try {
               expect(result).to.eq('Wrote 2 doc(s)')
 
-              expect(indexedDocuments).to.have.lengthOf(2)
+              expect(global.indexedDocuments).to.have.lengthOf(2)
 
               // Expect writes to "processed" stream:
               expect(kinesisWrites).to.have.property('IndexDocumentProcessed-test')
@@ -340,6 +333,28 @@ describe('index.handler', () => {
                 { id: '20970375', nyplSource: 'sierra-nypl', nyplType: 'bib' },
                 { id: '11361121', nyplSource: 'sierra-nypl', nyplType: 'bib' }
               ])
+
+              return resolve()
+            } catch (e) {
+              return reject(e)
+            }
+          })
+        })
+      })
+    })
+
+    describe('Circ bib', () => {
+      it('Handles deleting a circ bib', () => {
+        const event = require('./sample-events/b22316804.json')
+
+        return new Promise((resolve, reject) => {
+          index.handler(event, {}, (e, result) => {
+            try {
+              expect(result).to.eq('Wrote 0 doc(s)')
+
+              expect(global.indexedDocuments).to.have.lengthOf(0)
+              expect(global.deletedUris).to.have.lengthOf(1)
+              expect(global.deletedUris[0]).to.eq('b22316804')
 
               return resolve()
             } catch (e) {
@@ -383,6 +398,7 @@ describe('index.handler', () => {
           index.handler(event, {}, (e, result) => {
             try {
               expect(result).to.eq('Wrote 1 doc(s)')
+              const { indexedDocuments } = global
               expect(indexedDocuments).to.have.lengthOf(1)
 
               // Confirm the deleted item does not appear in the newly built
@@ -437,7 +453,7 @@ describe('index.handler', () => {
           index.handler(event, {}, (e, result) => {
             try {
               expect(result).to.eq('Wrote 0 doc(s)')
-              expect(indexedDocuments).to.have.lengthOf(0)
+              expect(global.indexedDocuments).to.have.lengthOf(0)
 
               return resolve()
             } catch (e) {
@@ -479,7 +495,7 @@ describe('index.handler', () => {
               expect(result).to.be.a('undefined')
               expect(e).to.be.a('error')
 
-              expect(indexedDocuments).to.have.lengthOf(0)
+              expect(global.indexedDocuments).to.have.lengthOf(0)
 
               // Expect writes to "processed" stream:
               expect(kinesisWrites).to.not.have.property('IndexDocumentProcessed-test')
