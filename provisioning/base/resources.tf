@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+}
+
 provider "aws" {
   region     = "us-east-1"
 }
@@ -27,7 +36,7 @@ data "archive_file" "lambda_zip" {
 }
 
 # Upload the zipped app to S3:
-resource "aws_s3_bucket_object" "uploaded_zip" {
+resource "aws_s3_object" "uploaded_zip" {
   bucket = "nypl-travis-builds-${var.environment}"
   key    = "discovery-hybrid-indexer-${var.environment}-dist.zip"
   acl    = "private"
@@ -46,8 +55,8 @@ resource "aws_lambda_function" "lambda_instance" {
   timeout       = 300
 
   # Location of the zipped code in S3:
-  s3_bucket     = aws_s3_bucket_object.uploaded_zip.bucket
-  s3_key        = aws_s3_bucket_object.uploaded_zip.key
+  s3_bucket     = aws_s3_object.uploaded_zip.bucket
+  s3_key        = aws_s3_object.uploaded_zip.key
 
   # Trigger pulling code from S3 when the zip has changed:
   source_code_hash = data.archive_file.lambda_zip.output_base64sha256
