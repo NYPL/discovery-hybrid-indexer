@@ -1,9 +1,9 @@
 const discoveryStoreModel = require('../lib/discovery-store-model')
 
 describe('discovery-store-model', () => {
-  describe('filterOutNonResearchBibs', () => {
+  describe('filterOutAndDeleteNonResearchBibs', () => {
     it('removes non-research bib', () => {
-      return discoveryStoreModel.filterOutNonResearchBibs([
+      return discoveryStoreModel.filterOutAndDeleteNonResearchBibs([
         {
           id: 'circulating-bib',
           nyplSource: 'sierra-nypl',
@@ -26,7 +26,7 @@ describe('discovery-store-model', () => {
     })
 
     it('does not remove locations that are both Research and Branch', () => {
-      return discoveryStoreModel.filterOutNonResearchBibs([
+      return discoveryStoreModel.filterOutAndDeleteNonResearchBibs([
         {
           id: 'research-or-branch-bib',
           nyplSource: 'sierra-nypl',
@@ -43,7 +43,7 @@ describe('discovery-store-model', () => {
     })
 
     it('assues bibs with no locations are research', () => {
-      return discoveryStoreModel.filterOutNonResearchBibs([
+      return discoveryStoreModel.filterOutAndDeleteNonResearchBibs([
         { id: 123 },
         { id: 456, locations: [] }
       ]).then((filtered) => {
@@ -53,7 +53,7 @@ describe('discovery-store-model', () => {
     })
 
     it('assumes partner bibs are Research', () => {
-      return discoveryStoreModel.filterOutNonResearchBibs([
+      return discoveryStoreModel.filterOutAndDeleteNonResearchBibs([
         {
           id: 123,
           nyplSource: 'recap-cul',
@@ -144,8 +144,8 @@ describe('discovery-store-model', () => {
       })
     })
 
-    it('assumes bibs with location code "none" or "os" are Research (to ensure they are suppressed)', () => {
-      return discoveryStoreModel.filterOutNonResearchBibs([
+    it('classifies bibs with location code "none" or "os" as NON-Research (to ensure they are deleted from index)', () => {
+      return discoveryStoreModel.filterOutAndDeleteNonResearchBibs([
         {
           nyplSource: 'sierra-nypl',
           id: 'research-bib-1',
@@ -163,7 +163,7 @@ describe('discovery-store-model', () => {
 
       ]).then((filtered) => {
         expect(filtered).to.be.a('array')
-        expect(filtered).to.have.lengthOf(2)
+        expect(filtered).to.have.lengthOf(0)
       })
     })
   })

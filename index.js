@@ -28,7 +28,7 @@ const handler = (event, context, callback) => {
     // Dispatch based on what kind of event (Bib, Item, or Holding)
     switch (result.type) {
       case 'Bib':
-        updateTask = discoveryStoreModel.filterOutNonResearchBibs(result.records)
+        updateTask = discoveryStoreModel.filterOutAndDeleteNonResearchBibs(result.records)
           .then(fullRebuildForBibs)
         break
       case 'Item':
