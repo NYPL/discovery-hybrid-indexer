@@ -144,7 +144,7 @@ describe('discovery-store-model', () => {
       })
     })
 
-    it('classifies bibs with location code "none" or "os" as NON-Research (to ensure they are deleted from index)', () => {
+    it('classifies bibs with location code "none" or "os" as Research (to ensure they are handled by suppression rules in the indexer)', () => {
       return discoveryStoreModel.filterOutAndDeleteNonResearchBibs([
         {
           nyplSource: 'sierra-nypl',
@@ -163,7 +163,7 @@ describe('discovery-store-model', () => {
 
       ]).then((filtered) => {
         expect(filtered).to.be.a('array')
-        expect(filtered).to.have.lengthOf(0)
+        expect(filtered).to.have.lengthOf(2)
       })
     })
   })
