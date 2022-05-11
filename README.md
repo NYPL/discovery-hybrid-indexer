@@ -76,9 +76,39 @@ This app uses Travis-CI and terraform for deployment. Code pushed to `qa` and `m
 
 #### Troubleshooting deployments
 
+**Importing existing resources**:
+
 Because terraform state is synced to S3, you should never have to do this, but should you need to make `terraform` aware of a lambda resource that was created outside of `terraform`, you can import the existing resource like this:
 
 ```
 terraform -chdir=provisioning/production import module.base.aws_lambda_function.lambda_instance DiscoveryHybridIndexer-production
 ```
 
+**Terraform deprecation warnings**:
+
+As Terraform names evolve, you may encounter warnings like this:
+
+```
+│ Warning: Argument is deprecated
+│   with module.base.aws_s3_bucket_object.uploaded_zip,
+│   on ../base/resources.tf line 31, in resource "aws_s3_bucket_object" "uploaded_zip":
+│   31:   bucket = "nypl-travis-builds-${var.environment}"
+│
+│ Use the aws_s3_object resource instead
+```
+
+In this case, the resource type FKA `aws_s3_bucket_object` is changing to `aws_s3_object`. To migrate to the new name:
+ 1. Change `.tf` files to use `aws_s3_object`
+ 2. Import the existing S3 objects into the new name:
+   - `terraform -chdir=provisioning/qa import module.base.aws_s3_object.uploaded_zip nypl-travis-builds-qa/discovery-hybrid-indexer-qa-dist.zip`
+   - `terraform -chdir=provisioning/production import module.base.aws_s3_object.uploaded_zip nypl-travis-builds-production/discovery-hybrid-indexer-production-dist.zip`
+ 3. Run a `plan` to confirm terraform reports minimal changes to the new S3 resource (Note: terraform may report it will fully delete the previous S3 resource and that is okay.)
+
+**Terraform reports resource type not supported**:
+
+When encountering errors like this:
+```
+The provider hashicorp/aws does not support resource type "aws_s3_object"
+```
+
+If you believe the resource type _should_ be supported, the provider version may be behind. To see the provider version, run an `init` and look for a line like "Using previously-installed hashicorp/aws v4.13.0". Note: Provider versions are cached _by deployment_, so an error of this sort may arise for one deployment but not the other. Set provider versions explicitly in the base terraform file to mitigate.
