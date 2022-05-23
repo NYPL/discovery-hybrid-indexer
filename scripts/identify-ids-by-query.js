@@ -62,7 +62,7 @@ const usage = () => {
 // Ensure we're looking at the right profile and region
 awsInit()
 
-// Insist on an eventfile or a uri:
+// Require a --query
 if (!argv.query) usage() && die('Must specify --query')
 
 /**
