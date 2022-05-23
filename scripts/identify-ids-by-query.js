@@ -1,9 +1,9 @@
 /**
  *
  * Given a ES query, identfies matching records and writes them to a local csv
- * (just the numeric ids)
  *
  * Options:
+ *  --query QUERY - Provide ES query as a quoted JSON blob
  *  --outfile FILE - Specify where to write the CSV (default ./out.csv)
  *  --from N - Specify index to start collecting from. Default 0
  *  --size M - Specify records per page. Default 100
