@@ -3,7 +3,7 @@
   "dependencies": {
     "@nypl/nypl-core-objects": "2.0.0",
     "@nypl/nypl-data-api-client": "^1.0.4",
-    "@nypl/scsb-rest-client": "^1.0.6",
+    "@nypl/scsb-rest-client": "^2.0.0",
     "avsc": "^5.7.1",
     "deep-object-diff": "^1.1.0",
     "discovery-api-indexer": "github:NYPL-discovery/discovery-api-indexer#v1.2.1",
