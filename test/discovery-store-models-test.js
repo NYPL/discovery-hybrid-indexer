@@ -167,4 +167,10 @@ describe('discovery-store-model', () => {
       })
     })
   })
+
+  describe('discoveryStoreModel', () => {
+    it('converts a bib with attached _items and _holdings into an ES document', () => {
+      // const bibWithItemsAndHoldings = 
+    })
+  })
 })
