@@ -76,6 +76,13 @@ function parseResultAndScroll (result, records = []) {
   if (argv.stripprefix) ids = ids.map((id) => id.replace(/^[a-z]+/, ''))
   records = records.concat(ids)
 
+
+  if (argv.limit && records.length >= argv.limit) {
+    console.log(`Reached ${argv.limit} limit; Stopping`)
+    records = records.slice(0, argv.limit)
+    return records
+  }
+
   if (records.length < result.hits.total) {
     const page = Math.ceil(records.length / argv.size)
     const pages = Math.ceil(result.hits.total / argv.size)
@@ -107,6 +114,7 @@ const writeFile = (records) => {
  */
 function fetch (body, records = []) {
   console.log('Query Index: ', JSON.stringify(body, null, 2))
+  if (argv.limit) console.log(`Applying limit of ${argv.limit}`)
 
   return discoveryApiIndexer.queryIndex(body, { scroll: '30s' })
     .then(parseResultAndScroll)
