@@ -1,0 +1,842 @@
+{
+  "data": [
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "10010064"
+      ],
+      "id": "10005201",
+      "nyplType": "item",
+      "updatedDate": "2014-10-06T20:49:14-04:00",
+      "createdDate": "2009-02-03T00:43:00-05:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "scdd2",
+        "name": "Schomburg Center - Manuscripts & Archives"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433076137102",
+      "callNumber": "|hSc Rare C 81-10",
+      "itemType": null,
+      "fixedFields": {
+        "57": {
+          "label": "BIB HOLD",
+          "value": false,
+          "display": null
+        },
+        "58": {
+          "label": "Copy No.",
+          "value": 1,
+          "display": null
+        },
+        "59": {
+          "label": "Item Code 1",
+          "value": "0",
+          "display": null
+        },
+        "60": {
+          "label": "Item Code 2",
+          "value": "-",
+          "display": null
+        },
+        "61": {
+          "label": "Item Type",
+          "value": "2",
+          "display": null
+        },
+        "62": {
+          "label": "Price",
+          "value": 0,
+          "display": null
+        },
+        "64": {
+          "label": "Checkout Location",
+          "value": 0,
+          "display": null
+        },
+        "70": {
+          "label": "Checkin Location",
+          "value": 0,
+          "display": null
+        },
+        "74": {
+          "label": "Item Use 3",
+          "value": 0,
+          "display": null
+        },
+        "76": {
+          "label": "Total Checkouts",
+          "value": 0,
+          "display": null
+        },
+        "77": {
+          "label": "Total Renewals",
+          "value": 0,
+          "display": null
+        },
+        "79": {
+          "label": "Location",
+          "value": "scdd2",
+          "display": "Schomburg Center - Manuscripts & Archives"
+        },
+        "80": {
+          "label": "Record Type",
+          "value": "i",
+          "display": null
+        },
+        "81": {
+          "label": "Record Number",
+          "value": "10005201",
+          "display": null
+        },
+        "83": {
+          "label": "Created Date",
+          "value": "2009-02-03T00:43:00Z",
+          "display": null
+        },
+        "84": {
+          "label": "Updated Date",
+          "value": "2014-10-06T20:49:14Z",
+          "display": null
+        },
+        "85": {
+          "label": "No. of Revisions",
+          "value": "9",
+          "display": null
+        },
+        "86": {
+          "label": "Agency",
+          "value": "1",
+          "display": null
+        },
+        "88": {
+          "label": "Status",
+          "value": "-",
+          "display": "AVAILABLE"
+        },
+        "93": {
+          "label": "Inhouse Use",
+          "value": 0,
+          "display": null
+        },
+        "94": {
+          "label": "Copy Use",
+          "value": 0,
+          "display": null
+        },
+        "97": {
+          "label": "Item Message",
+          "value": "-",
+          "display": null
+        },
+        "98": {
+          "label": "PDATE",
+          "value": "2014-07-16T19:57:46Z",
+          "display": null
+        },
+        "108": {
+          "label": "OPAC Message",
+          "value": "1",
+          "display": null
+        },
+        "109": {
+          "label": "Year-to-Date Circ",
+          "value": 0,
+          "display": null
+        },
+        "110": {
+          "label": "Last Year Circ",
+          "value": 0,
+          "display": null
+        },
+        "127": {
+          "label": "Item Agency",
+          "value": "31",
+          "display": "Schomburg"
+        },
+        "161": {
+          "label": "VI Central",
+          "value": 0,
+          "display": null
+        },
+        "162": {
+          "label": "IR Dist Learn Same Site",
+          "value": "0",
+          "display": null
+        },
+        "264": {
+          "label": "Holdings Item Tag",
+          "value": "6",
+          "display": null
+        },
+        "265": {
+          "label": "Inherit Location",
+          "value": false,
+          "display": null
+        }
+      },
+      "varFields": [
+        {
+          "fieldTag": "a",
+          "marcTag": "949",
+          "ind1": " ",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "a",
+              "content": "Sc Rare C 81-10"
+            },
+            {
+              "tag": "h",
+              "content": "1"
+            },
+            {
+              "tag": "i",
+              "content": "0"
+            },
+            {
+              "tag": "j",
+              "content": "-"
+            },
+            {
+              "tag": "k",
+              "content": "2"
+            },
+            {
+              "tag": "l",
+              "content": "$0.00"
+            },
+            {
+              "tag": "m",
+              "content": "0"
+            },
+            {
+              "tag": "n",
+              "content": "0"
+            },
+            {
+              "tag": "o",
+              "content": "0"
+            },
+            {
+              "tag": "p",
+              "content": "sm   "
+            },
+            {
+              "tag": "q",
+              "content": "-"
+            },
+            {
+              "tag": "r",
+              "content": "0"
+            },
+            {
+              "tag": "s",
+              "content": "0"
+            },
+            {
+              "tag": "u",
+              "content": "-"
+            },
+            {
+              "tag": "v",
+              "content": "0"
+            },
+            {
+              "tag": "w",
+              "content": "0"
+            },
+            {
+              "tag": "x",
+              "content": ".i10084125"
+            },
+            {
+              "tag": "y",
+              "content": "05-30-96"
+            },
+            {
+              "tag": "z",
+              "content": "10-28-08"
+            }
+          ]
+        },
+        {
+          "fieldTag": "b",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "33433076137102",
+          "subfields": null
+        },
+        {
+          "fieldTag": "c",
+          "marcTag": "852",
+          "ind1": "8",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "h",
+              "content": "Sc Rare C 81-10"
+            }
+          ]
+        },
+        {
+          "fieldTag": "t",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "scm/aja",
+          "subfields": null
+        }
+      ]
+    },
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "10010064"
+      ],
+      "id": "33615197",
+      "nyplType": "item",
+      "updatedDate": "2016-07-26T20:11:08-04:00",
+      "createdDate": "2016-01-05T16:51:27-05:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "scdd2",
+        "name": "Schomburg Center - Manuscripts & Archives"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433017978234",
+      "callNumber": "|hSc Rare C 15-22 (Lapidus Collection)",
+      "itemType": null,
+      "fixedFields": {
+        "57": {
+          "label": "BIB HOLD",
+          "value": false,
+          "display": null
+        },
+        "58": {
+          "label": "Copy No.",
+          "value": 1,
+          "display": null
+        },
+        "59": {
+          "label": "Item Code 1",
+          "value": "0",
+          "display": null
+        },
+        "60": {
+          "label": "Item Code 2",
+          "value": "-",
+          "display": null
+        },
+        "61": {
+          "label": "Item Type",
+          "value": "2",
+          "display": null
+        },
+        "62": {
+          "label": "Price",
+          "value": 0,
+          "display": null
+        },
+        "64": {
+          "label": "Checkout Location",
+          "value": 0,
+          "display": null
+        },
+        "70": {
+          "label": "Checkin Location",
+          "value": 0,
+          "display": null
+        },
+        "74": {
+          "label": "Item Use 3",
+          "value": 0,
+          "display": null
+        },
+        "76": {
+          "label": "Total Checkouts",
+          "value": 0,
+          "display": null
+        },
+        "77": {
+          "label": "Total Renewals",
+          "value": 0,
+          "display": null
+        },
+        "79": {
+          "label": "Location",
+          "value": "scdd2",
+          "display": "Schomburg Center - Manuscripts & Archives"
+        },
+        "80": {
+          "label": "Record Type",
+          "value": "i",
+          "display": null
+        },
+        "81": {
+          "label": "Record Number",
+          "value": "33615197",
+          "display": null
+        },
+        "83": {
+          "label": "Created Date",
+          "value": "2016-01-05T16:51:27Z",
+          "display": null
+        },
+        "84": {
+          "label": "Updated Date",
+          "value": "2016-07-26T20:11:08Z",
+          "display": null
+        },
+        "85": {
+          "label": "No. of Revisions",
+          "value": "3",
+          "display": null
+        },
+        "86": {
+          "label": "Agency",
+          "value": "1",
+          "display": null
+        },
+        "88": {
+          "label": "Status",
+          "value": "-",
+          "display": "AVAILABLE"
+        },
+        "93": {
+          "label": "Inhouse Use",
+          "value": 0,
+          "display": null
+        },
+        "94": {
+          "label": "Copy Use",
+          "value": 0,
+          "display": null
+        },
+        "97": {
+          "label": "Item Message",
+          "value": "-",
+          "display": null
+        },
+        "98": {
+          "label": "PDATE",
+          "value": "2016-01-08T20:15:25Z",
+          "display": null
+        },
+        "108": {
+          "label": "OPAC Message",
+          "value": "2",
+          "display": null
+        },
+        "109": {
+          "label": "Year-to-Date Circ",
+          "value": 0,
+          "display": null
+        },
+        "110": {
+          "label": "Last Year Circ",
+          "value": 0,
+          "display": null
+        },
+        "127": {
+          "label": "Item Agency",
+          "value": "31",
+          "display": "Schomburg"
+        },
+        "161": {
+          "label": "VI Central",
+          "value": 0,
+          "display": null
+        },
+        "162": {
+          "label": "IR Dist Learn Same Site",
+          "value": "0",
+          "display": null
+        },
+        "264": {
+          "label": "Holdings Item Tag",
+          "value": "6",
+          "display": null
+        },
+        "265": {
+          "label": "Inherit Location",
+          "value": false,
+          "display": null
+        }
+      },
+      "varFields": [
+        {
+          "fieldTag": "b",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "33433017978234",
+          "subfields": null
+        },
+        {
+          "fieldTag": "c",
+          "marcTag": "852",
+          "ind1": "8",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "h",
+              "content": "Sc Rare C 15-22 (Lapidus Collection)"
+            }
+          ]
+        },
+        {
+          "fieldTag": "t",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "sfp/tlc",
+          "subfields": null
+        }
+      ]
+    },
+    {
+      "nyplSource": "sierra-nypl",
+      "bibIds": [
+        "10010064"
+      ],
+      "id": "10005200",
+      "nyplType": "item",
+      "updatedDate": "2017-02-20T16:32:47-05:00",
+      "createdDate": "2009-02-03T00:43:38-05:00",
+      "deletedDate": null,
+      "deleted": false,
+      "location": {
+        "code": "mal92",
+        "name": "SASB M2 - General Research Room 315"
+      },
+      "status": {
+        "code": "-",
+        "display": "AVAILABLE",
+        "duedate": null
+      },
+      "barcode": "33433082549480",
+      "callNumber": "|hAN (Benezet) (Vaux, R. Memoirs of the life of Anthony Benezet. Philadelphia, 1817)",
+      "itemType": null,
+      "fixedFields": {
+        "57": {
+          "label": "BIB HOLD",
+          "value": false,
+          "display": null
+        },
+        "58": {
+          "label": "Copy No.",
+          "value": 1,
+          "display": null
+        },
+        "59": {
+          "label": "Item Code 1",
+          "value": "0",
+          "display": null
+        },
+        "60": {
+          "label": "Item Code 2",
+          "value": "-",
+          "display": null
+        },
+        "61": {
+          "label": "Item Type",
+          "value": "52",
+          "display": "i-archive/google monograph"
+        },
+        "62": {
+          "label": "Price",
+          "value": 0,
+          "display": null
+        },
+        "64": {
+          "label": "Checkout Location",
+          "value": 888,
+          "display": null
+        },
+        "68": {
+          "label": "Last Checkin",
+          "value": "2012-08-28T13:53:53Z",
+          "display": null
+        },
+        "69": {
+          "label": "Inventory Date",
+          "value": "2017-02-20T09:00:00Z",
+          "display": null
+        },
+        "70": {
+          "label": "Checkin Location",
+          "value": 915,
+          "display": null
+        },
+        "74": {
+          "label": "Item Use 3",
+          "value": 0,
+          "display": null
+        },
+        "76": {
+          "label": "Total Checkouts",
+          "value": 3,
+          "display": null
+        },
+        "77": {
+          "label": "Total Renewals",
+          "value": 0,
+          "display": null
+        },
+        "78": {
+          "label": "Last Checkout Date",
+          "value": "2012-08-23T15:24:58Z",
+          "display": null
+        },
+        "79": {
+          "label": "Location",
+          "value": "mal92",
+          "display": "SASB M2 - General Research Room 315"
+        },
+        "80": {
+          "label": "Record Type",
+          "value": "i",
+          "display": null
+        },
+        "81": {
+          "label": "Record Number",
+          "value": "10005200",
+          "display": null
+        },
+        "83": {
+          "label": "Created Date",
+          "value": "2009-02-03T00:43:38Z",
+          "display": null
+        },
+        "84": {
+          "label": "Updated Date",
+          "value": "2017-02-20T16:32:47Z",
+          "display": null
+        },
+        "85": {
+          "label": "No. of Revisions",
+          "value": "16",
+          "display": null
+        },
+        "86": {
+          "label": "Agency",
+          "value": "1",
+          "display": null
+        },
+        "88": {
+          "label": "Status",
+          "value": "-",
+          "display": "AVAILABLE"
+        },
+        "93": {
+          "label": "Inhouse Use",
+          "value": 0,
+          "display": null
+        },
+        "94": {
+          "label": "Copy Use",
+          "value": 0,
+          "display": null
+        },
+        "97": {
+          "label": "Item Message",
+          "value": "-",
+          "display": null
+        },
+        "98": {
+          "label": "PDATE",
+          "value": "2017-02-20T15:55:09Z",
+          "display": null
+        },
+        "108": {
+          "label": "OPAC Message",
+          "value": "1",
+          "display": null
+        },
+        "109": {
+          "label": "Year-to-Date Circ",
+          "value": 0,
+          "display": null
+        },
+        "110": {
+          "label": "Last Year Circ",
+          "value": 0,
+          "display": null
+        },
+        "127": {
+          "label": "Item Agency",
+          "value": "33",
+          "display": "S.A. Schwarzman Bldg."
+        },
+        "161": {
+          "label": "VI Central",
+          "value": 0,
+          "display": null
+        },
+        "162": {
+          "label": "IR Dist Learn Same Site",
+          "value": "0",
+          "display": null
+        },
+        "264": {
+          "label": "Holdings Item Tag",
+          "value": "6",
+          "display": null
+        },
+        "265": {
+          "label": "Inherit Location",
+          "value": false,
+          "display": null
+        },
+        "306": {
+          "label": "Sticky Status",
+          "value": " ",
+          "display": null
+        }
+      },
+      "varFields": [
+        {
+          "fieldTag": "a",
+          "marcTag": "949",
+          "ind1": " ",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "a",
+              "content": "AN (Benezet) (Vaux, R. Memoirs of the life of Anthony Benezet. Philadelphia, 1817)"
+            },
+            {
+              "tag": "c",
+              "content": "33433082549480"
+            },
+            {
+              "tag": "g",
+              "content": "rla/jgo/rla/anb"
+            },
+            {
+              "tag": "h",
+              "content": "1"
+            },
+            {
+              "tag": "i",
+              "content": "0"
+            },
+            {
+              "tag": "j",
+              "content": "-"
+            },
+            {
+              "tag": "k",
+              "content": "52"
+            },
+            {
+              "tag": "l",
+              "content": "$0.00"
+            },
+            {
+              "tag": "m",
+              "content": "0"
+            },
+            {
+              "tag": "n",
+              "content": "2"
+            },
+            {
+              "tag": "o",
+              "content": "0"
+            },
+            {
+              "tag": "p",
+              "content": "hgb  "
+            },
+            {
+              "tag": "q",
+              "content": "-"
+            },
+            {
+              "tag": "r",
+              "content": "0"
+            },
+            {
+              "tag": "s",
+              "content": "0"
+            },
+            {
+              "tag": "u",
+              "content": "-"
+            },
+            {
+              "tag": "v",
+              "content": "2"
+            },
+            {
+              "tag": "w",
+              "content": "0"
+            },
+            {
+              "tag": "x",
+              "content": ".i10084113"
+            },
+            {
+              "tag": "y",
+              "content": "05-30-96"
+            },
+            {
+              "tag": "z",
+              "content": "10-28-08"
+            }
+          ]
+        },
+        {
+          "fieldTag": "b",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "33433082549480",
+          "subfields": null
+        },
+        {
+          "fieldTag": "c",
+          "marcTag": "852",
+          "ind1": "8",
+          "ind2": " ",
+          "content": null,
+          "subfields": [
+            {
+              "tag": "h",
+              "content": "AN (Benezet) (Vaux, R. Memoirs of the life of Anthony Benezet. Philadelphia, 1817)"
+            }
+          ]
+        },
+        {
+          "fieldTag": "t",
+          "marcTag": null,
+          "ind1": null,
+          "ind2": null,
+          "content": "rla/jgo/rla/anb",
+          "subfields": null
+        }
+      ]
+    }
+  ],
+  "count": 3,
+  "totalCount": 0,
+  "statusCode": 200,
+  "debugInfo": []
+}
