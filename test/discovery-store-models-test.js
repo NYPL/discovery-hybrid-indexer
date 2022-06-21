@@ -166,5 +166,20 @@ describe('discovery-store-model', () => {
         expect(filtered).to.have.lengthOf(2)
       })
     })
+
+    it('classifies bibs with location code "iarch" (has collectionTypes Branch & Research) as Research', () => {
+      return discoveryStoreModel.filterOutAndDeleteNonResearchBibs([
+        {
+          nyplSource: 'sierra-nypl',
+          id: 'research-bib-1',
+          locations: [
+            { code: 'iarch' }
+          ]
+        }
+      ]).then((filtered) => {
+        expect(filtered).to.be.a('array')
+        expect(filtered).to.have.lengthOf(1)
+      })
+    })
   })
 })
