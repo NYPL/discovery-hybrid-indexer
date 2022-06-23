@@ -245,6 +245,21 @@ describe('discovery-store-model', () => {
         expect(filtered).to.have.lengthOf(2)
       })
     })
+
+    it('classifies bibs with location code "iarch" (has collectionTypes Branch & Research) as Research', () => {
+      return discoveryStoreModel.filterOutAndDeleteNonResearchBibs([
+        {
+          nyplSource: 'sierra-nypl',
+          id: 'research-bib-1',
+          locations: [
+            { code: 'iarch' }
+          ]
+        }
+      ]).then((filtered) => {
+        expect(filtered).to.be.a('array')
+        expect(filtered).to.have.lengthOf(1)
+      })
+    })
   })
 
   describe('buildDiscoveryStoreBibs', () => {
@@ -261,7 +276,6 @@ describe('discovery-store-model', () => {
     it('converts a plain bib into an object with correctly grouped statements', async () => {
       const bib = await platformApi.bibById('sierra-nypl', '10010064')
       const groupedStatements = await discoveryStoreModel.buildDiscoveryStoreBibs([bib])
-      console.log('::', JSON.stringify(groupedStatements, null, 2))
 
       expect(groupedStatements).to.be.a('array')
       expect(groupedStatements[0]).to.be.a('object')
