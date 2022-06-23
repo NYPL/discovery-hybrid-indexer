@@ -26,7 +26,11 @@ before(() => {
       return Promise.resolve()
     })
 
-  sinon.stub(kmsHelper, 'decrypt').callsFake(() => Promise.resolve('decrypted!'))
+  sinon.stub(kmsHelper, 'decrypt').callsFake((val) => {
+    // If updating fixtures, pass the origianl value through because local
+    // config is decrypted
+    return Promise.resolve(process.UPDATE_FIXTURES ? val : 'decrypted!')
+  })
 
   global.indexedDocuments = []
   global.deletedUris = []
