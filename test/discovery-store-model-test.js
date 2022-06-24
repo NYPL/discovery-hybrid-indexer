@@ -371,6 +371,23 @@ describe('discovery-store-model', () => {
       })
     })
 
+    it('handles deleted bibs', async () => {
+      const groupedStatements = await discoveryStoreModel.buildDiscoveryStoreBibs([{
+        id: '987',
+        nyplSource: 'sierra-nypl',
+        nyplType: 'bib',
+        deletedDate: '2022-06-22',
+        deleted: true
+      }])
+
+      expect(groupedStatements).to.be.a('array')
+      expect(groupedStatements[0]).to.be.a('object')
+      // The following method will return true if the wrapped statements
+      // include a statement with nypl:suppressed and value `true` and is
+      // the mechanism for flagging bibs for deletion.
+      expect(groupedStatements[0].isSuppressed()).to.eq(true)
+    })
+
     describe('with checkin-card extraction', () => {
       const extraCheckinCardStatements = [
         // First checkin card item:
