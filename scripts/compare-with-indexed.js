@@ -28,6 +28,9 @@ const { printDiff } = require('../test/diff-report')
 const platformApi = require('../lib/platform-api')
 const discoveryApiIndexer = require('../lib/discovery-api-indexer')
 
+const logger = require('../lib/logger')
+logger.setLevel(process.env.LOGLEVEL || 'info')
+
 const usage = () => {
   console.log('Usage: node scripts/compare-with-indexed --envfile [path to .env] [--uri bnum] ./test/sample-events/[eventfile]')
   return true
