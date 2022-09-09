@@ -76,7 +76,6 @@ function parseResultAndScroll (result, records = []) {
   if (argv.stripprefix) ids = ids.map((id) => id.replace(/^[a-z]+/, ''))
   records = records.concat(ids)
 
-
   if (argv.limit && records.length >= argv.limit) {
     console.log(`Reached ${argv.limit} limit; Stopping`)
     records = records.slice(0, argv.limit)
