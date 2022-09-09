@@ -1,0 +1,581 @@
+{
+  "data": {
+    "id": "10010064",
+    "nyplSource": "sierra-nypl",
+    "nyplType": "bib",
+    "updatedDate": "2021-06-30T11:20:57-04:00",
+    "createdDate": "2008-12-13T16:01:03-05:00",
+    "deletedDate": null,
+    "deleted": false,
+    "locations": [
+      {
+        "code": "scd",
+        "name": "Schomburg Center - Manuscripts & Archives"
+      },
+      {
+        "code": "mal",
+        "name": "SASB - Service Desk Rm 315"
+      }
+    ],
+    "suppressed": false,
+    "lang": {
+      "code": "eng",
+      "name": "English"
+    },
+    "title": "Memoirs of the life of Anthony Benezet",
+    "author": "Vaux, Roberts, 1786-1836.",
+    "materialType": {
+      "code": "a  ",
+      "value": "BOOK/TEXT"
+    },
+    "bibLevel": {
+      "code": "m",
+      "value": "MONOGRAPH"
+    },
+    "publishYear": 1817,
+    "catalogDate": "2000-12-15",
+    "country": {
+      "code": "pau",
+      "name": "Pennsylvania"
+    },
+    "normTitle": "memoirs of the life of anthony benezet",
+    "normAuthor": "vaux roberts 1786 1836",
+    "standardNumbers": [],
+    "controlNumber": "NYPG009000783-B",
+    "fixedFields": {
+      "24": {
+        "label": "Language",
+        "value": "eng",
+        "display": "English"
+      },
+      "25": {
+        "label": "Skip",
+        "value": "0",
+        "display": null
+      },
+      "26": {
+        "label": "Location",
+        "value": "multi",
+        "display": null
+      },
+      "27": {
+        "label": "COPIES",
+        "value": "3",
+        "display": null
+      },
+      "28": {
+        "label": "Cat. Date",
+        "value": "2000-12-15",
+        "display": null
+      },
+      "29": {
+        "label": "Bib Level",
+        "value": "m",
+        "display": "MONOGRAPH"
+      },
+      "30": {
+        "label": "Material Type",
+        "value": "a  ",
+        "display": "BOOK/TEXT"
+      },
+      "31": {
+        "label": "Bib Code 3",
+        "value": "-",
+        "display": null
+      },
+      "80": {
+        "label": "Record Type",
+        "value": "b",
+        "display": null
+      },
+      "81": {
+        "label": "Record Number",
+        "value": "10010064",
+        "display": null
+      },
+      "83": {
+        "label": "Created Date",
+        "value": "2008-12-13T16:01:03Z",
+        "display": null
+      },
+      "84": {
+        "label": "Updated Date",
+        "value": "2021-06-30T11:20:57Z",
+        "display": null
+      },
+      "85": {
+        "label": "No. of Revisions",
+        "value": "16",
+        "display": null
+      },
+      "86": {
+        "label": "Agency",
+        "value": "1",
+        "display": null
+      },
+      "89": {
+        "label": "Country",
+        "value": "pau",
+        "display": "Pennsylvania"
+      },
+      "98": {
+        "label": "PDATE",
+        "value": "2021-05-01T09:26:58Z",
+        "display": null
+      },
+      "107": {
+        "label": "MARC Type",
+        "value": " ",
+        "display": null
+      }
+    },
+    "varFields": [
+      {
+        "fieldTag": "a",
+        "marcTag": "100",
+        "ind1": "1",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Vaux, Roberts,"
+          },
+          {
+            "tag": "d",
+            "content": "1786-1836."
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "790",
+        "ind1": "1",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Lapidus, Sidney,"
+          },
+          {
+            "tag": "d",
+            "content": "1937-"
+          },
+          {
+            "tag": "e",
+            "content": "donor."
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "600",
+        "ind1": "1",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Benezet, Anthony,"
+          },
+          {
+            "tag": "d",
+            "content": "1713-1784."
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Quakers"
+          },
+          {
+            "tag": "v",
+            "content": "Biography."
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Antislavery movements"
+          },
+          {
+            "tag": "z",
+            "content": "United States."
+          }
+        ]
+      },
+      {
+        "fieldTag": "l",
+        "marcTag": "035",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "(WaOLN)nyp0210040"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "504",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Bibliography: leaf preceding p. [1]"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "541",
+        "ind1": "1",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "c",
+            "content": "Gift; "
+          },
+          {
+            "tag": "a",
+            "content": "of Sidney Lapidus; "
+          },
+          {
+            "tag": "d",
+            "content": "2015."
+          },
+          {
+            "tag": "3",
+            "content": "Copy in Schomburg Center, Manuscripts, Archives & Rare Books"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "561",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Copy in Sc Rare C 15-22 (Lapidus Collection) inscribed: in ink, on title page, \"Barth W Wiston\" ; Library Company of Burlington label on upper pastedown."
+          },
+          {
+            "tag": "5",
+            "content": "NN"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "563",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Copy in Sc Rare C 15-22 (Lapidus Collection) bound in in black stamped brown paper boards ; spine lacking."
+          },
+          {
+            "tag": "5",
+            "content": "NN"
+          }
+        ]
+      },
+      {
+        "fieldTag": "o",
+        "marcTag": "001",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "NYPG009000783-B",
+        "subfields": null
+      },
+      {
+        "fieldTag": "p",
+        "marcTag": "260",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Philadelphia :"
+          },
+          {
+            "tag": "b",
+            "content": "James P. Parke,"
+          },
+          {
+            "tag": "c",
+            "content": "1817"
+          },
+          {
+            "tag": "f",
+            "content": "(Merritt, printer)"
+          }
+        ]
+      },
+      {
+        "fieldTag": "q",
+        "marcTag": "852",
+        "ind1": "8",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "h",
+            "content": "Sc Rare C 81-10"
+          }
+        ]
+      },
+      {
+        "fieldTag": "q",
+        "marcTag": "852",
+        "ind1": "8",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "h",
+            "content": "AN (Benezet) (Vaux, R. Memoirs of the life of Anthony Benezet. Philadelphia, 1817)"
+          }
+        ]
+      },
+      {
+        "fieldTag": "q",
+        "marcTag": "852",
+        "ind1": "8",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "h",
+            "content": "Sc Rare C 15-22 (Lapidus Collection)"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "300",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "v, 136 p. :"
+          },
+          {
+            "tag": "b",
+            "content": "ill. ;"
+          },
+          {
+            "tag": "c",
+            "content": "19 cm."
+          }
+        ]
+      },
+      {
+        "fieldTag": "t",
+        "marcTag": "245",
+        "ind1": "1",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Memoirs of the life of Anthony Benezet /"
+          },
+          {
+            "tag": "c",
+            "content": "by Roberts Vaux."
+          }
+        ]
+      },
+      {
+        "fieldTag": "v",
+        "marcTag": "959",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": ".b10101238"
+          },
+          {
+            "tag": "b",
+            "content": "07-18-08"
+          },
+          {
+            "tag": "c",
+            "content": "07-29-91"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "856",
+        "ind1": "4",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "u",
+            "content": "https://specialcollections.nypl.org/aeon/Aeon.dll?Action=10&Form=30&Title=Memoirs+of+the+life+of+Anthony+Benezet+/&Site=SCHRB&CallNumber=Sc+Rare+C+81-10&Author=Vaux,+Roberts,&ItemPlace=Philadelphia+:&ItemPublisher=James+P.+Parke,&Date=1817&ItemInfo3=https://nypl-sierra-test.nypl.org/record=b10010064&ReferenceNumber=b100100648&Genre=Book-text&Location=Schomburg+Center"
+          },
+          {
+            "tag": "z",
+            "content": "Request Access to Schomburg Rare Book Materials"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "005",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "20001116192544.8",
+        "subfields": null
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "008",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "860219s1817    paua     b    000 0beng dcam a ",
+        "subfields": null
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "040",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "NN"
+          },
+          {
+            "tag": "c",
+            "content": "NN"
+          },
+          {
+            "tag": "d",
+            "content": "WaOLN"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "856",
+        "ind1": "4",
+        "ind2": "0",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "u",
+            "content": "http://hdl.handle.net/2027/nyp.33433082549480"
+          },
+          {
+            "tag": "z",
+            "content": "Full text available via HathiTrust"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "043",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "n-us---"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "997",
+        "ind1": " ",
+        "ind2": " ",
+        "content": null,
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "sm"
+          },
+          {
+            "tag": "a",
+            "content": "hg"
+          },
+          {
+            "tag": "b",
+            "content": "12-15-00"
+          },
+          {
+            "tag": "c",
+            "content": "m"
+          },
+          {
+            "tag": "d",
+            "content": "a"
+          },
+          {
+            "tag": "e",
+            "content": "-"
+          },
+          {
+            "tag": "f",
+            "content": "eng"
+          },
+          {
+            "tag": "g",
+            "content": "pau"
+          },
+          {
+            "tag": "h",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "fieldTag": "_",
+        "marcTag": null,
+        "ind1": null,
+        "ind2": null,
+        "content": "00000cam  2200241 a 4500",
+        "subfields": null
+      }
+    ]
+  },
+  "count": 1,
+  "totalCount": 0,
+  "statusCode": 200,
+  "debugInfo": []
+}

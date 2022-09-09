@@ -7,6 +7,7 @@ const ScsbClient = require('../lib/scsb-client')
 
 const index = require('../index')
 const fixtures = require('./fixtures')
+const { expect } = require('chai')
 
 // const { printJsonObject } = require('./utils')
 
@@ -78,7 +79,9 @@ describe('index.handler', () => {
               { type: 'bf:Note', noteType: 'Note', label: 'Publication date from cover.' },
               { type: 'bf:Note', noteType: 'Bibliography', label: 'Includes bibliographical references.' }
             ])
-            expect(indexedDocuments[0].numItems).to.eql([2])
+            // Two items, one is electronic resource, so numItems should be 1
+            expect(indexedDocuments[0].numItems).to.eql([1])
+            expect(indexedDocuments[0].numElectronicResources).to.eql([1])
 
             // Check holdings:
             expect(indexedDocuments[0].holdings).to.eql([])

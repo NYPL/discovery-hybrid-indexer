@@ -27,6 +27,7 @@ const { awsInit, die, suppressIndexAndStreamWrites } = require('../lib/script-ut
 const { printDiff } = require('../test/diff-report')
 const platformApi = require('../lib/platform-api')
 const discoveryApiIndexer = require('../lib/discovery-api-indexer')
+const discoveryStoreModel = require('../lib/discovery-store-model')
 
 const logger = require('../lib/logger')
 logger.setLevel(process.env.LOGLEVEL || 'info')
@@ -81,7 +82,8 @@ if (ev) {
     case 'bib':
       platformApi.bibById(nyplSource, id)
         .then((bib) => {
-          index.fullRebuildForBibs([bib])
+          return discoveryStoreModel.filterOutAndDeleteNonResearchBibs([bib])
+            .then(index.fullRebuildForBibs)
         })
       break
   }
