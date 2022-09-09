@@ -87,20 +87,18 @@ describe('dateParser Lambda', () => {
     const parsed = checkCache(fieldtagv)
     expect(parsed).to.deep.equal([['1934', '1936']])
   })
-  it.only('v. 6-7 no. 2, 5-v. 8 no. 1 (Oct. 1961-Sept./Oct. 1962, May-June/July 1963) @local-only', async () => {
-    const fieldtagv = 'v. 6-7 no. 2, 5-v. 8 no. 1 (Oct. 1961 - Sept./ Oct. 1962, May - June / July 1963)'
+  it('v. 6-7 no. 2, 5-v. 8 no. 1 (Oct. 1961-Sept./Oct. 1962, May-June/July 1963) @local-only', async () => {
+    const fieldtagv = 'v. 6-7 no. 2, 5-v. 8 no. 1 (Oct. 1961-Sept./Oct. 1962, May-June/July 1963)'
     await parseDatesAndCache(fieldtagv)
     const parsed = checkCache(fieldtagv)
     expect(parsed).to.deep.equal([['1961-10', '1962-10'], ['1963-05', '1963-07']])
   })
-  // timetwister is not returning what the sheet says
   it('Aug. 1976 @local-only', async () => {
     const fieldtagv = 'Aug. 1976'
     await parseDatesAndCache(fieldtagv)
     const parsed = checkCache(fieldtagv)
     expect(parsed).to.deep.equal([['1976-08', '1976-08']])
   })
-  // Waiting on better seasonal support from timetwister
   it('1992:spring @local-only', async () => {
     const fieldtagv = '1992:spring'
     await parseDatesAndCache(fieldtagv)
