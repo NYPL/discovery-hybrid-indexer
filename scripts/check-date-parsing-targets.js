@@ -32,7 +32,7 @@ const argv = require('minimist')(process.argv.slice(2))
 
 const input = fs.readFileSync('./data/date-and-volume-parsing-targets.csv', 'utf8')
 
-const dateParser = require('../lib/dateParser-lambda')
+const { private: { _parseDates } } = require('../lib/dateParser-lambda')
 const volumeParser = require('../lib/volume-parser')
 
 const parseRangeTargets = (target, intRange = false) => {
@@ -60,8 +60,7 @@ const processNext = async (records, index = 0) => {
   let match = true
 
   if (dateRange && argv.only !== 'volumes') {
-    let parsed = await dateParser.parseDate(fieldtagv)
-    parsed = parsed[0]
+    const parsed = await _parseDates(fieldtagv)
     const targets = parseRangeTargets(dateRange)
     match = checkParsedAgainstTargets(parsed, targets, { label: 'Date' })
     totals.dateRanges.inspected += 1
