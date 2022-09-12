@@ -1,6 +1,6 @@
 /* global describe it */
 const expect = require('chai').expect
-const { private: { _parseDates } } = require('../lib/dateParser-lambda')
+const { private: { _parseDates } } = require('../lib/date-parse')
 
 describe.only('dateParser Lambda', () => {
   it('v. 36-37 (Nov. 1965-Oct. 1967) @local-only', async () => {
