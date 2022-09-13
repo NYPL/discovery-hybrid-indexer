@@ -3,7 +3,7 @@ const expect = require('chai').expect
 const { parseDatesAndCache, checkCache, private: { _parseDates } } = require('../lib/date-parse')
 const serialBibs = require('./fixtures/date-parse-bibs/mock-bib.json')
 
-describe.only('dateParser Lambda', () => {
+describe('dateParser Lambda', () => {
   describe('caching', () => {
     it('caches parsed dates', async () => {
       await parseDatesAndCache(serialBibs)
