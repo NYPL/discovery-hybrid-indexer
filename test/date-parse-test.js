@@ -1,12 +1,19 @@
 /* global describe it */
 const expect = require('chai').expect
 const { parseDatesAndCache, checkCache, private: { _parseDates } } = require('../lib/date-parse')
-const serialBibs = require('./fixtures/date-parse-bibs/mock-bib.json')
+const serialBibs = require('./fixtures/date-parse-bibs/v-bibs.json')
+const mixedBibs = require('./fixtures/date-parse-bibs/mixed-bibs.json')
 
 describe('dateParser Lambda', () => {
   describe('caching', () => {
-    it('caches parsed dates', async () => {
+    it('caches parsed dates for bibs with fieldtagvs', async () => {
       await parseDatesAndCache(serialBibs)
+      expect(checkCache('v. 36-37 (Nov. 1965-Oct. 1967)')).to.deep.equal([['1965-11', '1967-10']])
+      expect(checkCache('v. 6-7 no. 2, 5-v. 8 no. 1 (Oct. 1961-Sept./Oct. 1962, May-June/July 1963)')).to.deep.equal([['1961-10', '1962-10'], ['1963-05', '1963-07']])
+      expect(checkCache('1992:Feb.-Mar.')).to.deep.equal([['1992-02', '1992-03']])
+    })
+    it('can handle bibs with and without fieldtagvs', async () => {
+      await parseDatesAndCache(mixedBibs)
       const fieldtagvs = ['v. 36-37 (Nov. 1965-Oct. 1967)', '1992:Feb.-Mar.', 'v. 6-7 no. 2, 5-v. 8 no. 1 (Oct. 1961-Sept./Oct. 1962, May-June/July 1963)']
       const cachedParsedValues = fieldtagvs.map((tag) => {
         return checkCache(tag)
