@@ -1,11 +1,12 @@
 const sinon = require('sinon')
+const AWS = require('aws-sdk')
 
 const HoldingsUpdater = require('pcdm-store-updater/lib/holdings-updater')
 
 const discoveryStoreModel = require('../lib/discovery-store-model')
 const platformApi = require('../lib/platform-api')
 const ScsbClient = require('../lib/scsb-client')
-const parseDate = require('../lib/date-parse')
+const { awsLambdaStub } = require('./utils')
 
 const { enableDataApiFixtures, disableDataApiFixtures } = require('./fixtures')
 
@@ -82,7 +83,11 @@ const expectStatement = (statements, toMatch, raiseError = true) => {
 
 describe('discovery-store-model', () => {
   before(() => {
-    sinon.stub(parseDate, 'parseDatesAndCache')
+    sinon.stub(AWS, 'Lambda')
+      .callsFake(awsLambdaStub)
+  })
+  after(() => {
+    AWS.Lambda.restore()
   })
   describe('filterOutAndDeleteNonResearchBibs', () => {
     it('removes non-research bib', () => {
