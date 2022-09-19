@@ -15,6 +15,9 @@ const { awsInit, suppressIndexAndStreamWrites } = require('../lib/script-utils')
 const platformApi = require('../lib/platform-api')
 const discoveryStoreModel = require('../lib/discovery-store-model')
 
+const logger = require('../lib/logger')
+logger.setLevel(process.env.LOGLEVEL || 'info')
+
 const usage = () => {
   console.log('Usage: node scripts/suppression-report --envfile [path to .env] --uri [bnum]')
   return true
@@ -23,13 +26,14 @@ const usage = () => {
 const suppressionReport = (bib) => {
   const printRationale = function (what, result, rationale) {
     console.log(`${result ? '✅' : '❌'} ${what} is-research`)
-    console.log('   Rationale: (Must satisfy one)')
+    console.log('   Rationale:')
     Object.keys(rationale).forEach((key) => {
       console.log(`   ${rationale[key].result ? '✅' : '❌'} ${key}`)
       console.log(`        ${rationale[key].notes}`)
     })
   }
 
+  const deletedDate = bib.deletedDate
   return discoveryStoreModel.buildDiscoveryStoreBibs([bib])
     .then((discoveryStoreBibs) => {
       discoveryStoreBibs.forEach((bib) => {
@@ -56,17 +60,21 @@ const suppressionReport = (bib) => {
           'Has Research items': {
             notes: `Has ${researchItemsCount} items`,
             result: researchItemsCount > 0
+          },
+          'Is not deleted': {
+            notes: `Deleted ${deletedDate}`,
+            result: !deletedDate
           }
         }
-        printRationale(`Bib ${bib.uri}`, bib.isResearch(), rationale)
+        printRationale(`Bib ${bib.uri}`, !deletedDate && bib.isResearch(), rationale)
 
         const catalogItemTypeMapping = require('@nypl/nypl-core-objects')('by-catalog-item-type')
         bib.items().forEach((item) => {
-          const itype = item.objectId('nypl:catalogItemType')
+          const itype = (item.objectId('nypl:catalogItemType') || '').replace(/\w+:/, '')
           const rationale = {
             'Not suppressed': {
-              check: item.literal('nypl:suppressed'),
-              notes: item.literal('nypl:suppressed') ? `Suppressed due to ${item.statement('nypl:suppressed') ? item.statement('nypl:suppressed').source_record_path : '?'}` : 'Not suppressed'
+              result: item.literal('nypl:suppressed') === 'false',
+              notes: item.literal('nypl:suppressed') === 'false' ? `Suppressed due to ${item.statement('nypl:suppressed') ? item.statement('nypl:suppressed').source_record_path : '?'}` : 'Not suppressed'
             },
             'Item Type is Research': {
               notes: `Item Type is ${itype}`,
