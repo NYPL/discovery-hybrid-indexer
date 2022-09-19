@@ -3,6 +3,7 @@ const discoveryApiIndexer = require('./lib/discovery-api-indexer')
 const platformApi = require('./lib/platform-api')
 const logger = require('./lib/logger')
 const { decodeRecordsFromEvent } = require('./lib/event-decoder')
+const { checkCache } = require('./lib/date-parse')
 
 /**
  * Given an array of bibs, fetches necessary items and holdings to fully
@@ -62,5 +63,6 @@ const handler = (event, context, callback) => {
 
 module.exports = {
   fullRebuildForBibs,
-  handler
+  handler,
+  checkParsedDatesCache: checkCache
 }
