@@ -29,6 +29,9 @@ const platformApi = require('../lib/platform-api')
 const discoveryApiIndexer = require('../lib/discovery-api-indexer')
 const discoveryStoreModel = require('../lib/discovery-store-model')
 
+const logger = require('../lib/logger')
+logger.setLevel(process.env.LOGLEVEL || 'info')
+
 const usage = () => {
   console.log('Usage: node scripts/compare-with-indexed --envfile [path to .env] [--uri bnum] ./test/sample-events/[eventfile]')
   return true
