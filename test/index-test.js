@@ -1,4 +1,5 @@
 const sinon = require('sinon')
+const AWS = require('aws-sdk')
 const discoveryApiIndex = require('discovery-api-indexer/lib/index')
 const NyplStreamsClient = require('@nypl/nypl-streams-client')
 // For stubbing scsb client instantiation from a different module
@@ -8,6 +9,7 @@ const ScsbClient = require('../lib/scsb-client')
 const index = require('../index')
 const fixtures = require('./fixtures')
 const { expect } = require('chai')
+const { awsLambdaStub } = require('./utils')
 
 // const { printJsonObject } = require('./utils')
 
@@ -15,6 +17,7 @@ describe('index.handler', () => {
   let kinesisWrites = {}
   let client
   before(async function () {
+    sinon.stub(AWS, 'Lambda').callsFake(awsLambdaStub)
     // If updating fixtures, increase timeout to 10s
     this.timeout(process.env.UPDATE_FIXTURES ? 10000 : 2000)
     sinon.stub(kmsHelperPcdm, 'decrypt').callsFake(() => Promise.resolve('decrypted!'))
@@ -35,6 +38,7 @@ describe('index.handler', () => {
   })
 
   after(() => {
+    AWS.Lambda.restore()
     kmsHelperPcdm.decrypt.restore()
     client.search.restore()
     NyplStreamsClient.prototype.write.restore()
