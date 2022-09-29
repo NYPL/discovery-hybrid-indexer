@@ -19,7 +19,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/standard && ./node_modules/.bin/mocha test"
+    "test": "./node_modules/.bin/standard && ./node_modules/.bin/mocha test --grep '@local-only' --invert"
   },
   "author": "",
   "license": "ISC",
