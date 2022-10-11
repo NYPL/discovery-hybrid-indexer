@@ -7,6 +7,22 @@ const printJsonObject = (obj) => {
   console.log('Doc: ', linted)
 }
 
+const awsLambdaStub = () => {
+  return {
+    invoke: () => {
+      return {
+        promise: () => {
+          return Promise.resolve({
+            Payload: JSON.stringify({
+              body: JSON.stringify({ dates: {} })
+            })
+          })
+        }
+      }
+    }
+  }
+}
+
 module.exports = {
-  printJsonObject
+  printJsonObject, awsLambdaStub
 }
