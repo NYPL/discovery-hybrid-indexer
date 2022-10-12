@@ -57,7 +57,6 @@ describe('index.handler', () => {
             expect(discoveryApiIndex.resources.save.calledOnce).to.eq(true)
 
             const { indexedDocuments } = global
-            console.log('indexed: ', JSON.stringify(indexedDocuments, null, 2))
 
             expect(indexedDocuments).to.have.lengthOf(1)
             expect(indexedDocuments[0]).to.be.a('object')
