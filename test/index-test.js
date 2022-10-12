@@ -57,6 +57,7 @@ describe('index.handler', () => {
             expect(discoveryApiIndex.resources.save.calledOnce).to.eq(true)
 
             const { indexedDocuments } = global
+
             expect(indexedDocuments).to.have.lengthOf(1)
             expect(indexedDocuments[0]).to.be.a('object')
 
@@ -71,6 +72,7 @@ describe('index.handler', () => {
               { type: 'bf:Identifier', value: '(WaOLN)nyp0201934' }
             ])
             expect(indexedDocuments[0].issuance_packed).to.eql(['urn:biblevel:m||monograph/item'])
+            expect(indexedDocuments[0].idOclc).to.eql(['NYPG002001377-B'])
             expect(indexedDocuments[0].language_packed).to.eql(['lang:arm||Armenian'])
             expect(indexedDocuments[0].title).to.eql(['Niwtʻer azgayin patmutʻian hamar Ereveli hay kazunkʻ ; Parskastan'])
             expect(indexedDocuments[0].subjectLiteral_exploded).to.include.members([
