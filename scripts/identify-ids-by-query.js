@@ -127,7 +127,6 @@ if (argv.query || argv.queryfile) {
   let query
   try {
     query = argv.query ? JSON.parse(argv.query) : require(argv.queryfile)
-    console.log('parsed query: ', query);
   } catch (e) {
     die('Error parsing query: ', e)
   }
