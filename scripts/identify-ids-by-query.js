@@ -4,6 +4,8 @@
  *
  * Options:
  *  --query QUERY - Provide ES query as a quoted JSON blob
+ *  --queryfile FILE - Provide a file path to a json file with the query. Should be relative to the script and in quotes.
+ *  e.g. `--queryfile '../query.json'` in case you are in the main `discovery-hybrid-indexer` directory
  *  --outfile FILE - Specify where to write the CSV (default ./out.csv)
  *  --from N - Specify index to start collecting from. Default 0
  *  --size M - Specify records per page. Default 100
@@ -11,6 +13,8 @@
  *                identifier before writing to CSV (e.g. hb12345 > 12345).
  *                Default false
  *  --envfile - Specify config file to use. Default ./config/qa.env
+ *
+ * Note that only one of --query and --queryfile should be used.
  *
  * Note that when using with `--stripprefix true`, because the output will not
  * include nyplSource, queries should ideally restrict their scope to one
@@ -63,7 +67,7 @@ const usage = () => {
 awsInit()
 
 // Require a --query
-if (!argv.query) usage() && die('Must specify --query')
+if (!argv.query && !argv.queryfile) usage() && die('Must specify --query')
 
 /**
  * Recursive step. Given a raw search result, calls `scroll` until all records
@@ -119,10 +123,10 @@ function fetch (body, records = []) {
     .then(parseResultAndScroll)
 }
 
-if (argv.query) {
+if (argv.query || argv.queryfile) {
   let query
   try {
-    query = JSON.parse(argv.query)
+    query = argv.query ? JSON.parse(argv.query) : require(argv.queryfile)
   } catch (e) {
     die('Error parsing query: ', e)
   }
