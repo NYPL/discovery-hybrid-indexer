@@ -1,8 +1,6 @@
 const sinon = require('sinon')
 const AWS = require('aws-sdk')
 
-// const HoldingsUpdater = require('pcdm-store-updater/lib/holdings-updater')
-
 const discoveryStoreModel = require('../lib/discovery-store-model')
 const platformApi = require('../lib/platform-api')
 const ScsbClient = require('../lib/scsb-client')
@@ -352,18 +350,19 @@ describe('discovery-store-model', () => {
         predicate: 'dcterms:title',
         object_literal: 'AAHGS news : the bi-monthly newsletter of the Afro-American Historical and Genealogical Society, Inc.'
       })
-      const realItems = groupedStatements[0]._items.filter(i => !i.id.includes('i-h'))
-      const checkInCardItems = groupedStatements[0]._items.filter(i => i.id.includes('i-h'))
+
+      const isCheckinCard = (item) => item._statements.some((s) => {
+        return s.predicate === 'rdfs:type' &&
+          s.object_id === 'nypl:CheckinCardItem'
+      })
+      const realItems = groupedStatements[0]._items.filter((g) => !isCheckinCard(g))
+      const checkinCardItems = groupedStatements[0]._items.filter(isCheckinCard)
       expect(groupedStatements[0]._items).to.be.a('array')
       // real item statements
       expect(realItems).to.have.lengthOf(12)
       // checkin card item statements are there
-      expect(checkInCardItems).to.have.lengthOf(3)
+      expect(checkinCardItems).to.have.lengthOf(3)
       // checkin card items have minimum properties
-      expect(checkInCardItems.every(i => i._statements.some(statement => {
-        return statement.predicate === 'rdfs:type' &&
-          statement.object_id === 'nypl:CheckinCardItem'
-      })))
 
       expect(groupedStatements[0]._holdings).to.be.a('array')
       expect(groupedStatements[0]._holdings).to.have.lengthOf(1)

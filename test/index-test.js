@@ -250,7 +250,7 @@ describe('index.handler', () => {
             // Check items:
             expect(indexedDocuments[0].items).to.have.lengthOf(15)
             // Check amount of checkin card items
-            expect(indexedDocuments[0].items.filter(item => item.uri.includes('i-h'))).to.have.lengthOf(checkInBoxes.length)
+            expect(indexedDocuments[0].items.filter(item => item.type[0] === 'nypl:CheckinCardItem')).to.have.lengthOf(checkInBoxes.length)
 
             // Expect writes to "processed" stream:
             expect(kinesisWrites).to.have.property('IndexDocumentProcessed-test')
