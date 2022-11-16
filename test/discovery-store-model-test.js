@@ -1,8 +1,6 @@
 const sinon = require('sinon')
 const AWS = require('aws-sdk')
 
-const HoldingsUpdater = require('pcdm-store-updater/lib/holdings-updater')
-
 const discoveryStoreModel = require('../lib/discovery-store-model')
 const platformApi = require('../lib/platform-api')
 const ScsbClient = require('../lib/scsb-client')
@@ -273,7 +271,7 @@ describe('discovery-store-model', () => {
 
   describe('buildDiscoveryStoreBibs', () => {
     before(() => {
-      sinon.stub(ScsbClient, 'instance').callsFake(() => Promise.resolve({ search: () => {} }))
+      sinon.stub(ScsbClient, 'instance').callsFake(() => Promise.resolve({ search: () => { } }))
       enableDataApiFixtures()
     })
 
@@ -346,7 +344,6 @@ describe('discovery-store-model', () => {
     it('converts a plain bib into an object with correctly grouped statements, including holdings', async () => {
       const bib = await platformApi.bibById('sierra-nypl', '12959619')
       const groupedStatements = await discoveryStoreModel.buildDiscoveryStoreBibs([bib])
-
       expect(groupedStatements).to.be.a('array')
       expect(groupedStatements[0]).to.be.a('object')
       expectStatement(groupedStatements[0]._statements, {
@@ -354,8 +351,18 @@ describe('discovery-store-model', () => {
         object_literal: 'AAHGS news : the bi-monthly newsletter of the Afro-American Historical and Genealogical Society, Inc.'
       })
 
+      const isCheckinCard = (item) => item._statements.some((s) => {
+        return s.predicate === 'rdfs:type' &&
+          s.object_id === 'nypl:CheckinCardItem'
+      })
+      const realItems = groupedStatements[0]._items.filter((g) => !isCheckinCard(g))
+      const checkinCardItems = groupedStatements[0]._items.filter(isCheckinCard)
       expect(groupedStatements[0]._items).to.be.a('array')
-      expect(groupedStatements[0]._items).to.have.lengthOf(12)
+      // real item statements
+      expect(realItems).to.have.lengthOf(12)
+      // checkin card item statements are there
+      expect(checkinCardItems).to.have.lengthOf(3)
+      // checkin card items have minimum properties
 
       expect(groupedStatements[0]._holdings).to.be.a('array')
       expect(groupedStatements[0]._holdings).to.have.lengthOf(1)
@@ -395,106 +402,6 @@ describe('discovery-store-model', () => {
       // include a statement with nypl:suppressed and value `true` and is
       // the mechanism for flagging bibs for deletion.
       expect(groupedStatements[0].isSuppressed()).to.eq(true)
-    })
-
-    describe('with checkin-card extraction', () => {
-      const extraCheckinCardStatements = [
-        // First checkin card item:
-        {
-          subject_id: 'i-holding1032862-0',
-          predicate: 'rdfs:type',
-          index: 0,
-          object_id: 'nypl:CheckinCardItem'
-        },
-        {
-          subject_id: 'i-holding1032862-0',
-          predicate: 'nypl:shelfMark',
-          index: 0,
-          object_literal: 'Special checkin-card shelfmark from holding record 1'
-        },
-        {
-          subject_id: 'i-holding1032862-0',
-          predicate: 'nypl:accessMessage',
-          index: 0,
-          object_id: 'accessMessage:1',
-          object_label: 'Use in library'
-        },
-        // Second checkin card item:
-        {
-          subject_id: 'i-holding1032862-1',
-          predicate: 'rdfs:type',
-          index: 0,
-          object_id: 'nypl:CheckinCardItem'
-        },
-        {
-          subject_id: 'i-holding1032862-1',
-          predicate: 'nypl:shelfMark',
-          index: 0,
-          object_literal: 'Special checkin-card shelfmark from holding record 2'
-        },
-        {
-          subject_id: 'i-holding1032862-1',
-          predicate: 'nypl:accessMessage',
-          index: 0,
-          object_id: 'accessMessage:1',
-          object_label: 'Use in library'
-        }
-      ]
-
-      before(() => {
-        // Let's modify HoldingsUpdater.extractStatements to return the same
-        // set of statements it currently does, _plus_ some extra "item"
-        // statements modelling check-in cards. This will emulate our Holdings
-        // serializer emitting items, which we anticipate it will do when
-        // extracting items from checkin-cards.
-        const original = HoldingsUpdater.prototype.extractStatements.bind(new HoldingsUpdater())
-        sinon.stub(HoldingsUpdater.prototype, 'extractStatements').callsFake(async (holding) => {
-          const originalStatements = await original(holding)
-          return originalStatements.concat(extraCheckinCardStatements)
-        })
-      })
-
-      after(() => {
-        HoldingsUpdater.prototype.extractStatements.restore()
-      })
-
-      it('allows a set of item statements emitted by the holdings serializer to manifest as items in the resulting DiscoveryStoreBib', async () => {
-        const bib = await platformApi.bibById('sierra-nypl', '12959619')
-        const groupedStatements = await discoveryStoreModel.buildDiscoveryStoreBibs([bib])
-
-        expect(groupedStatements).to.be.a('array')
-        expect(groupedStatements[0]).to.be.a('object')
-
-        expect(groupedStatements[0]._items).to.be.a('array')
-        expect(groupedStatements[0]._items).to.have.lengthOf(14)
-
-        // Expect the resulting object to include the holdings-generated items
-        // in the _items array:
-        expectStatementIn(groupedStatements[0]._items, {
-          subject_id: 'i-holding1032862-0',
-          predicate: 'nypl:accessMessage',
-          object_id: 'accessMessage:1'
-        })
-        expectStatementIn(groupedStatements[0]._items, {
-          subject_id: 'i-holding1032862-0',
-          predicate: 'nypl:shelfMark',
-          object_literal: 'Special checkin-card shelfmark from holding record 1'
-        })
-
-        expectStatementIn(groupedStatements[0]._items, {
-          subject_id: 'i-holding1032862-1',
-          predicate: 'nypl:accessMessage',
-          object_id: 'accessMessage:1'
-        })
-        expectStatementIn(groupedStatements[0]._items, {
-          subject_id: 'i-holding1032862-1',
-          predicate: 'nypl:shelfMark',
-          object_literal: 'Special checkin-card shelfmark from holding record 2'
-        })
-
-        expect(groupedStatements[0]._holdings).to.be.a('array')
-        expect(groupedStatements[0]._holdings).to.have.lengthOf(1)
-      })
     })
   })
 })
