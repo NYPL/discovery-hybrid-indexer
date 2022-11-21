@@ -219,8 +219,8 @@ describe('index.handler', () => {
                 { label: 'Schomburg Center - Research and Reference Division', code: 'loc:sc' }
               ]
             })
-
-            expect(indexedDocuments[0].holdings[0].checkInBoxes).to.deep.include.members([
+            const checkInBoxes = indexedDocuments[0].holdings[0].checkInBoxes
+            expect(checkInBoxes).to.deep.include.members([
               {
                 copies: undefined,
                 type: 'nypl:CheckInBox',
@@ -248,7 +248,9 @@ describe('index.handler', () => {
             ])
 
             // Check items:
-            expect(indexedDocuments[0].items).to.have.lengthOf(12)
+            expect(indexedDocuments[0].items).to.have.lengthOf(15)
+            // Check amount of checkin card items
+            expect(indexedDocuments[0].items.filter(item => item.type[0] === 'nypl:CheckinCardItem')).to.have.lengthOf(checkInBoxes.length)
 
             // Expect writes to "processed" stream:
             expect(kinesisWrites).to.have.property('IndexDocumentProcessed-test')
