@@ -13,6 +13,9 @@ const usedFixturePaths = {}
 function enableDataApiFixtures (pathToFixtureMap) {
   const originalCall = NYPLDataApiClient.prototype._doAuthenticatedRequest
 
+  if (process.env.UPDATE_FIXTURES === 'all' || process.env.UPDATE_FIXTURES === 'if-missing') {
+    console.log(`Rebuilding fixtures using '${process.env.NYPL_OAUTH_KEY}' platform user`)
+  }
   // Override app's _doAuthenticatedRequest call to return fixtures for specific paths, otherwise fail:
   sinon.stub(NYPLDataApiClient.prototype, '_doAuthenticatedRequest').callsFake(function (requestOptions) {
     const originalRequestOptions = JSON.parse(JSON.stringify(requestOptions))
