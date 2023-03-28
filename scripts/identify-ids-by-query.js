@@ -86,9 +86,6 @@ function parseResultAndScroll (result, records = []) {
   }
 
   if (records.length < result.hits.total) {
-    const page = Math.ceil(records.length / argv.size)
-    const pages = Math.ceil(result.hits.total / argv.size)
-
     // Periodically report on progress and save records:
     if (records.length % 1000 === 0) {
       // Report on progress:
@@ -149,7 +146,7 @@ if (argv.query || argv.queryfile) {
     if (argv.queryfile) {
       try {
         fs.statSync(argv.queryfile)
-      } catch(e) {
+      } catch (e) {
         die(`Could not find ${argv.queryfile}`)
       }
     }
