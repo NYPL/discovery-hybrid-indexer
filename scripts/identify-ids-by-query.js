@@ -4,8 +4,7 @@
  *
  * Options:
  *  --query QUERY - Provide ES query as a quoted JSON blob
- *  --queryfile FILE - Provide a file path to a json file with the query. Should be relative to the script and in quotes.
- *  e.g. `--queryfile '../query.json'` in case you are in the main `discovery-hybrid-indexer` directory
+ *  --queryfile FILE - Provide a file path to a json file with the query.
  *  --outfile FILE - Specify where to write the CSV (default ./out.csv)
  *  --from N - Specify index to start collecting from. Default 0
  *  --size M - Specify records per page. Default 100
@@ -89,9 +88,17 @@ function parseResultAndScroll (result, records = []) {
   if (records.length < result.hits.total) {
     const page = Math.ceil(records.length / argv.size)
     const pages = Math.ceil(result.hits.total / argv.size)
-    console.log(`Scrolling: ${page} of ${pages}`)
 
+    // Periodically report on progress and save records:
     if (records.length % 1000 === 0) {
+      // Report on progress:
+      const ellapsedMs = (new Date()) - startTime
+      const recordsPerSecond = (records.length / ellapsedMs) * 1000
+      const eta = (totalHits - records.length) / recordsPerSecond
+      const etaDisplay = eta > 60 ? `${Math.round(eta / 60)}mins` : `${Math.round(eta)}s`
+      const completePercent = Math.floor((records.length / totalHits) * 100)
+      console.log(`[${completePercent}% complete. ETA: ${etaDisplay}]`)
+
       // Every so often, write to file:
       writeFile(records)
     }
@@ -110,6 +117,9 @@ const writeFile = (records) => {
   fs.writeFileSync(outpath, records.join('\n'))
 }
 
+let startTime = null
+let totalHits = null
+
 /**
  * Given an ES query, performs query, returning ids
  *
@@ -120,14 +130,29 @@ function fetch (body, records = []) {
   if (argv.limit) console.log(`Applying limit of ${argv.limit}`)
 
   return discoveryApiIndexer.queryIndex(body, { scroll: '30s' })
+    .then((resp) => {
+      if (resp.hits) {
+        totalHits = resp.hits.total
+        console.log(`Identified ${totalHits} hits. `)
+        startTime = new Date()
+      }
+      return resp
+    })
     .then(parseResultAndScroll)
 }
 
 if (argv.query || argv.queryfile) {
   let query
   try {
-    query = argv.query ? JSON.parse(argv.query) : require(argv.queryfile)
+    query = argv.query ? JSON.parse(argv.query) : JSON.parse(fs.readFileSync(argv.queryfile, 'utf8'))
   } catch (e) {
+    if (argv.queryfile) {
+      try {
+        fs.statSync(argv.queryfile)
+      } catch(e) {
+        die(`Could not find ${argv.queryfile}`)
+      }
+    }
     die('Error parsing query: ', e)
   }
   // If "query" property used in root, remove it
