@@ -29,9 +29,9 @@ const removeBibsWithInvalidNyplSources = async (bibs) => {
  * rebuild and save the ES document for each
  */
 const fullRebuildForBibs = async (bibs) => {
-  logger.debug(`Full rebuild for bibs: ${bibs.map((b) => `${b.nyplSource}/${b.id}`).join(', ')}`)
-
   bibs = await removeBibsWithInvalidNyplSources(bibs)
+
+  logger.debug(`Full rebuild for bibs: ${bibs.map((b) => `${b.nyplSource}/${b.id}`).join(', ')}`)
 
   return discoveryStoreModel.buildDiscoveryStoreBibs(bibs)
     .then(discoveryApiIndexer.reindexBibs)
