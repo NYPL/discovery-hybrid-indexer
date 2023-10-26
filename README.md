@@ -1,3 +1,7 @@
+# Archived 10/26/2023
+
+This app's functionality has been taked over by the [Research Catalog Indexer](https://github.com/NYPL/research-catalog-indexer).
+
 # Discovery Hybrid Indexer
 
 This is an experimental app investigating combining the [DiscoveryStorePoster](https://github.com/NYPL-discovery/discovery-store-poster) and [DiscoveryApiIndexer](https://github.com/NYPL-discovery/discovery-api-indexer) deployments into a single app that accomplishes their work without the overhead of an intermediary database (the "legacy discovery-store database"). This implementation includes both components as modules, overwriting certain behaviors (notably db writes and reads). It may be connected to the same Lambda triggers currently used in the [DiscoveryStorePoster](https://github.com/NYPL-discovery/discovery-store-poster) and can be expected to produce the same output as the [DiscoveryApiIndexer](https://github.com/NYPL-discovery/discovery-api-indexer).
