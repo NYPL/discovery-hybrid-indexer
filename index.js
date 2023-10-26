@@ -3,12 +3,34 @@ const discoveryApiIndexer = require('./lib/discovery-api-indexer')
 const platformApi = require('./lib/platform-api')
 const logger = require('./lib/logger')
 const { decodeRecordsFromEvent } = require('./lib/event-decoder')
+const { validNyplSource } = require('./lib/utils')
+
+const removeBibsWithInvalidNyplSources = async (bibs) => {
+  const removed = []
+  // Nullify records with invalid nyplSource
+  bibs = await Promise.all(
+    bibs.map(async (bib) => {
+      const valid = await validNyplSource(bib.nyplSource, 'bib')
+      if (!valid) {
+        removed.push(`${bib.nyplSource}/${bib.id}`)
+      }
+      return valid ? bib : null
+    })
+  )
+  if (removed.length > 0) {
+    logger.info(`Skipping ${removed.length} bib(s) with invalid nyplSource: ${removed.join(',')}`)
+  }
+  // Remove null (removed) bibs
+  return bibs.filter((bib) => bib)
+}
 
 /**
  * Given an array of bibs, fetches necessary items and holdings to fully
  * rebuild and save the ES document for each
  */
-const fullRebuildForBibs = (bibs) => {
+const fullRebuildForBibs = async (bibs) => {
+  bibs = await removeBibsWithInvalidNyplSources(bibs)
+
   logger.debug(`Full rebuild for bibs: ${bibs.map((b) => `${b.nyplSource}/${b.id}`).join(', ')}`)
 
   return discoveryStoreModel.buildDiscoveryStoreBibs(bibs)

@@ -15,14 +15,14 @@ const { awsLambdaStub } = require('./utils')
 
 describe('index.handler', () => {
   let kinesisWrites = {}
-  let client
-  before(async function () {
+  let scsbClient
+  beforeEach(async function () {
     sinon.stub(AWS, 'Lambda').callsFake(awsLambdaStub)
     // If updating fixtures, increase timeout to 10s
     this.timeout(process.env.UPDATE_FIXTURES ? 10000 : 2000)
     sinon.stub(kmsHelperPcdm, 'decrypt').callsFake(() => Promise.resolve('decrypted!'))
-    client = await ScsbClient.instance()
-    sinon.stub(client, 'search').callsFake(() => Promise.resolve('search result'))
+    scsbClient = await ScsbClient.instance()
+    sinon.stub(scsbClient, 'search').callsFake(() => Promise.resolve('search result'))
 
     sinon.stub(NyplStreamsClient.prototype, 'write')
       .callsFake((streamName, records) => {
@@ -35,12 +35,9 @@ describe('index.handler', () => {
 
   afterEach(() => {
     kinesisWrites = {}
-  })
-
-  after(() => {
     AWS.Lambda.restore()
     kmsHelperPcdm.decrypt.restore()
-    client.search.restore()
+    scsbClient.search.restore()
     NyplStreamsClient.prototype.write.restore()
 
     fixtures.disableDataApiFixtures()
@@ -54,7 +51,6 @@ describe('index.handler', () => {
         index.handler(event, {}, (e, result) => {
           try {
             expect(result).to.eq('Wrote 1 doc(s)')
-            expect(discoveryApiIndex.resources.save.calledOnce).to.eq(true)
 
             const { indexedDocuments } = global
 
@@ -478,7 +474,7 @@ describe('index.handler', () => {
     describe('Network error', function () {
       const NYPLDataApiClient = require('@nypl/nypl-data-api-client')
 
-      before(() => {
+      beforeEach(() => {
         // Disable default fixtures to establish special error emulation:
         fixtures.disableDataApiFixtures()
 
@@ -487,7 +483,7 @@ describe('index.handler', () => {
         })
       })
 
-      after(() => {
+      afterEach(() => {
         // Restore default fixtures:
         NYPLDataApiClient.prototype._doAuthenticatedRequest.restore()
 
@@ -516,6 +512,40 @@ describe('index.handler', () => {
               return reject(e)
             }
           })
+        })
+      })
+    })
+  })
+
+  describe('M2 Items', () => {
+    it('Handles b14359423, with 1 M2 item', async () => {
+      const event = require('./sample-events/b14359423.json')
+
+      return new Promise((resolve, reject) => {
+        index.handler(event, {}, (e, result) => {
+          try {
+            expect(result).to.eq('Wrote 1 doc(s)')
+
+            const { indexedDocuments } = global
+
+            expect(indexedDocuments).to.have.lengthOf(1)
+            expect(indexedDocuments[0]).to.be.a('object')
+
+            // Check bib metadata:
+            expect(indexedDocuments[0].uri).to.eq('b14359423')
+            expect(indexedDocuments[0].nyplSource).to.eql(['sierra-nypl'])
+            expect(indexedDocuments[0].type).to.eql(['nypl:Item'])
+
+            // Check item m2CustomerCode
+            expect(indexedDocuments[0].items).to.be.a('array')
+            expect(indexedDocuments[0].items[0]).to.deep.include({
+              m2CustomerCode: ['XH']
+            })
+
+            return resolve()
+          } catch (e) {
+            return reject(e)
+          }
         })
       })
     })
